@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /guest
+Disallow: /r
+Disallow: /together
+
+Sitemap: https://tinysidequest.com/sitemap.xml

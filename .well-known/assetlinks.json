@@ -1,0 +1,14 @@
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.sidequest",
+      "sha256_cert_fingerprints": [
+        "CD:71:80:8F:0A:12:76:4E:97:F7:4D:F3:D2:5C:6B:A7:B9:12:F6:8F:67:6C:91:F3:8C:E9:70:A5:7D:D7:4D:CA"
+      ]
+    }
+  }
+]
