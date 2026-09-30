@@ -1,5 +1,6 @@
 User-agent: *
 Allow: /
+Disallow: /code
 Disallow: /guest
 Disallow: /r
 Disallow: /together
