@@ -8,3 +8,19 @@
 
 /* Keep all three navigation links reachable on small screens. */
 @media(max-width:560px){.header-inner{flex-wrap:wrap;justify-content:center;padding-block:10px;gap:4px}.header-inner nav{width:100%;justify-content:center;gap:25px}.header-inner nav a{padding-block:10px}}
+
+/* Contact page and its homepage entry points. */
+.header-inner nav.contact-navigation{align-items:center}
+.header-inner nav a.contact-nav{padding:12px 18px;border-radius:12px;background:var(--violet);color:#fff;line-height:1.3}
+.header-inner nav a.contact-nav:hover{background:var(--deep);color:#fff}
+.footer nav.contact-footer{flex-wrap:wrap}
+.contact-page{max-width:920px;margin:auto;padding:72px 32px 96px;min-height:calc(100svh - 300px)}
+.contact-intro{max-width:650px;margin-bottom:36px}
+.contact-intro h1{font-size:clamp(38px,6vw,60px);line-height:1.08;letter-spacing:-.05em}
+.contact-intro>p{font-size:19px;line-height:1.7;color:#5a536a;margin-top:22px;max-width:560px}
+.contact-card{display:flex;align-items:center;gap:24px;width:fit-content;max-width:100%;background:#fff;border:1px solid #e9dcc8;border-radius:20px;padding:22px 24px;box-shadow:0 12px 30px #24165306}
+.contact-email{display:inline-block;min-width:0;color:var(--violet);font-size:22px;line-height:1.5;font-weight:700;overflow-wrap:anywhere;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:5px}
+.contact-action{display:inline-flex;align-items:center;justify-content:center;gap:10px;flex-shrink:0;background:var(--violet);color:white;padding:17px 23px;border-radius:14px;font-size:16px;font-weight:800;line-height:1.4}
+.contact-action:hover{background:var(--deep)}
+@media(max-width:600px){.contact-page{padding:42px 22px 56px}.contact-intro>p{font-size:17px}.contact-card{width:100%;align-items:stretch;flex-direction:column;padding:22px 24px;gap:20px}.contact-email{font-size:20px}.contact-action{align-self:flex-start}}
+@media(max-width:560px){.header-inner nav.contact-navigation{flex-wrap:wrap;column-gap:16px;row-gap:6px}.header-inner nav a.contact-nav{padding:10px 14px}.footer nav.contact-footer{column-gap:24px;row-gap:18px}}
