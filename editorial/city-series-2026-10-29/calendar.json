@@ -1,0 +1,149 @@
+{
+  "repository": "cjwheelock/tinysidequest-site",
+  "base_url": "https://tinysidequest.com",
+  "timezone": "America/New_York",
+  "cadence": "weekdays at 09:00",
+  "max_posts": 20,
+  "posts": [
+    {
+      "order": 1,
+      "city_id": "chicago",
+      "slug": "things-to-do-chicago-three-stops",
+      "title": "Things to Do in Chicago: Three Stops for a More Playful Visit",
+      "date": "2026-10-30"
+    },
+    {
+      "order": 2,
+      "city_id": "paris",
+      "slug": "what-to-do-paris-louvre-seine",
+      "title": "What to Do in Paris: Three Places to Pause Around the Louvre and Seine",
+      "date": "2026-11-02"
+    },
+    {
+      "order": 3,
+      "city_id": "san-diego",
+      "slug": "things-to-do-balboa-park-three-stops",
+      "title": "Things to Do in Balboa Park: Three Stops for Art, Gardens and Discovery",
+      "date": "2026-11-03"
+    },
+    {
+      "order": 4,
+      "city_id": "new-orleans",
+      "slug": "things-to-do-new-orleans-beyond-bourbon-street",
+      "title": "Things to Do in New Orleans Beyond Bourbon Street: Three Places to Explore",
+      "date": "2026-11-04"
+    },
+    {
+      "order": 5,
+      "city_id": "boston",
+      "slug": "things-to-do-boston-curious-afternoon",
+      "title": "Things to Do in Boston: Three Stops for a Curious Afternoon",
+      "date": "2026-11-05"
+    },
+    {
+      "order": 6,
+      "city_id": "new-york",
+      "slug": "things-to-do-nyc-three-places",
+      "title": "Things to Do in NYC: Three Places to See a Little Differently",
+      "date": "2026-11-06"
+    },
+    {
+      "order": 7,
+      "city_id": "lisbon",
+      "slug": "what-to-do-lisbon-baixa-river",
+      "title": "What to Do in Lisbon: Three Stops from Baixa to the River",
+      "date": "2026-11-09"
+    },
+    {
+      "order": 8,
+      "city_id": "london",
+      "slug": "things-to-do-london-south-bank",
+      "title": "Things to Do in London: Three Stops for a Playful Afternoon",
+      "date": "2026-11-10"
+    },
+    {
+      "order": 9,
+      "city_id": "san-francisco",
+      "slug": "things-to-do-san-francisco-waterfront",
+      "title": "Things to Do in San Francisco: Three Stops for a Different View",
+      "date": "2026-11-11"
+    },
+    {
+      "order": 10,
+      "city_id": "miami",
+      "slug": "things-to-do-miami-beach-three-stops",
+      "title": "Things to Do in Miami Beach: Three Stops Beyond the Beach Towel",
+      "date": "2026-11-12"
+    },
+    {
+      "order": 11,
+      "city_id": "rome",
+      "slug": "things-to-do-rome-closer-look",
+      "title": "Things to Do in Rome: Three Stops for a Closer Look",
+      "date": "2026-11-13"
+    },
+    {
+      "order": 12,
+      "city_id": "barcelona",
+      "slug": "things-to-do-barcelona-slow-down",
+      "title": "Things to Do in Barcelona: Three Places to Slow Down and Explore",
+      "date": "2026-11-16"
+    },
+    {
+      "order": 13,
+      "city_id": "washington-dc",
+      "slug": "things-to-do-washington-dc-curious-visit",
+      "title": "Things to Do in Washington, D.C.: Three Stops for a Curious Visit",
+      "date": "2026-11-17"
+    },
+    {
+      "order": 14,
+      "city_id": "tokyo",
+      "slug": "things-to-do-asakusa-tokyo",
+      "title": "Things to Do in Asakusa: Three Stops for a Closer Look at Tokyo",
+      "date": "2026-11-18"
+    },
+    {
+      "order": 15,
+      "city_id": "savannah",
+      "slug": "things-to-do-savannah-three-squares",
+      "title": "Things to Do in Savannah: Three Squares for a Curious Afternoon",
+      "date": "2026-11-19"
+    },
+    {
+      "order": 16,
+      "city_id": "amsterdam",
+      "slug": "what-to-do-amsterdam-canals-museumplein",
+      "title": "What to Do in Amsterdam: Three Stops from the Canals to Museumplein",
+      "date": "2026-11-20"
+    },
+    {
+      "order": 17,
+      "city_id": "kyoto",
+      "slug": "things-to-do-kyoto-okazaki",
+      "title": "Things to Do in Kyoto: Three Places to Notice More",
+      "date": "2026-11-23"
+    },
+    {
+      "order": 18,
+      "city_id": "seattle",
+      "slug": "things-to-do-seattle-market-waterfront",
+      "title": "Things to Do in Seattle: Three Stops Between the Market and the Water",
+      "date": "2026-11-24"
+    },
+    {
+      "order": 19,
+      "city_id": "mexico-city",
+      "slug": "things-to-do-mexico-city-centro",
+      "title": "Things to Do in Mexico City: Three Stops for a More Playful Visit",
+      "date": "2026-11-25"
+    },
+    {
+      "order": 20,
+      "city_id": "san-juan-pr",
+      "slug": "things-to-do-old-san-juan-three-stops",
+      "title": "Things to Do in Old San Juan: Three Stops for a Closer Look",
+      "date": "2026-11-26"
+    }
+  ]
+}
