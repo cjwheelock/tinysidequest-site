@@ -37,7 +37,11 @@
     });
   }
   function updateDetails(city) {
+    content.dataset.city = city.id;
     content.querySelector('h2').textContent = city.name;
+    content.querySelectorAll('[data-chicago-only]').forEach(section => {
+      section.hidden = city.id !== 'chicago';
+    });
     content.querySelectorAll('.pack-row').forEach((row, i) => {
       const pack = city.packs[i], img = row.querySelector('img');
       img.src = pack.image; img.alt = pack.alt;
