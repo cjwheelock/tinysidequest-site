@@ -12,14 +12,15 @@
   const mod = n => (n % cities.length + cities.length) % cities.length;
   const normal = s => s.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().trim();
   const loading = new Map();
-  function ready(src) {
-    if (!loading.has(src)) {
+  function ready(src, slot = "") {
+    const key = `${slot}|${src}`;
+    if (!loading.has(key)) {
       const image = new Image();
       image.src = src;
-      const promise = image.decode().then(() => image).catch(error => { loading.delete(src); throw error; });
-      loading.set(src, promise);
+      const promise = image.decode().then(() => image).catch(error => { loading.delete(key); throw error; });
+      loading.set(key, promise);
     }
-    return loading.get(src);
+    return loading.get(key);
   }
   function render(position = current, instant = false) {
     const step = parseFloat(getComputedStyle(stage).getPropertyValue('--step'));
@@ -36,7 +37,15 @@
       card.tabIndex = index === current ? 0 : -1;
     });
   }
-  function updateDetails(city, packImages) {
+  function imageSpecs(city) {
+    return [
+      {slot:'cover', src:city.cover.image, alt:`${city.name} City Edition cover artwork`},
+      ...city.packs.map((pack, i) => ({slot:`pack-${i}`, src:pack.image, alt:pack.alt})),
+      ...city.editorial.previews.map((quest, i) => ({slot:`quest-${i}`, src:quest.image, alt:quest.alt})),
+      ...city.packs.map((pack, i) => ({slot:`cta-${i}`, src:pack.image, alt:''})),
+    ];
+  }
+  function updateDetails(city, images) {
     content.dataset.city = city.id;
     content.querySelector('h2').textContent = city.name;
     const copy = {
@@ -45,7 +54,6 @@
       questLink: `See a few ${city.name} quests`,
       total: city.packs.reduce((sum, pack) => sum + pack.questCount, 0),
       totalLabel: `quests across ${city.name}`,
-      purchaseNote: `Find ${city.name} in the app. City Edition purchase is separate from attraction admission.`,
       place: city.editorial.previews.map((quest, i) => `${String(i + 1).padStart(2, '0')} / ${quest.place}`),
     };
     content.querySelectorAll('[data-copy]').forEach(node => {
@@ -53,10 +61,20 @@
     });
     content.querySelector('.city-included').setAttribute('aria-label', `${city.name} City Edition includes`);
     content.querySelector('.city-quest-link').href = `#city=${city.id}&section=quests`;
-    content.querySelectorAll('.pack-row').forEach((row, i) => {
-      const pack = city.packs[i], img = packImages[i], previous = row.querySelector('img');
-      img.alt = pack.alt;
+    imageSpecs(city).forEach((spec, i) => {
+      const img = images[i];
+      const previous = spec.slot.startsWith('pack-')
+        ? content.querySelectorAll('.pack-row img')[Number(spec.slot.slice(5))]
+        : content.querySelector(`[data-image="${spec.slot}"]`);
+      img.alt = spec.alt;
+      if (spec.slot === 'cover') img.style.objectPosition = city.cover.position;
+      img.dataset.image = spec.slot;
+      img.width = img.naturalWidth;
+      img.height = img.naturalHeight;
       if (previous !== img) previous.replaceWith(img);
+    });
+    content.querySelectorAll('.pack-row').forEach((row, i) => {
+      const pack = city.packs[i];
       row.querySelector('.tag').textContent = pack.role;
       row.querySelector('.count').textContent = `${pack.questCount} quests`;
       row.querySelector('h3').textContent = pack.title;
@@ -67,14 +85,14 @@
   async function select(index, scroll = false, updateUrl = true) {
     requested = mod(index);
     const selected = requested, token = ++revision, city = cities[selected];
-    let packImages;
-    try { packImages = (await Promise.all([ready(city.cover.image), ...city.packs.map(p => ready(p.image))])).slice(1); }
+    let images;
+    try { images = await Promise.all(imageSpecs(city).map(spec => ready(spec.src, spec.slot))); }
     catch { if (token === revision) status.textContent = 'Could not load this city. Try again.'; return; }
     if (token !== revision) return;
     const cardFocused = cards.includes(document.activeElement);
     current = selected;
     // All incoming images are decoded. Update existing nodes together; the shell stays mounted.
-    updateDetails(city, packImages); render();
+    updateDetails(city, images); render();
     document.querySelector('#city-position').textContent = String(current + 1);
     status.textContent = `${city.name} selected. Citywide and local packs shown below.`;
     if (updateUrl) history.replaceState(null, '', '#city=' + city.id);
@@ -158,6 +176,6 @@
   }
   window.addEventListener('hashchange', fromHash);
   new ResizeObserver(() => render(current, true)).observe(stage);
-  cities.forEach(c => { ready(c.cover.image).catch(() => {}); c.packs.forEach(p => { ready(p.image).catch(() => {}); }); });
+  cities.forEach(city => { imageSpecs(city).forEach(spec => { ready(spec.src, spec.slot).catch(() => {}); }); });
   render(current, true); fromHash();
 })();
