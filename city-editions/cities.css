@@ -10,65 +10,66 @@
 .stage{height:487px;--step:232px}.city-card{width:270px;height:426px;top:25px}.card-art{height:360px;background:#f1eadc}.card-art img{object-fit:cover}.card-label{height:64px}.card-label strong{font-size:20px}
 @media(max-width:700px){.stage{height:402px;--step:193px}.city-card{width:222px;height:355px;top:23px}.card-art{height:296px}.card-label{height:57px;padding:8px 11px}.card-label strong{font-size:18px}.card-label small{font-size:10px}}
 
-/* Chicago editorial detail; other city presentations keep their existing layout. */
-[data-chicago-only][hidden]{display:none}
-.chicago-story{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(260px,1fr);gap:48px;padding:20px 0 44px;align-items:center}
-.chicago-story h3{font-size:clamp(38px,4.7vw,54px);line-height:1.03;margin:0 0 22px}
-.chicago-story-copy>p:not(.eyebrow){font-size:16px;line-height:1.7;color:var(--muted);max-width:520px;margin-top:14px}
-.chicago-quest-link{display:inline-flex;align-items:center;gap:18px;margin-top:22px;color:#6330c9;font-size:14px;font-weight:750;border-bottom:1px solid #c5acec;padding-bottom:6px}
-.chicago-quest-link:hover{border-color:var(--violet)}
-.chicago-included{background:#eee5ff;border:1px solid #ded0f5;border-radius:22px;padding:28px}
-.chicago-total{font-size:15px;font-weight:750;color:var(--ink)}
-.chicago-total strong{display:block;font-size:72px;letter-spacing:-.07em;line-height:1.05;color:#6330c9;margin-bottom:5px}
-.chicago-included>p:not(.chicago-total){font-size:14px;color:#55486f;margin-top:12px}
-.chicago-included ul{list-style:none;margin:22px 0;padding:0;border-top:1px solid #d7c7ed}
-.chicago-included li{padding:10px 0;border-bottom:1px solid #d7c7ed;font-size:13px;font-weight:650}
-.chicago-app-link{display:flex;justify-content:center;align-items:center;gap:10px;text-align:center;min-height:48px;padding:13px 15px;border-radius:12px;background:#7040f5;color:#fff;font-size:13px;font-weight:750;line-height:1.4}
-.chicago-app-link:hover{background:#5c2ddd}
-.chicago-included .chicago-purchase-note{font-size:11px!important;line-height:1.6}
-.chicago-quests,.chicago-fit{padding:42px 0;border-top:1px solid var(--line)}
-.chicago-quests{scroll-margin-top:24px}
-.chicago-section-heading{max-width:630px;margin-bottom:26px}
-.chicago-section-heading h3{font-size:35px;line-height:1.12;margin-bottom:13px}
-.chicago-section-heading>p:not(.eyebrow){color:var(--muted);font-size:15px;line-height:1.65}
-.chicago-quest-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
-.chicago-quest{padding:24px 22px;background:#f0ece3;border:1px solid #e4dccc;border-radius:16px;display:flex;flex-direction:column}
-.chicago-quest:nth-child(2){background:#eee8f6;border-color:#dfd4ec}
-.chicago-quest:nth-child(3){background:#e8efec;border-color:#d6e2dc}
-.chicago-place{font-size:10px;letter-spacing:.07em;text-transform:uppercase;font-weight:750;color:#625773;line-height:1.5;margin-bottom:22px}
-.chicago-quest h4,.chicago-fit h4{font-size:22px;line-height:1.15;letter-spacing:-.025em;margin:0 0 13px;font-weight:800}
-.chicago-quest>p:not(.chicago-place):not(.chicago-quest-meta){font-size:14px;line-height:1.7;color:#554e60;margin-bottom:24px}
-.chicago-quest-meta{font-size:12px;font-weight:750;margin-top:auto;padding-top:16px;border-top:1px solid #00000018}
-.chicago-quest-meta span{display:block;font-size:11px;font-weight:500;margin-top:4px;color:#625773}
-.chicago-fit-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:32px}
-.chicago-fit h4{font-size:20px}
-.chicago-fit-grid p{font-size:14px;line-height:1.7;color:var(--muted)}
-.chicago-planning{display:grid;grid-template-columns:1fr 2fr;gap:38px;padding:32px 0 40px;border-top:1px solid var(--line)}
-.chicago-planning h3{font-size:28px;line-height:1.14;margin:0;max-width:270px}
-.chicago-planning p{font-size:14px;line-height:1.7;color:var(--muted)}
-.chicago-planning p+p{margin-top:14px}.chicago-planning strong{color:var(--ink)}
+/* Shared city editorial detail. */
+.city-story{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(260px,1fr);gap:48px;padding:20px 0 44px;align-items:center}
+.city-story h3{font-size:clamp(38px,4.7vw,54px);line-height:1.03;margin:0 0 22px}
+.city-story-copy>p:not(.eyebrow){font-size:16px;line-height:1.7;color:var(--muted);max-width:520px;margin-top:14px}
+.city-quest-link{display:inline-flex;align-items:center;gap:18px;margin-top:22px;color:#6330c9;font-size:14px;font-weight:750;border-bottom:1px solid #c5acec;padding-bottom:6px}
+.city-quest-link:hover{border-color:var(--violet)}
+.city-included{background:#eee5ff;border:1px solid #ded0f5;border-radius:22px;padding:28px}
+.city-total{font-size:15px;font-weight:750;color:var(--ink)}
+.city-total strong{display:block;font-size:72px;letter-spacing:-.07em;line-height:1.05;color:#6330c9;margin-bottom:5px}
+.city-included>p:not(.city-total){font-size:14px;color:#55486f;margin-top:12px}
+.city-included ul{list-style:none;margin:22px 0;padding:0;border-top:1px solid #d7c7ed}
+.city-included li{padding:10px 0;border-bottom:1px solid #d7c7ed;font-size:13px;font-weight:650}
+.city-app-link{display:flex;justify-content:center;align-items:center;gap:10px;text-align:center;min-height:48px;padding:13px 15px;border-radius:12px;background:#7040f5;color:#fff;font-size:13px;font-weight:750;line-height:1.4}
+.city-app-link:hover{background:#5c2ddd}
+.city-included .city-purchase-note{font-size:11px!important;line-height:1.6}
+.city-quests,.city-fit{padding:42px 0;border-top:1px solid var(--line)}
+.city-quests{scroll-margin-top:24px}
+.city-section-heading{max-width:630px;margin-bottom:26px}
+.city-section-heading h3{font-size:35px;line-height:1.12;margin-bottom:13px}
+.city-section-heading>p:not(.eyebrow){color:var(--muted);font-size:15px;line-height:1.65}
+.city-quest-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.city-quest{padding:24px 22px;background:#f0ece3;border:1px solid #e4dccc;border-radius:16px;display:flex;flex-direction:column}
+.city-quest:nth-child(2){background:#eee8f6;border-color:#dfd4ec}
+.city-quest:nth-child(3){background:#e8efec;border-color:#d6e2dc}
+.city-place{font-size:10px;letter-spacing:.07em;text-transform:uppercase;font-weight:750;color:#625773;line-height:1.5;margin-bottom:22px}
+.city-quest h4,.city-fit h4{font-size:22px;line-height:1.15;letter-spacing:-.025em;margin:0 0 13px;font-weight:800}
+.city-quest>p:not(.city-place):not(.city-quest-meta){font-size:14px;line-height:1.7;color:#554e60;margin-bottom:24px}
+.city-quest-meta{font-size:12px;font-weight:750;margin-top:auto;padding-top:16px;border-top:1px solid #00000018}
+.city-quest-meta span{display:block;font-size:11px;font-weight:500;margin-top:4px;color:#625773}
+.city-fit-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:32px}
+.city-fit h4{font-size:20px}
+.city-fit-grid p{font-size:14px;line-height:1.7;color:var(--muted)}
+.city-planning{display:grid;grid-template-columns:1fr 2fr;gap:38px;padding:32px 0 40px;border-top:1px solid var(--line)}
+.city-planning h3{font-size:28px;line-height:1.14;margin:0;max-width:270px}
+.city-planning p{font-size:14px;line-height:1.7;color:var(--muted)}
+.city-planning p+p{margin-top:14px}.city-planning strong{color:var(--ink)}
 @media(max-width:700px){
-  .chicago-story{grid-template-columns:1fr;gap:26px;padding:20px 0 30px}
-  .chicago-story h3{font-size:43px;margin-bottom:18px}
-  .chicago-story-copy>p:not(.eyebrow){font-size:16px;line-height:1.65}
-  .chicago-included{padding:23px;border-radius:17px}
-  .chicago-total strong{font-size:58px;display:inline-block;margin-right:10px;vertical-align:middle}
-  .chicago-included ul{margin:18px 0}
-  .chicago-included .chicago-purchase-note{font-size:12px!important}
-  .chicago-quests,.chicago-fit{padding:32px 0}
-  .chicago-section-heading h3{font-size:30px}
-  .chicago-quest-grid,.chicago-fit-grid{grid-template-columns:1fr;gap:16px}
-  .chicago-quest{padding:24px}.chicago-place{margin-bottom:14px}
-  .chicago-quest>p:not(.chicago-place):not(.chicago-quest-meta),.chicago-fit-grid p{font-size:15px}
-  .chicago-fit-grid{gap:24px}
-  .chicago-planning{grid-template-columns:1fr;gap:20px;padding:30px 0}
-  .chicago-planning h3{font-size:28px;max-width:100%}
-  .chicago-planning p{font-size:15px}
+  .city-story{grid-template-columns:1fr;gap:26px;padding:20px 0 30px}
+  .city-story h3{font-size:43px;margin-bottom:18px}
+  .city-story-copy>p:not(.eyebrow){font-size:16px;line-height:1.65}
+  .city-included{padding:23px;border-radius:17px}
+  .city-total strong{font-size:58px;display:inline-block;margin-right:10px;vertical-align:middle}
+  .city-included ul{margin:18px 0}
+  .city-included .city-purchase-note{font-size:12px!important}
+  .city-quests,.city-fit{padding:32px 0}
+  .city-section-heading h3{font-size:30px}
+  .city-quest-grid,.city-fit-grid{grid-template-columns:1fr;gap:16px}
+  .city-quest{padding:24px}.city-place{margin-bottom:14px}
+  .city-quest>p:not(.city-place):not(.city-quest-meta),.city-fit-grid p{font-size:15px}
+  .city-fit-grid{gap:24px}
+  .city-planning{grid-template-columns:1fr;gap:20px;padding:30px 0}
+  .city-planning h3{font-size:28px;max-width:100%}
+  .city-planning p{font-size:15px}
 }
 
 @media(max-width:700px){
-  #city-content[data-city="chicago"] .pack-row{grid-template-columns:1fr;gap:20px}
-  #city-content[data-city="chicago"] .pack-art img{width:100%;max-height:none}
-  #city-content[data-city="chicago"] .pack-copy>p{font-size:15px;line-height:1.65}
-  #city-content[data-city="chicago"] .pack-copy h3{font-size:29px}
+  #city-content .pack-row{grid-template-columns:1fr;gap:20px}
+  #city-content .pack-art img{width:100%;max-height:none}
+  #city-content .pack-copy>p{font-size:15px;line-height:1.65}
+  #city-content .pack-copy h3{font-size:29px}
 }
+
+.city-quest-meta .quest-duration{font-size:12px;font-weight:750;margin-top:0;color:var(--ink)}

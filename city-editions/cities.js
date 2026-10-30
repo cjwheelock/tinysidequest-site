@@ -16,7 +16,7 @@
     if (!loading.has(src)) {
       const image = new Image();
       image.src = src;
-      const promise = image.decode().catch(error => { loading.delete(src); throw error; });
+      const promise = image.decode().then(() => image).catch(error => { loading.delete(src); throw error; });
       loading.set(src, promise);
     }
     return loading.get(src);
@@ -36,15 +36,27 @@
       card.tabIndex = index === current ? 0 : -1;
     });
   }
-  function updateDetails(city) {
+  function updateDetails(city, packImages) {
     content.dataset.city = city.id;
     content.querySelector('h2').textContent = city.name;
-    content.querySelectorAll('[data-chicago-only]').forEach(section => {
-      section.hidden = city.id !== 'chicago';
+    const copy = {
+      ...city.editorial,
+      storyEyebrow: `Explore ${city.name} with SideQuest`,
+      questLink: `See a few ${city.name} quests`,
+      total: city.packs.reduce((sum, pack) => sum + pack.questCount, 0),
+      totalLabel: `quests across ${city.name}`,
+      purchaseNote: `Find ${city.name} in the app. City Edition purchase is separate from attraction admission.`,
+      place: city.editorial.previews.map((quest, i) => `${String(i + 1).padStart(2, '0')} / ${quest.place}`),
+    };
+    content.querySelectorAll('[data-copy]').forEach(node => {
+      node.textContent = node.dataset.copy.split('.').reduce((value, key) => value[key], copy);
     });
+    content.querySelector('.city-included').setAttribute('aria-label', `${city.name} City Edition includes`);
+    content.querySelector('.city-quest-link').href = `#city=${city.id}&section=quests`;
     content.querySelectorAll('.pack-row').forEach((row, i) => {
-      const pack = city.packs[i], img = row.querySelector('img');
-      img.src = pack.image; img.alt = pack.alt;
+      const pack = city.packs[i], img = packImages[i], previous = row.querySelector('img');
+      img.alt = pack.alt;
+      if (previous !== img) previous.replaceWith(img);
       row.querySelector('.tag').textContent = pack.role;
       row.querySelector('.count').textContent = `${pack.questCount} quests`;
       row.querySelector('h3').textContent = pack.title;
@@ -55,18 +67,19 @@
   async function select(index, scroll = false, updateUrl = true) {
     requested = mod(index);
     const selected = requested, token = ++revision, city = cities[selected];
-    try { await Promise.all([ready(city.cover.image), ...city.packs.map(p => ready(p.image))]); }
+    let packImages;
+    try { packImages = (await Promise.all([ready(city.cover.image), ...city.packs.map(p => ready(p.image))])).slice(1); }
     catch { if (token === revision) status.textContent = 'Could not load this city. Try again.'; return; }
     if (token !== revision) return;
     const cardFocused = cards.includes(document.activeElement);
     current = selected;
     // All incoming images are decoded. Update existing nodes together; the shell stays mounted.
-    updateDetails(city); render();
+    updateDetails(city, packImages); render();
     document.querySelector('#city-position').textContent = String(current + 1);
     status.textContent = `${city.name} selected. Citywide and local packs shown below.`;
     if (updateUrl) history.replaceState(null, '', '#city=' + city.id);
     if (cardFocused) cards[current].focus({preventScroll:true});
-    if (scroll) document.querySelector('#city-details').scrollIntoView({behavior:reduced ? 'instant' : 'smooth',block:'start'});
+    if (scroll) document.querySelector(scroll === 'quests' ? '#city-quests' : '#city-details').scrollIntoView({behavior:reduced ? 'instant' : 'smooth',block:'start'});
   }
   document.querySelector('.previous').addEventListener('click', () => select(requested - 1));
   document.querySelector('.next').addEventListener('click', () => select(requested + 1));
@@ -136,7 +149,13 @@
   clear.addEventListener('click', () => { input.value = ''; input.focus(); search(); });
   document.addEventListener('click', e => { if (!e.target.closest('.search')) closeSearch(); });
   document.querySelector('.search').addEventListener('focusout', e => { if (!e.currentTarget.contains(e.relatedTarget)) closeSearch(); });
-  function fromHash() { const id = new URLSearchParams(location.hash.slice(1)).get('city'), index = cities.findIndex(c => c.id === id); if (index >= 0) select(index, false, false); }
+  function fromHash() {
+    const params = new URLSearchParams(location.hash.slice(1));
+    // Keep the first published Chicago quest anchor working.
+    const legacy = location.hash === '#chicago-quests';
+    const index = cities.findIndex(c => c.id === (legacy ? 'chicago' : params.get('city')));
+    if (index >= 0) select(index, legacy || params.get('section') === 'quests' ? 'quests' : false, false);
+  }
   window.addEventListener('hashchange', fromHash);
   new ResizeObserver(() => render(current, true)).observe(stage);
   cities.forEach(c => { ready(c.cover.image).catch(() => {}); c.packs.forEach(p => { ready(p.image).catch(() => {}); }); });
