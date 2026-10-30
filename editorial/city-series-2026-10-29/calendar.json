@@ -2,15 +2,16 @@
   "repository": "cjwheelock/tinysidequest-site",
   "base_url": "https://tinysidequest.com",
   "timezone": "America/New_York",
-  "cadence": "weekdays at 09:00",
+  "cadence": "Chicago October 31 at 09:00; then weekdays at 09:00",
   "max_posts": 20,
   "posts": [
     {
       "order": 1,
       "city_id": "chicago",
       "slug": "things-to-do-chicago-three-stops",
-      "title": "Things to Do in Chicago: Three Stops for a More Playful Visit",
-      "date": "2026-10-30"
+      "title": "Things to Do in Chicago: A Free Downtown Walk That Ends on the River",
+      "date": "2026-10-31",
+      "allow_weekend": true
     },
     {
       "order": 2,
