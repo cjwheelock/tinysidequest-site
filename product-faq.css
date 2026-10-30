@@ -1,0 +1,9 @@
+/* Product answers use the existing website colors and type. */
+.product-faq{max-width:1200px;margin:0 auto;padding:72px 48px 40px}
+.product-faq h2{font-size:clamp(30px,4vw,44px);line-height:1.15;letter-spacing:-.04em;margin-bottom:32px}
+.product-faq-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 48px}
+.product-faq article{padding:24px 0;border-top:1px solid #e9dcc8;min-width:0}
+.product-faq h3{font-size:20px;line-height:1.35;letter-spacing:-.02em;margin-bottom:10px}
+.product-faq p{font-size:16px;color:#5a536a}
+.product-faq a{color:var(--violet);text-decoration:underline;text-underline-offset:3px}
+@media(max-width:700px){.product-faq{padding:44px 22px 20px}.product-faq-grid{grid-template-columns:1fr}.product-faq h2{margin-bottom:24px}.product-faq article{padding:20px 0}}
