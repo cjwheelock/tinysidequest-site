@@ -26,6 +26,9 @@ export function previewDocument(preview, config, document = window.document) {
       if (!href.startsWith('#')) {
         element.setAttribute('target', '_top');
         element.setAttribute('rel', 'noopener noreferrer');
+      } else {
+        // srcdoc inherits the parent's base URL; make fragment navigation stay in this document.
+        element.setAttribute('href', `about:srcdoc${href}`);
       }
     }
     if (element.tagName === 'IMG') {
