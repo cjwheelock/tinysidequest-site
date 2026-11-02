@@ -1,6 +1,6 @@
 import { checkedConfig, GateController, GateError, messages } from './core.js';
 import { createGateApi } from './client.js';
-import { previewDocument } from './render.js';
+import { previewDocument } from './render.js?v=20261102-fragments';
 
 const form = document.querySelector('#code-form');
 const input = document.querySelector('#code');
