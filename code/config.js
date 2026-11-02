@@ -1,0 +1,1 @@
+window.SIDEQUEST_TEASER_CONFIG = {"supabaseUrl":"https://qoxoutfmmmuzjneyvryi.supabase.co","publishableKey":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFveG91dGZtbW11empuZXl2cnlpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzgyNjI3OTQsImV4cCI6MjA5MzgzODc5NH0.gziAhY5aGdjkkd2SK44csMSMo8xtwufTZUyovUswSA0","assetBucket":"sidequest-institution-teasers"};

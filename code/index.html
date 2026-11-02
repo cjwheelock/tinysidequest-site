@@ -1,37 +1,33 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <title>SideQuest</title>
-    <!-- The `react-native-web` recommended style reset: https://necolas.github.io/react-native-web/docs/setup/#root-element -->
-    <style id="expo-reset">
-      /* These styles make the body full-height */
-      html,
-      body {
-        height: 100%;
-      }
-      /* These styles disable body scrolling if you are using <ScrollView> */
-      body {
-        overflow: hidden;
-      }
-      /* These styles make the root element full-height */
-      #root {
-        display: flex;
-        height: 100%;
-        flex: 1;
-      }
-    </style>
-  <meta name="robots" content="noindex,nofollow"><meta name="referrer" content="no-referrer"><meta name="theme-color" content="#F5F8FF"><script>if(location.protocol==="http:"&&!["localhost","127.0.0.1","[::1]"].includes(location.hostname))location.replace("https:"+location.href.slice(5));</script></head>
-
-  <body>
-    <!-- Use static rendering with Expo Router to support running without JavaScript. -->
-    <noscript>
-      You need to enable JavaScript to run this app.
-    </noscript>
-    <!-- The root element for your Expo app. -->
-    <div id="root"></div>
-  <script src="/code/_expo/static/js/web/index-c63f5a16166c48ef5ccdc86033262dc1.js" defer></script>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="referrer" content="no-referrer">
+  <meta name="theme-color" content="#faf8f3">
+  <title>SideQuest</title>
+  <link rel="icon" href="./favicon.ico">
+  <link rel="stylesheet" href="./shell.css">
+  <script src="./config.js" defer></script>
+  <script src="./vendor/supabase.js" defer></script>
+  <script type="module" src="./src/app.js"></script>
+</head>
+<body>
+  <div id="viewer-toolbar" hidden><span>SideQuest</span><button id="change-code" type="button">Change code</button></div>
+  <main id="viewer" aria-label="SideQuest preview"></main>
+  <section id="entry" aria-labelledby="entry-title">
+    <div class="entry-card">
+      <a class="brand" href="https://tinysidequest.com/" aria-label="SideQuest home"><img src="./wordmark.png" width="182" height="68" alt="SideQuest"></a>
+      <h1 id="entry-title">Enter your code</h1>
+      <form id="code-form" aria-busy="false">
+        <label for="code">Code</label>
+        <input id="code" name="code" type="text" inputmode="text" autocomplete="off" autocapitalize="characters" spellcheck="false" minlength="6" maxlength="8" required aria-describedby="error status">
+        <p id="error" role="alert"></p>
+        <button id="continue" type="submit">Continue</button>
+        <p id="status" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
 </body>
 </html>
