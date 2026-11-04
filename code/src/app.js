@@ -1,6 +1,6 @@
-import { checkedConfig, GateController, GateError, messages } from './core.js';
-import { createGateApi } from './client.js';
-import { previewDocument } from './render.js?v=20261102-fragments';
+import { checkedConfig, GateController, GateError, messages } from './core.js?v=20261104-direct';
+import { createGateApi } from './client.js?v=20261104-direct';
+import { previewDocument } from './render.js?v=20261104-direct';
 
 const form = document.querySelector('#code-form');
 const input = document.querySelector('#code');
@@ -9,7 +9,7 @@ const entry = document.querySelector('#entry');
 const alert = document.querySelector('#error');
 const status = document.querySelector('#status');
 const viewer = document.querySelector('#viewer');
-const toolbar = document.querySelector('#viewer-toolbar');
+const opening = document.querySelector('#opening');
 let activeFrame = null;
 
 function preloadImages(assets) {
@@ -24,7 +24,12 @@ function preloadImages(assets) {
 }
 
 const view = {
+  // Links in outreach emails open the page directly; the code form is only a fallback.
+  opening() { entry.hidden = true; opening.hidden = false; },
+  // Headless link scanners would otherwise use a code's limited redemptions.
+  automated() { return navigator.webdriver === true; },
   entry(code, message = '') {
+    opening.hidden = true;
     input.value = code;
     entry.hidden = false;
     entry.classList.toggle('overlay', Boolean(activeFrame));
@@ -32,6 +37,7 @@ const view = {
     input.focus();
   },
   error(message) {
+    opening.hidden = true;
     entry.hidden = false;
     entry.classList.toggle('overlay', Boolean(activeFrame));
     alert.textContent = message;
@@ -67,9 +73,10 @@ const view = {
     previous?.remove();
   },
   loaded() {
-    entry.hidden = true; toolbar.hidden = false;
+    entry.hidden = true; opening.hidden = true;
     activeFrame?.focus();
-    document.title = 'SideQuest';
+    const named = activeFrame?.srcdoc.match(/<title>([^<]{1,80})<\/title>/);
+    document.title = named ? named[1].replace(/&amp;/g, '&') : 'SideQuest';
   },
 };
 
@@ -85,6 +92,5 @@ if (!config || !window.supabase?.createClient) {
   const controller = new GateController({ api: createGateApi(client, config), view,
     render: payload => previewDocument(payload, config) });
   form.addEventListener('submit', event => { event.preventDefault(); void controller.submit(input.value); });
-  document.querySelector('#change-code').addEventListener('click', () => view.entry(''));
   void controller.start(window.location.search);
 }

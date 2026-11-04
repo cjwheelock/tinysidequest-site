@@ -3,20 +3,24 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="robots" content="noindex, nofollow">
+  <meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex, noai, noimageai">
   <meta name="referrer" content="no-referrer">
   <meta name="theme-color" content="#faf8f3">
   <title>SideQuest</title>
   <link rel="icon" href="./favicon.ico">
-  <link rel="stylesheet" href="./shell.css">
+  <link rel="stylesheet" href="./shell.css?v=20261104-direct">
   <script src="./config.js" defer></script>
   <script src="./vendor/supabase.js" defer></script>
-  <script type="module" src="./src/app.js?v=20261102-fragments"></script>
+  <script type="module" src="./src/app.js?v=20261104-direct"></script>
 </head>
 <body>
-  <div id="viewer-toolbar" hidden><span>SideQuest</span><button id="change-code" type="button">Change code</button></div>
   <main id="viewer" aria-label="SideQuest preview"></main>
-  <section id="entry" aria-labelledby="entry-title">
+  <section id="opening" aria-live="polite" aria-busy="true">
+    <img src="./wordmark.png" width="182" height="68" alt="SideQuest">
+    <span class="spinner" aria-hidden="true"></span>
+    <p>Opening your preview…</p>
+  </section>
+  <section id="entry" aria-labelledby="entry-title" hidden>
     <div class="entry-card">
       <a class="brand" href="https://tinysidequest.com/" aria-label="SideQuest home"><img src="./wordmark.png" width="182" height="68" alt="SideQuest"></a>
       <h1 id="entry-title">Enter your code</h1>
