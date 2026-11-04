@@ -1,4 +1,4 @@
-import { GateError, messages, parseRedeemedAccess, selectEnterprisePack, checkedPreview } from './core.js';
+import { GateError, messages, parseRedeemedAccess, selectEnterprisePack, checkedPreview } from './core.js?v=20261104-direct';
 
 const isUnauthorized = error => Number(error?.context?.status ?? error?.status) === 401
   || ['PGRST301', 'bad_jwt', 'session_not_found', 'refresh_token_not_found', 'refresh_token_already_used'].includes(error?.code);

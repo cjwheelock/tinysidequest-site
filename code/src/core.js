@@ -124,8 +124,14 @@ export class GateController {
   constructor({ api, view, render }) { this.api = api; this.view = view; this.render = render; this.pending = false; this.current = null; }
   async start(search) {
     const initial = codeFromSearch(search);
+    // A valid link opens its page directly. Automated browsers wait for Continue so
+    // link scanners cannot use up a code's redemptions.
+    if (initial.explicit && !initial.invalid && !this.view.automated?.()) {
+      this.view.opening?.();
+      await this.run(async () => this.load(await this.api.redeem(initial.code)), 'Opening…');
+      return;
+    }
     this.view.entry(initial.code, initial.invalid ? messages.malformed : '');
-    // An explicit link always waits for Continue, even if this browser has earlier access.
     if (initial.explicit) return;
     await this.run(async () => {
       const access = await this.api.resume();

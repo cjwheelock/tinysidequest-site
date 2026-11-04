@@ -1,8 +1,9 @@
-import { GateError, messages, safeAssetPath } from './core.js';
+import { GateError, messages, safeAssetPath } from './core.js?v=20261104-direct';
 
 const allowedTags = new Set(['A', 'HEADER', 'NAV', 'MAIN', 'SECTION', 'DIV', 'SPAN', 'P', 'H1', 'H2', 'H3', 'FIGURE', 'IMG', 'FIGCAPTION', 'ARTICLE', 'FOOTER', 'UL', 'LI', 'BR', 'STRONG', 'EM']);
 const safeAttributes = new Set(['class', 'id', 'role', 'aria-label', 'aria-labelledby', 'aria-hidden', 'tabindex', 'data-quest-id', 'alt', 'width', 'height', 'loading', 'decoding', 'fetchpriority', 'sizes']);
 const destinations = new Set(['https://tinysidequest.com/', 'https://tinysidequest.com/contact/', 'https://tinysidequest.com/privacy/', 'https://apps.apple.com/us/app/sidequest-tiny-adventures/id6781441096']);
+const mailtoPattern = /^mailto:cj@tinysidequest\.com\?subject=[A-Za-z0-9%._~-]{1,120}$/;
 const escape = text => text.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/"/g, '&quot;');
 
 // Template contents are inert; no source resources are inserted into the live document.
@@ -22,7 +23,7 @@ export function previewDocument(preview, config, document = window.document) {
     }
     if (element.tagName === 'A') {
       const href = element.getAttribute('href');
-      if (!href || !/^#[A-Za-z][\w-]*$/.test(href) && !destinations.has(href)) throw new GateError('preview', messages.preview);
+      if (!href || !/^#[A-Za-z][\w-]*$/.test(href) && !destinations.has(href) && !mailtoPattern.test(href)) throw new GateError('preview', messages.preview);
       if (!href.startsWith('#')) {
         element.setAttribute('target', '_top');
         element.setAttribute('rel', 'noopener noreferrer');
