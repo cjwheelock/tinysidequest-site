@@ -1,5 +1,5 @@
 {
- "source": "SideQuest live City catalog (Supabase), exported 2026-11-05",
+ "source": "SideQuest live City catalog (Supabase), exported 2026-11-05 (after scope alignment)",
  "cities": [
   {
    "id": "albany-ny",
@@ -8,6 +8,8 @@
    "aliases": [],
    "cw": "albany-museums-homes-and-horizons",
    "nb": "albany-capitol-hill-to-hudson",
+   "coverageCw": "albany-museums-homes-and-horizons",
+   "coverageLocal": "albany-capitol-hill-to-hudson",
    "packs": [
     {
      "id": "albany-capitol-hill-to-hudson",
@@ -105,6 +107,8 @@
    "aliases": [],
    "cw": "albuquerque-sandia-to-river",
    "nb": "albuquerque-old-town-to-biopark",
+   "coverageCw": "albuquerque-sandia-to-river",
+   "coverageLocal": "albuquerque-old-town-to-biopark",
    "packs": [
     {
      "id": "albuquerque-old-town-to-biopark",
@@ -201,6 +205,8 @@
    "aliases": [],
    "cw": "amsterdam-waterline-wonder",
    "nb": "amsterdam-local-brick-and-canals",
+   "coverageCw": "amsterdam-waterline-wonder",
+   "coverageLocal": "amsterdam-local-brick-and-canals",
    "packs": [
     {
      "id": "amsterdam-local-brick-and-canals",
@@ -296,6 +302,8 @@
    "aliases": [],
    "cw": "anaheim-stages-sports-and-open-space",
    "nb": "anaheim-center-street-and-packing-district",
+   "coverageCw": "anaheim-stages-sports-and-open-space",
+   "coverageLocal": "anaheim-center-street-and-packing-district",
    "packs": [
     {
      "id": "anaheim-center-street-and-packing-district",
@@ -393,6 +401,8 @@
    "aliases": [],
    "cw": "anchorage-inlet-to-chugach",
    "nb": "anchorage-downtown-creek-walk",
+   "coverageCw": "anchorage-inlet-to-chugach",
+   "coverageLocal": "anchorage-downtown-creek-walk",
    "packs": [
     {
      "id": "anchorage-downtown-creek-walk",
@@ -489,6 +499,8 @@
    "aliases": [],
    "cw": "antalya-citywide-parks-and-coast",
    "nb": "antalya-local-kaleici-lanes",
+   "coverageCw": "antalya-citywide-parks-and-coast",
+   "coverageLocal": "antalya-local-kaleici-lanes",
    "packs": [
     {
      "id": "antalya-citywide-parks-and-coast",
@@ -585,6 +597,8 @@
    "aliases": [],
    "cw": "asheville-mountain-and-makers",
    "nb": "asheville-downtown-threads",
+   "coverageCw": "asheville-mountain-and-makers",
+   "coverageLocal": "asheville-downtown-threads",
    "packs": [
     {
      "id": "asheville-downtown-threads",
@@ -683,7 +697,9 @@
     "αθηνα"
    ],
    "cw": "athens-citywide-marble-brick-and-open-sky",
-   "nb": null,
+   "nb": "athens-stone-frames-and-garden-time",
+   "coverageCw": "athens-citywide-marble-brick-and-open-sky",
+   "coverageLocal": "athens-stone-frames-and-garden-time",
    "packs": [
     {
      "id": "athens-citywide-marble-brick-and-open-sky",
@@ -731,13 +747,14 @@
     {
      "id": "athens-stone-frames-and-garden-time",
      "city": "Athens",
-     "scope": "citywide",
+     "scope": "neighborhood",
      "sort": 0,
      "live": true,
      "title": "Athens: Stone Frames and Garden Time",
      "heroTitle": "Stone Frames and Garden Time",
      "promise": "Find an Athens story in the space between a stone edge and a moving leaf.",
      "description": "Follow public streets around Plaka and Makrygianni, then slow down among Zappeion and the National Garden. Ten small adventures turn light, shapes and changing views into notes, collections and stories.",
+     "neighborhood": "Plaka, Makrygianni and the National Garden",
      "questCount": 10,
      "valueLabels": [
       "10 quests",
@@ -778,6 +795,8 @@
    "aliases": [],
    "cw": "athens-ga-citywide",
    "nb": "athens-ga-local",
+   "coverageCw": "athens-ga-citywide",
+   "coverageLocal": "athens-ga-local",
    "packs": [
     {
      "id": "athens-ga-citywide",
@@ -874,6 +893,8 @@
    "aliases": [],
    "cw": "atlanta-city-in-motion",
    "nb": "atlanta-along-the-eastside",
+   "coverageCw": "atlanta-city-in-motion",
+   "coverageLocal": "atlanta-along-the-eastside",
    "packs": [
     {
      "id": "atlanta-along-the-eastside",
@@ -970,6 +991,8 @@
    "aliases": [],
    "cw": "atlantic-city-inlet-arts-and-stories",
    "nb": "atlantic-city-boardwalk-to-steel-pier",
+   "coverageCw": "atlantic-city-inlet-arts-and-stories",
+   "coverageLocal": "atlantic-city-boardwalk-to-steel-pier",
    "packs": [
     {
      "id": "atlantic-city-boardwalk-to-steel-pier",
@@ -1067,6 +1090,8 @@
    "aliases": [],
    "cw": "auckland-citywide",
    "nb": "auckland-local",
+   "coverageCw": "auckland-citywide",
+   "coverageLocal": "auckland-local",
    "packs": [
     {
      "id": "auckland-citywide",
@@ -1163,6 +1188,8 @@
    "aliases": [],
    "cw": "austin-capitol-springs-and-lake",
    "nb": "austin-south-congress",
+   "coverageCw": "austin-capitol-springs-and-lake",
+   "coverageLocal": "austin-south-congress",
    "packs": [
     {
      "id": "austin-capitol-springs-and-lake",
@@ -1259,6 +1286,8 @@
    "aliases": [],
    "cw": "baltimore-fort-galleries-and-greenways",
    "nb": "baltimore-harbor-to-fells-point",
+   "coverageCw": "baltimore-fort-galleries-and-greenways",
+   "coverageLocal": "baltimore-harbor-to-fells-point",
    "packs": [
     {
      "id": "baltimore-fort-galleries-and-greenways",
@@ -1359,6 +1388,8 @@
    ],
    "cw": "bangkok-citywide-forms-and-gardens",
    "nb": "bangkok-river-and-lanes",
+   "coverageCw": "bangkok-citywide-forms-and-gardens",
+   "coverageLocal": "bangkok-river-and-lanes",
    "packs": [
     {
      "id": "bangkok-citywide-forms-and-gardens",
@@ -1455,6 +1486,8 @@
    "aliases": [],
    "cw": "bar-harbor-me-citywide",
    "nb": "bar-harbor-me-local",
+   "coverageCw": "bar-harbor-me-citywide",
+   "coverageLocal": "bar-harbor-me-local",
    "packs": [
     {
      "id": "bar-harbor-me-citywide",
@@ -1551,6 +1584,8 @@
    "aliases": [],
    "cw": "barcelona-lines-in-the-light",
    "nb": "barcelona-local-hill-and-horizon",
+   "coverageCw": "barcelona-lines-in-the-light",
+   "coverageLocal": "barcelona-local-hill-and-horizon",
    "packs": [
     {
      "id": "barcelona-lines-in-the-light",
@@ -1646,6 +1681,8 @@
    "aliases": [],
    "cw": "berlin-citywide-parks-and-spree",
    "nb": "berlin-read-the-open-city",
+   "coverageCw": "berlin-citywide-parks-and-spree",
+   "coverageLocal": "berlin-read-the-open-city",
    "packs": [
     {
      "id": "berlin-citywide-parks-and-spree",
@@ -1742,6 +1779,8 @@
    "aliases": [],
    "cw": "boise-foothills-and-culture",
    "nb": "boise-capitol-to-river",
+   "coverageCw": "boise-foothills-and-culture",
+   "coverageLocal": "boise-capitol-to-river",
    "packs": [
     {
      "id": "boise-capitol-to-river",
@@ -1838,6 +1877,8 @@
    "aliases": [],
    "cw": "boston-between-the-bricks",
    "nb": "boston-doors-squares-water",
+   "coverageCw": "boston-history-harbor-and-home-teams",
+   "coverageLocal": "boston-doors-squares-water",
    "packs": [
     {
      "id": "boston-between-the-bricks",
@@ -1976,6 +2017,8 @@
    "aliases": [],
    "cw": "boulder-flatirons-science-and-trails",
    "nb": "boulder-pearl-to-creek",
+   "coverageCw": "boulder-flatirons-science-and-trails",
+   "coverageLocal": "boulder-pearl-to-creek",
    "packs": [
     {
      "id": "boulder-flatirons-science-and-trails",
@@ -2073,6 +2116,8 @@
    "aliases": [],
    "cw": "bozeman-mt-citywide",
    "nb": "bozeman-mt-local",
+   "coverageCw": "bozeman-mt-citywide",
+   "coverageLocal": "bozeman-mt-local",
    "packs": [
     {
      "id": "bozeman-mt-citywide",
@@ -2169,6 +2214,8 @@
    "aliases": [],
    "cw": "branson-shows-hills-and-waters",
    "nb": "branson-downtown-to-taneycomo",
+   "coverageCw": "branson-shows-hills-and-waters",
+   "coverageLocal": "branson-downtown-to-taneycomo",
    "packs": [
     {
      "id": "branson-downtown-to-taneycomo",
@@ -2266,6 +2313,8 @@
    "aliases": [],
    "cw": "breckenridge-co-citywide",
    "nb": "breckenridge-co-local",
+   "coverageCw": "breckenridge-co-citywide",
+   "coverageLocal": "breckenridge-co-local",
    "packs": [
     {
      "id": "breckenridge-co-citywide",
@@ -2362,6 +2411,8 @@
    "aliases": [],
    "cw": "bruges-citywide",
    "nb": "bruges-local",
+   "coverageCw": "bruges-citywide",
+   "coverageLocal": "bruges-local",
    "packs": [
     {
      "id": "bruges-citywide",
@@ -2458,6 +2509,8 @@
    "aliases": [],
    "cw": "brussels-citywide-frames-and-forms",
    "nb": "brussels-local-marolles-and-sablon",
+   "coverageCw": "brussels-citywide-frames-and-forms",
+   "coverageLocal": "brussels-local-marolles-and-sablon",
    "packs": [
     {
      "id": "brussels-citywide-frames-and-forms",
@@ -2553,7 +2606,9 @@
    "sort": 0,
    "aliases": [],
    "cw": "budapest-citywide-umbrellas-ruins-and-new-steps",
-   "nb": null,
+   "nb": "budapest-riverlines-and-park-rhythms",
+   "coverageCw": "budapest-citywide-umbrellas-ruins-and-new-steps",
+   "coverageLocal": "budapest-riverlines-and-park-rhythms",
    "packs": [
     {
      "id": "budapest-citywide-umbrellas-ruins-and-new-steps",
@@ -2601,13 +2656,14 @@
     {
      "id": "budapest-riverlines-and-park-rhythms",
      "city": "Budapest",
-     "scope": "citywide",
+     "scope": "neighborhood",
      "sort": 0,
      "live": true,
      "title": "Budapest: Riverlines and Park Rhythms",
      "heroTitle": "Riverlines and Park Rhythms",
      "promise": "Find Budapest in a changing view, a repeating shape and a quiet moment.",
      "description": "Read the Danube in near and distant details, then find a different rhythm in Városliget. Ten small adventures turn facades, paths and park buildings into collections and creations of your own.",
+     "neighborhood": "Central Pest and Városliget",
      "questCount": 10,
      "valueLabels": [
       "10 quests",
@@ -2648,6 +2704,8 @@
    "aliases": [],
    "cw": "buenos-aires-citywide",
    "nb": "buenos-aires-local",
+   "coverageCw": "buenos-aires-citywide",
+   "coverageLocal": "buenos-aires-local",
    "packs": [
     {
      "id": "buenos-aires-citywide",
@@ -2744,6 +2802,8 @@
    "aliases": [],
    "cw": "burlington-vt-citywide",
    "nb": "burlington-vt-local",
+   "coverageCw": "burlington-vt-citywide",
+   "coverageLocal": "burlington-vt-local",
    "packs": [
     {
      "id": "burlington-vt-citywide",
@@ -2840,6 +2900,8 @@
    "aliases": [],
    "cw": "charleston-harbor-and-lowcountry",
    "nb": "charleston-from-market-to-battery",
+   "coverageCw": "charleston-harbor-and-lowcountry",
+   "coverageLocal": "charleston-from-market-to-battery",
    "packs": [
     {
      "id": "charleston-from-market-to-battery",
@@ -2937,6 +2999,8 @@
    "aliases": [],
    "cw": "charlotte-art-racing-and-outdoors",
    "nb": "charlotte-patterns-along-tryon",
+   "coverageCw": "charlotte-art-racing-and-outdoors",
+   "coverageLocal": "charlotte-patterns-along-tryon",
    "packs": [
     {
      "id": "charlotte-art-racing-and-outdoors",
@@ -3033,6 +3097,8 @@
    "aliases": [],
    "cw": "chattanooga-mountain-river-and-rail",
    "nb": "chattanooga-riverfront-to-terminal",
+   "coverageCw": "chattanooga-mountain-river-and-rail",
+   "coverageLocal": "chattanooga-riverfront-to-terminal",
    "packs": [
     {
      "id": "chattanooga-mountain-river-and-rail",
@@ -3130,6 +3196,8 @@
    "aliases": [],
    "cw": "chiang-mai-citywide",
    "nb": "chiang-mai-local",
+   "coverageCw": "chiang-mai-citywide",
+   "coverageLocal": "chiang-mai-local",
    "packs": [
     {
      "id": "chiang-mai-citywide",
@@ -3226,6 +3294,8 @@
    "aliases": [],
    "cw": "chicago-skyline-museums-and-lake",
    "nb": "chicago-steel-and-water",
+   "coverageCw": "chicago-skyline-museums-and-lake",
+   "coverageLocal": "chicago-steel-and-water",
    "packs": [
     {
      "id": "chicago-skyline-museums-and-lake",
@@ -3323,6 +3393,8 @@
    "aliases": [],
    "cw": "cincinnati-art-parks-and-stories",
    "nb": "cincinnati-downtown-to-river",
+   "coverageCw": "cincinnati-art-parks-and-stories",
+   "coverageLocal": "cincinnati-downtown-to-river",
    "packs": [
     {
      "id": "cincinnati-art-parks-and-stories",
@@ -3420,6 +3492,8 @@
    "aliases": [],
    "cw": "clearwater-gulf-to-gardens",
    "nb": "clearwater-downtown-to-harbor",
+   "coverageCw": "clearwater-gulf-to-gardens",
+   "coverageLocal": "clearwater-downtown-to-harbor",
    "packs": [
     {
      "id": "clearwater-downtown-to-harbor",
@@ -3516,6 +3590,8 @@
    "aliases": [],
    "cw": "cleveland-lake-art-and-living-city",
    "nb": "cleveland-civic-core-walk",
+   "coverageCw": "cleveland-lake-art-and-living-city",
+   "coverageLocal": "cleveland-civic-core-walk",
    "packs": [
     {
      "id": "cleveland-civic-core-walk",
@@ -3613,6 +3689,8 @@
    "aliases": [],
    "cw": "colorado-springs-red-rocks-and-culture",
    "nb": "colorado-springs-downtown-paths-and-places",
+   "coverageCw": "colorado-springs-red-rocks-and-culture",
+   "coverageLocal": "colorado-springs-downtown-paths-and-places",
    "packs": [
     {
      "id": "colorado-springs-downtown-paths-and-places",
@@ -3709,6 +3787,8 @@
    "aliases": [],
    "cw": "columbus-science-art-and-gardens",
    "nb": "columbus-brick-by-brick",
+   "coverageCw": "columbus-science-art-and-gardens",
+   "coverageLocal": "columbus-brick-by-brick",
    "packs": [
     {
      "id": "columbus-brick-by-brick",
@@ -3808,6 +3888,8 @@
    ],
    "cw": "copenhagen-citywide-paths-and-water",
    "nb": "copenhagen-colour-and-calm",
+   "coverageCw": "copenhagen-citywide-paths-and-water",
+   "coverageLocal": "copenhagen-colour-and-calm",
    "packs": [
     {
      "id": "copenhagen-citywide-paths-and-water",
@@ -3903,6 +3985,8 @@
    "aliases": [],
    "cw": "corpus-christi-islands-and-inventions",
    "nb": "corpus-christi-bayfront-walk",
+   "coverageCw": "corpus-christi-islands-and-inventions",
+   "coverageLocal": "corpus-christi-bayfront-walk",
    "packs": [
     {
      "id": "corpus-christi-bayfront-walk",
@@ -4000,6 +4084,8 @@
    "aliases": [],
    "cw": "da-nang-citywide",
    "nb": "da-nang-local",
+   "coverageCw": "da-nang-citywide",
+   "coverageLocal": "da-nang-local",
    "packs": [
     {
      "id": "da-nang-citywide",
@@ -4096,6 +4182,8 @@
    "aliases": [],
    "cw": "dallas-icons-and-neighborhoods",
    "nb": "dallas-forms-between-performances",
+   "coverageCw": "dallas-icons-and-neighborhoods",
+   "coverageLocal": "dallas-forms-between-performances",
    "packs": [
     {
      "id": "dallas-forms-between-performances",
@@ -4192,6 +4280,8 @@
    "aliases": [],
    "cw": "daytona-beach-track-to-tide",
    "nb": "daytona-beach-beach-street-stories",
+   "coverageCw": "daytona-beach-track-to-tide",
+   "coverageLocal": "daytona-beach-beach-street-stories",
    "packs": [
     {
      "id": "daytona-beach-beach-street-stories",
@@ -4288,6 +4378,8 @@
    "aliases": [],
    "cw": "denton-tx-citywide",
    "nb": "denton-tx-local",
+   "coverageCw": "denton-tx-citywide",
+   "coverageLocal": "denton-tx-local",
    "packs": [
     {
      "id": "denton-tx-citywide",
@@ -4384,6 +4476,8 @@
    "aliases": [],
    "cw": "denver-art-nature-and-red-rocks",
    "nb": "denver-lodo-and-small-discoveries",
+   "coverageCw": "denver-art-nature-and-red-rocks",
+   "coverageLocal": "denver-lodo-and-small-discoveries",
    "packs": [
     {
      "id": "denver-art-nature-and-red-rocks",
@@ -4480,6 +4574,8 @@
    "aliases": [],
    "cw": "destin-gulf-to-bayou",
    "nb": "destin-old-waterfront-walk",
+   "coverageCw": "destin-gulf-to-bayou",
+   "coverageLocal": "destin-old-waterfront-walk",
    "packs": [
     {
      "id": "destin-gulf-to-bayou",
@@ -4576,6 +4672,8 @@
    "aliases": [],
    "cw": "detroit-studios-markets-and-waterways",
    "nb": "detroit-downtown-to-riverfront",
+   "coverageCw": "detroit-studios-markets-and-waterways",
+   "coverageLocal": "detroit-downtown-to-riverfront",
    "packs": [
     {
      "id": "detroit-downtown-to-riverfront",
@@ -4675,6 +4773,8 @@
    ],
    "cw": "dubai-citywide-lines-and-water",
    "nb": "dubai-creek-and-courtyards",
+   "coverageCw": "dubai-citywide-lines-and-water",
+   "coverageLocal": "dubai-creek-and-courtyards",
    "packs": [
     {
      "id": "dubai-citywide-lines-and-water",
@@ -4771,6 +4871,8 @@
    "aliases": [],
    "cw": "dublin-citywide-pages-and-city-paths",
    "nb": "dublin-local-liberties-in-detail",
+   "coverageCw": "dublin-citywide-pages-and-city-paths",
+   "coverageLocal": "dublin-local-liberties-in-detail",
    "packs": [
     {
      "id": "dublin-citywide-pages-and-city-paths",
@@ -4867,6 +4969,8 @@
    "aliases": [],
    "cw": "dubrovnik-citywide-bays-beyond",
    "nb": "dubrovnik-local-stone-small-stories",
+   "coverageCw": "dubrovnik-citywide-bays-beyond",
+   "coverageLocal": "dubrovnik-local-stone-small-stories",
    "packs": [
     {
      "id": "dubrovnik-citywide-bays-beyond",
@@ -4963,6 +5067,8 @@
    "aliases": [],
    "cw": "durango-co-citywide",
    "nb": "durango-co-local",
+   "coverageCw": "durango-co-citywide",
+   "coverageLocal": "durango-co-local",
    "packs": [
     {
      "id": "durango-co-citywide",
@@ -5060,6 +5166,8 @@
    "aliases": [],
    "cw": "edinburgh-citywide-rock-hill-and-shore",
    "nb": "edinburgh-local-leith-and-newhaven",
+   "coverageCw": "edinburgh-citywide-rock-hill-and-shore",
+   "coverageLocal": "edinburgh-local-leith-and-newhaven",
    "packs": [
     {
      "id": "edinburgh-citywide-rock-hill-and-shore",
@@ -5157,6 +5265,8 @@
    "aliases": [],
    "cw": "el-paso-mountains-missions-and-art",
    "nb": "el-paso-plazas-and-small-details",
+   "coverageCw": "el-paso-mountains-missions-and-art",
+   "coverageLocal": "el-paso-plazas-and-small-details",
    "packs": [
     {
      "id": "el-paso-mountains-missions-and-art",
@@ -5251,6 +5361,8 @@
    "aliases": [],
    "cw": "eugene-or-citywide",
    "nb": "eugene-or-local",
+   "coverageCw": "eugene-or-citywide",
+   "coverageLocal": "eugene-or-local",
    "packs": [
     {
      "id": "eugene-or-citywide",
@@ -5347,6 +5459,8 @@
    "aliases": [],
    "cw": "flagstaff-peaks-and-places",
    "nb": "flagstaff-depot-to-mother-road",
+   "coverageCw": "flagstaff-peaks-and-places",
+   "coverageLocal": "flagstaff-depot-to-mother-road",
    "packs": [
     {
      "id": "flagstaff-depot-to-mother-road",
@@ -5444,7 +5558,9 @@
     "firenze"
    ],
    "cw": "florence-citywide-arches-groves-and-open-air",
-   "nb": null,
+   "nb": "florence-stories-across-the-arno",
+   "coverageCw": "florence-citywide-arches-groves-and-open-air",
+   "coverageLocal": "florence-stories-across-the-arno",
    "packs": [
     {
      "id": "florence-citywide-arches-groves-and-open-air",
@@ -5492,13 +5608,14 @@
     {
      "id": "florence-stories-across-the-arno",
      "city": "Florence",
-     "scope": "citywide",
+     "scope": "neighborhood",
      "sort": 0,
      "live": true,
      "title": "Florence: Stories Across the Arno",
      "heroTitle": "Stories Across the Arno",
      "promise": "Turn Florence’s colours, corners and river views into small stories of your own.",
      "description": "Collect marble colours, invent an impossible shop and build a tiny stage from three shapes. Ten adventures connect central squares with the Arno and Oltrarno in two chapters you can visit separately.",
+     "neighborhood": "Historic centre and Oltrarno",
      "questCount": 10,
      "valueLabels": [
       "10 quests",
@@ -5539,6 +5656,8 @@
    "aliases": [],
    "cw": "fort-collins-co-citywide",
    "nb": "fort-collins-co-local",
+   "coverageCw": "fort-collins-co-citywide",
+   "coverageLocal": "fort-collins-co-local",
    "packs": [
     {
      "id": "fort-collins-co-citywide",
@@ -5634,6 +5753,8 @@
    "aliases": [],
    "cw": "fort-lauderdale-coast-canals-and-culture",
    "nb": "fort-lauderdale-riverwalk-stories",
+   "coverageCw": "fort-lauderdale-coast-canals-and-culture",
+   "coverageLocal": "fort-lauderdale-riverwalk-stories",
    "packs": [
     {
      "id": "fort-lauderdale-coast-canals-and-culture",
@@ -5730,6 +5851,8 @@
    "aliases": [],
    "cw": "fort-myers-river-gardens-and-nature",
    "nb": "fort-myers-river-district-on-foot",
+   "coverageCw": "fort-myers-river-gardens-and-nature",
+   "coverageLocal": "fort-myers-river-district-on-foot",
    "packs": [
     {
      "id": "fort-myers-river-district-on-foot",
@@ -5826,6 +5949,8 @@
    "aliases": [],
    "cw": "fort-worth-stockyards-art-and-gardens",
    "nb": "fort-worth-stockyards",
+   "coverageCw": "fort-worth-stockyards-art-and-gardens",
+   "coverageLocal": "fort-worth-stockyards",
    "packs": [
     {
      "id": "fort-worth-stockyards",
@@ -5922,6 +6047,8 @@
    "aliases": [],
    "cw": "fukuoka-citywide",
    "nb": "fukuoka-local",
+   "coverageCw": "fukuoka-citywide",
+   "coverageLocal": "fukuoka-local",
    "packs": [
     {
      "id": "fukuoka-citywide",
@@ -6018,6 +6145,8 @@
    "aliases": [],
    "cw": "gainesville-fl-citywide",
    "nb": "gainesville-fl-local",
+   "coverageCw": "gainesville-fl-citywide",
+   "coverageLocal": "gainesville-fl-local",
    "packs": [
     {
      "id": "gainesville-fl-citywide",
@@ -6114,6 +6243,8 @@
    "aliases": [],
    "cw": "galveston-island-histories-and-habitats",
    "nb": "galveston-strand-to-harbor",
+   "coverageCw": "galveston-island-histories-and-habitats",
+   "coverageLocal": "galveston-strand-to-harbor",
    "packs": [
     {
      "id": "galveston-island-histories-and-habitats",
@@ -6210,6 +6341,8 @@
    "aliases": [],
    "cw": "gatlinburg-smoky-gateways",
    "nb": "gatlinburg-downtown-and-river",
+   "coverageCw": "gatlinburg-smoky-gateways",
+   "coverageLocal": "gatlinburg-downtown-and-river",
    "packs": [
     {
      "id": "gatlinburg-downtown-and-river",
@@ -6307,6 +6440,8 @@
    "aliases": [],
    "cw": "george-town-citywide",
    "nb": "george-town-local",
+   "coverageCw": "george-town-citywide",
+   "coverageLocal": "george-town-local",
    "packs": [
     {
      "id": "george-town-citywide",
@@ -6403,6 +6538,8 @@
    "aliases": [],
    "cw": "gettysburg-pa-citywide",
    "nb": "gettysburg-pa-local",
+   "coverageCw": "gettysburg-pa-citywide",
+   "coverageLocal": "gettysburg-pa-local",
    "packs": [
     {
      "id": "gettysburg-pa-citywide",
@@ -6499,6 +6636,8 @@
    "aliases": [],
    "cw": "granada-citywide-hills-water-and-wonder",
    "nb": "granada-local-realejo-room-by-room",
+   "coverageCw": "granada-citywide-hills-water-and-wonder",
+   "coverageLocal": "granada-local-realejo-room-by-room",
    "packs": [
     {
      "id": "granada-citywide-hills-water-and-wonder",
@@ -6595,6 +6734,8 @@
    "aliases": [],
    "cw": "hanoi-citywide",
    "nb": "hanoi-local",
+   "coverageCw": "hanoi-citywide",
+   "coverageLocal": "hanoi-local",
    "packs": [
     {
      "id": "hanoi-citywide",
@@ -6691,6 +6832,8 @@
    "aliases": [],
    "cw": "helsinki-citywide",
    "nb": "helsinki-local",
+   "coverageCw": "helsinki-citywide",
+   "coverageLocal": "helsinki-local",
    "packs": [
     {
      "id": "helsinki-citywide",
@@ -6787,6 +6930,8 @@
    "aliases": [],
    "cw": "hilo-falls-and-living-land",
    "nb": "hilo-downtown-to-bay",
+   "coverageCw": "hilo-falls-and-living-land",
+   "coverageLocal": "hilo-downtown-to-bay",
    "packs": [
     {
      "id": "hilo-downtown-to-bay",
@@ -6883,6 +7028,8 @@
    "aliases": [],
    "cw": "hiroshima-citywide",
    "nb": "hiroshima-local",
+   "coverageCw": "hiroshima-citywide",
+   "coverageLocal": "hiroshima-local",
    "packs": [
     {
      "id": "hiroshima-citywide",
@@ -6979,6 +7126,8 @@
    "aliases": [],
    "cw": "ho-chi-minh-city-citywide",
    "nb": "ho-chi-minh-city-local",
+   "coverageCw": "ho-chi-minh-city-citywide",
+   "coverageLocal": "ho-chi-minh-city-local",
    "packs": [
     {
      "id": "ho-chi-minh-city-citywide",
@@ -7075,6 +7224,8 @@
    "aliases": [],
    "cw": "hoi-an-citywide",
    "nb": "hoi-an-local",
+   "coverageCw": "hoi-an-citywide",
+   "coverageLocal": "hoi-an-local",
    "packs": [
     {
      "id": "hoi-an-citywide",
@@ -7174,6 +7325,8 @@
    ],
    "cw": "hong-kong-citywide-garden-roofs-and-stone",
    "nb": "hong-kong-harbour-lines-and-small-scenes",
+   "coverageCw": "hong-kong-citywide-garden-roofs-and-stone",
+   "coverageLocal": "hong-kong-harbour-lines-and-small-scenes",
    "packs": [
     {
      "id": "hong-kong-citywide-garden-roofs-and-stone",
@@ -7269,6 +7422,8 @@
    "aliases": [],
    "cw": "honolulu-royal-city-ocean-city",
    "nb": "honolulu-waikiki-one-shore-at-a-time",
+   "coverageCw": "honolulu-royal-city-ocean-city",
+   "coverageLocal": "honolulu-waikiki-one-shore-at-a-time",
    "packs": [
     {
      "id": "honolulu-royal-city-ocean-city",
@@ -7366,6 +7521,8 @@
    "aliases": [],
    "cw": "houston-space-art-and-green",
    "nb": "houston-hermann-park",
+   "coverageCw": "houston-space-art-and-green",
+   "coverageLocal": "houston-hermann-park",
    "packs": [
     {
      "id": "houston-hermann-park",
@@ -7462,6 +7619,8 @@
    "aliases": [],
    "cw": "indianapolis-racing-art-and-discovery",
    "nb": "indianapolis-water-stone-shade",
+   "coverageCw": "indianapolis-racing-art-and-discovery",
+   "coverageLocal": "indianapolis-water-stone-shade",
    "packs": [
     {
      "id": "indianapolis-racing-art-and-discovery",
@@ -7558,6 +7717,8 @@
    "aliases": [],
    "cw": "istanbul-citywide-steps-and-shores",
    "nb": "istanbul-across-the-waterline",
+   "coverageCw": "istanbul-citywide-steps-and-shores",
+   "coverageLocal": "istanbul-across-the-waterline",
    "packs": [
     {
      "id": "istanbul-across-the-waterline",
@@ -7654,6 +7815,8 @@
    "aliases": [],
    "cw": "jacksonville-river-gardens-and-coast",
    "nb": "jacksonville-riverside",
+   "coverageCw": "jacksonville-river-gardens-and-coast",
+   "coverageLocal": "jacksonville-riverside",
    "packs": [
     {
      "id": "jacksonville-river-gardens-and-coast",
@@ -7750,6 +7913,8 @@
    "aliases": [],
    "cw": "juneau-glacier-forest-and-shore",
    "nb": "juneau-ridge-to-waterfront",
+   "coverageCw": "juneau-glacier-forest-and-shore",
+   "coverageLocal": "juneau-ridge-to-waterfront",
    "packs": [
     {
      "id": "juneau-glacier-forest-and-shore",
@@ -7846,6 +8011,8 @@
    "aliases": [],
    "cw": "kailua-kona-hi-citywide",
    "nb": "kailua-kona-hi-local",
+   "coverageCw": "kailua-kona-hi-citywide",
+   "coverageLocal": "kailua-kona-hi-local",
    "packs": [
     {
      "id": "kailua-kona-hi-citywide",
@@ -7942,6 +8109,8 @@
    "aliases": [],
    "cw": "kansas-city-mo-art-parks-and-stories",
    "nb": "kansas-city-mo-river-market-to-memorial",
+   "coverageCw": "kansas-city-mo-art-parks-and-stories",
+   "coverageLocal": "kansas-city-mo-river-market-to-memorial",
    "packs": [
     {
      "id": "kansas-city-mo-art-parks-and-stories",
@@ -8040,6 +8209,8 @@
    "aliases": [],
    "cw": "key-west-island-in-the-details",
    "nb": "key-west-harbor-at-human-scale",
+   "coverageCw": "key-west-island-in-the-details",
+   "coverageLocal": "key-west-harbor-at-human-scale",
    "packs": [
     {
      "id": "key-west-harbor-at-human-scale",
@@ -8135,6 +8306,8 @@
    "aliases": [],
    "cw": "knoxville-river-ridges-and-stories",
    "nb": "knoxville-old-city-to-worlds-fair",
+   "coverageCw": "knoxville-river-ridges-and-stories",
+   "coverageLocal": "knoxville-old-city-to-worlds-fair",
    "packs": [
     {
      "id": "knoxville-old-city-to-worlds-fair",
@@ -8233,6 +8406,8 @@
    ],
    "cw": "krakow-citywide-gardens-and-new-angles",
    "nb": "krakow-rooflines-and-river-notes",
+   "coverageCw": "krakow-citywide-gardens-and-new-angles",
+   "coverageLocal": "krakow-rooflines-and-river-notes",
    "packs": [
     {
      "id": "krakow-citywide-gardens-and-new-angles",
@@ -8328,6 +8503,8 @@
    "aliases": [],
    "cw": "kuala-lumpur-citywide",
    "nb": "kuala-lumpur-local",
+   "coverageCw": "kuala-lumpur-citywide",
+   "coverageLocal": "kuala-lumpur-local",
    "packs": [
     {
      "id": "kuala-lumpur-citywide",
@@ -8426,6 +8603,8 @@
    ],
    "cw": "kyoto-citywide-river-gates-and-open-space",
    "nb": "kyoto-water-shade-and-small-discoveries",
+   "coverageCw": "kyoto-citywide-river-gates-and-open-space",
+   "coverageLocal": "kyoto-water-shade-and-small-discoveries",
    "packs": [
     {
      "id": "kyoto-citywide-river-gates-and-open-space",
@@ -8521,6 +8700,8 @@
    "aliases": [],
    "cw": "laguna-beach-ca-citywide",
    "nb": "laguna-beach-ca-local",
+   "coverageCw": "laguna-beach-ca-citywide",
+   "coverageLocal": "laguna-beach-ca-local",
    "packs": [
     {
      "id": "laguna-beach-ca-citywide",
@@ -8619,6 +8800,8 @@
    ],
    "cw": "las-vegas-color-beyond-the-strip",
    "nb": "las-vegas-impossible-worlds",
+   "coverageCw": "las-vegas-color-beyond-the-strip",
+   "coverageLocal": "las-vegas-impossible-worlds",
    "packs": [
     {
      "id": "las-vegas-color-beyond-the-strip",
@@ -8719,20 +8902,21 @@
     "miraflores",
     "barranco"
    ],
-   "cw": null,
-   "nb": "lima-lines-above-the-pacific",
+   "cw": "lima-lines-above-the-pacific",
+   "nb": "lima-local-portals-towers-and-small-stories",
+   "coverageCw": "lima-lines-above-the-pacific",
+   "coverageLocal": "lima-local-portals-towers-and-small-stories",
    "packs": [
     {
      "id": "lima-lines-above-the-pacific",
      "city": "Lima",
-     "scope": "neighborhood",
+     "scope": "citywide",
      "sort": 0,
      "live": true,
      "title": "Lima: Lines Above the Pacific",
      "heroTitle": "Lines Above the Pacific",
      "promise": "Find a small Lima story between the coast and the next curious detail.",
      "description": "Follow coastal edges, read patterns in a park, and turn Barranco’s everyday details into a story of your own. Ten small adventures fit one stop, two neighborhood chapters, or several visits.",
-     "neighborhood": "Miraflores malecón and central Barranco",
      "questCount": 10,
      "valueLabels": [
       "10 quests",
@@ -8819,6 +9003,8 @@
    ],
    "cw": "lisbon-citywide-curves-and-open-sky",
    "nb": "lisbon-stone-to-the-river",
+   "coverageCw": "lisbon-citywide-curves-and-open-sky",
+   "coverageLocal": "lisbon-stone-to-the-river",
    "packs": [
     {
      "id": "lisbon-citywide-curves-and-open-sky",
@@ -8914,6 +9100,8 @@
    "aliases": [],
    "cw": "london-between-river-and-square",
    "nb": "london-local-greenwich-in-view",
+   "coverageCw": "london-between-river-and-square",
+   "coverageLocal": "london-local-greenwich-in-view",
    "packs": [
     {
      "id": "london-between-river-and-square",
@@ -9012,6 +9200,8 @@
    ],
    "cw": "los-angeles-hills-art-and-ocean",
    "nb": "los-angeles-city-in-the-frame",
+   "coverageCw": "los-angeles-hills-art-and-ocean",
+   "coverageLocal": "los-angeles-city-in-the-frame",
    "packs": [
     {
      "id": "los-angeles-city-in-the-frame",
@@ -9109,6 +9299,8 @@
    "aliases": [],
    "cw": "louisville-horses-homes-and-hills",
    "nb": "louisville-main-street-to-big-four",
+   "coverageCw": "louisville-horses-homes-and-hills",
+   "coverageLocal": "louisville-main-street-to-big-four",
    "packs": [
     {
      "id": "louisville-horses-homes-and-hills",
@@ -9206,6 +9398,8 @@
    "aliases": [],
    "cw": "lubbock-tx-citywide",
    "nb": "lubbock-tx-local",
+   "coverageCw": "lubbock-tx-citywide",
+   "coverageLocal": "lubbock-tx-local",
    "packs": [
     {
      "id": "lubbock-tx-citywide",
@@ -9302,6 +9496,8 @@
    "aliases": [],
    "cw": "lucerne-citywide",
    "nb": "lucerne-local",
+   "coverageCw": "lucerne-citywide",
+   "coverageLocal": "lucerne-local",
    "packs": [
     {
      "id": "lucerne-citywide",
@@ -9398,6 +9594,8 @@
    "aliases": [],
    "cw": "macau-citywide-across-the-water",
    "nb": "macau-local-between-barra-and-the-hill",
+   "coverageCw": "macau-citywide-across-the-water",
+   "coverageLocal": "macau-local-between-barra-and-the-hill",
    "packs": [
     {
      "id": "macau-citywide-across-the-water",
@@ -9494,6 +9692,8 @@
    "aliases": [],
    "cw": "madison-lakes-gardens-and-neighborhoods",
    "nb": "madison-capitol-to-campus",
+   "coverageCw": "madison-lakes-gardens-and-neighborhoods",
+   "coverageLocal": "madison-capitol-to-campus",
    "packs": [
     {
      "id": "madison-capitol-to-campus",
@@ -9590,7 +9790,9 @@
    "sort": 0,
    "aliases": [],
    "cw": "madrid-citywide-metal-stone-and-sky",
-   "nb": null,
+   "nb": "madrid-patterns-in-the-open",
+   "coverageCw": "madrid-citywide-metal-stone-and-sky",
+   "coverageLocal": "madrid-patterns-in-the-open",
    "packs": [
     {
      "id": "madrid-citywide-metal-stone-and-sky",
@@ -9638,13 +9840,14 @@
     {
      "id": "madrid-patterns-in-the-open",
      "city": "Madrid",
-     "scope": "citywide",
+     "scope": "neighborhood",
      "sort": 0,
      "live": true,
      "title": "Madrid: Patterns in the Open",
      "heroTitle": "Patterns in the Open",
      "promise": "Find a Madrid story in the shapes between squares and gardens.",
      "description": "Read a palace in repeats, turn a leaf into a map, and watch water make its own copies. Ten small adventures connect the historic centre with Prado and Retiro in two chapters you can visit separately.",
+     "neighborhood": "Royal Palace, Prado and Retiro",
      "questCount": 10,
      "valueLabels": [
       "10 quests",
@@ -9685,6 +9888,8 @@
    "aliases": [],
    "cw": "malaga-citywide",
    "nb": "malaga-local",
+   "coverageCw": "malaga-citywide",
+   "coverageLocal": "malaga-local",
    "packs": [
     {
      "id": "malaga-citywide",
@@ -9781,6 +9986,8 @@
    "aliases": [],
    "cw": "melbourne-citywide",
    "nb": "melbourne-local",
+   "coverageCw": "melbourne-citywide",
+   "coverageLocal": "melbourne-local",
    "packs": [
     {
      "id": "melbourne-citywide",
@@ -9877,6 +10084,8 @@
    "aliases": [],
    "cw": "memphis-studios-forests-and-gardens",
    "nb": "memphis-south-main-to-beale",
+   "coverageCw": "memphis-studios-forests-and-gardens",
+   "coverageLocal": "memphis-south-main-to-beale",
    "packs": [
     {
      "id": "memphis-south-main-to-beale",
@@ -9974,6 +10183,8 @@
    "aliases": [],
    "cw": "mexico-city-citywide",
    "nb": "mexico-city-local",
+   "coverageCw": "mexico-city-citywide",
+   "coverageLocal": "mexico-city-local",
    "packs": [
     {
      "id": "mexico-city-citywide",
@@ -10073,6 +10284,8 @@
    ],
    "cw": "miami-streets-to-the-bay",
    "nb": "miami-pastel-and-tides",
+   "coverageCw": "miami-streets-to-the-bay",
+   "coverageLocal": "miami-pastel-and-tides",
    "packs": [
     {
      "id": "miami-pastel-and-tides",
@@ -10171,7 +10384,9 @@
     "milano"
    ],
    "cw": "milan-citywide-water-rooms-and-sky-lines",
-   "nb": null,
+   "nb": "milan-small-signals-big-city",
+   "coverageCw": "milan-citywide-water-rooms-and-sky-lines",
+   "coverageLocal": "milan-small-signals-big-city",
    "packs": [
     {
      "id": "milan-citywide-water-rooms-and-sky-lines",
@@ -10219,13 +10434,14 @@
     {
      "id": "milan-small-signals-big-city",
      "city": "Milan",
-     "scope": "citywide",
+     "scope": "neighborhood",
      "sort": 0,
      "live": true,
      "title": "Milan: Small Signals, Big City",
      "heroTitle": "Small Signals, Big City",
      "promise": "Find a story in the details between Milan’s grand façades and green paths.",
      "description": "Give marble a mood, write a silent overture and turn a Brera lane into a book cover. Ten small adventures lead from central passages to park paths in two chapters you can visit separately.",
+     "neighborhood": "Duomo, Brera and Parco Sempione",
      "questCount": 10,
      "valueLabels": [
       "10 quests",
@@ -10266,6 +10482,8 @@
    "aliases": [],
    "cw": "milwaukee-art-industry-and-shore",
    "nb": "milwaukee-city-hall-to-lakefront",
+   "coverageCw": "milwaukee-art-industry-and-shore",
+   "coverageLocal": "milwaukee-city-hall-to-lakefront",
    "packs": [
     {
      "id": "milwaukee-art-industry-and-shore",
@@ -10363,6 +10581,8 @@
    "aliases": [],
    "cw": "minneapolis-art-lakes-and-paths",
    "nb": "minneapolis-two-banks-of-the-falls",
+   "coverageCw": "minneapolis-art-lakes-and-paths",
+   "coverageLocal": "minneapolis-two-banks-of-the-falls",
    "packs": [
     {
      "id": "minneapolis-art-lakes-and-paths",
@@ -10460,6 +10680,8 @@
    "aliases": [],
    "cw": "monterey-bay-peninsula-and-coast",
    "nb": "monterey-old-town-to-cannery-row",
+   "coverageCw": "monterey-bay-peninsula-and-coast",
+   "coverageLocal": "monterey-old-town-to-cannery-row",
    "packs": [
     {
      "id": "monterey-bay-peninsula-and-coast",
@@ -10556,6 +10778,8 @@
    "aliases": [],
    "cw": "montreal-citywide",
    "nb": "montreal-local",
+   "coverageCw": "montreal-citywide",
+   "coverageLocal": "montreal-local",
    "packs": [
     {
      "id": "montreal-citywide",
@@ -10655,6 +10879,8 @@
    ],
    "cw": "munich-citywide-canals-curves-and-current",
    "nb": "munich-small-wonders-wide-skies",
+   "coverageCw": "munich-citywide-canals-curves-and-current",
+   "coverageLocal": "munich-small-wonders-wide-skies",
    "packs": [
     {
      "id": "munich-citywide-canals-curves-and-current",
@@ -10751,6 +10977,8 @@
    "aliases": [],
    "cw": "myrtle-beach-coast-culture-and-marsh",
    "nb": "myrtle-beach-boardwalk-mile",
+   "coverageCw": "myrtle-beach-coast-culture-and-marsh",
+   "coverageLocal": "myrtle-beach-boardwalk-mile",
    "packs": [
     {
      "id": "myrtle-beach-boardwalk-mile",
@@ -10847,6 +11075,8 @@
    "aliases": [],
    "cw": "napa-hills-art-and-river",
    "nb": "napa-first-street-to-oxbow",
+   "coverageCw": "napa-hills-art-and-river",
+   "coverageLocal": "napa-first-street-to-oxbow",
    "packs": [
     {
      "id": "napa-first-street-to-oxbow",
@@ -10944,6 +11174,8 @@
    "aliases": [],
    "cw": "naples-citywide-bay-and-hills",
    "nb": "naples-ancient-grid-and-living-streets",
+   "coverageCw": "naples-citywide-bay-and-hills",
+   "coverageLocal": "naples-ancient-grid-and-living-streets",
    "packs": [
     {
      "id": "naples-ancient-grid-and-living-streets",
@@ -11040,6 +11272,8 @@
    "aliases": [],
    "cw": "naples-fl-coast-to-estuary",
    "nb": "naples-fl-old-town-to-bay",
+   "coverageCw": "naples-fl-coast-to-estuary",
+   "coverageLocal": "naples-fl-old-town-to-bay",
    "packs": [
     {
      "id": "naples-fl-coast-to-estuary",
@@ -11136,6 +11370,8 @@
    "aliases": [],
    "cw": "nashville-stages-stories-and-gardens",
    "nb": "nashville-lines-along-the-cumberland",
+   "coverageCw": "nashville-stages-stories-and-gardens",
+   "coverageLocal": "nashville-lines-along-the-cumberland",
    "packs": [
     {
      "id": "nashville-lines-along-the-cumberland",
@@ -11232,6 +11468,8 @@
    "aliases": [],
    "cw": "new-haven-ridges-museums-and-harbor",
    "nb": "new-haven-green-to-yale",
+   "coverageCw": "new-haven-ridges-museums-and-harbor",
+   "coverageLocal": "new-haven-green-to-yale",
    "packs": [
     {
      "id": "new-haven-green-to-yale",
@@ -11331,6 +11569,8 @@
    ],
    "cw": "new-orleans-rooms-without-walls",
    "nb": "new-orleans-river-and-revelations",
+   "coverageCw": "new-orleans-rooms-without-walls",
+   "coverageLocal": "new-orleans-river-and-revelations",
    "packs": [
     {
      "id": "new-orleans-river-and-revelations",
@@ -11432,6 +11672,8 @@
    ],
    "cw": "new-york-landmarks-and-city-life",
    "nb": "new-york-central-park",
+   "coverageCw": "new-york-landmarks-and-city-life",
+   "coverageLocal": "new-york-central-park",
    "packs": [
     {
      "id": "new-york-central-park",
@@ -11572,6 +11814,8 @@
    "aliases": [],
    "cw": "newport-ri-citywide",
    "nb": "newport-ri-local",
+   "coverageCw": "newport-ri-citywide",
+   "coverageLocal": "newport-ri-local",
    "packs": [
     {
      "id": "newport-ri-citywide",
@@ -11668,6 +11912,8 @@
    "aliases": [],
    "cw": "niagara-falls-gorge-to-lake",
    "nb": "niagara-falls-between-river-and-brink",
+   "coverageCw": "niagara-falls-gorge-to-lake",
+   "coverageLocal": "niagara-falls-between-river-and-brink",
    "packs": [
     {
      "id": "niagara-falls-between-river-and-brink",
@@ -11764,6 +12010,8 @@
    "aliases": [],
    "cw": "nice-citywide-shapes-and-sunlight",
    "nb": "nice-local-old-town-and-port",
+   "coverageCw": "nice-citywide-shapes-and-sunlight",
+   "coverageLocal": "nice-local-old-town-and-port",
    "packs": [
     {
      "id": "nice-citywide-shapes-and-sunlight",
@@ -11860,6 +12108,8 @@
    "aliases": [],
    "cw": "oklahoma-city-stories-science-and-sky",
    "nb": "okc-brick-water-small-details",
+   "coverageCw": "oklahoma-city-stories-science-and-sky",
+   "coverageLocal": "okc-brick-water-small-details",
    "packs": [
     {
      "id": "okc-brick-water-small-details",
@@ -11956,6 +12206,8 @@
    "aliases": [],
    "cw": "orlando-theme-parks-and-green-escapes",
    "nb": "orlando-downtown-to-lake-eola",
+   "coverageCw": "orlando-theme-parks-and-green-escapes",
+   "coverageLocal": "orlando-downtown-to-lake-eola",
    "packs": [
     {
      "id": "orlando-downtown-to-lake-eola",
@@ -12054,6 +12306,8 @@
    ],
    "cw": "osaka-citywide-towers-stone-and-sea",
    "nb": "osaka-between-water-and-stone",
+   "coverageCw": "osaka-citywide-towers-stone-and-sea",
+   "coverageLocal": "osaka-between-water-and-stone",
    "packs": [
     {
      "id": "osaka-between-water-and-stone",
@@ -12149,6 +12403,8 @@
    "aliases": [],
    "cw": "oslo-citywide-harbour-and-parks",
    "nb": "oslo-local-river-and-neighbourhood",
+   "coverageCw": "oslo-citywide-harbour-and-parks",
+   "coverageLocal": "oslo-local-river-and-neighbourhood",
    "packs": [
     {
      "id": "oslo-citywide-harbour-and-parks",
@@ -12245,6 +12501,8 @@
    "aliases": [],
    "cw": "palm-springs-desert-to-sky",
    "nb": "palm-springs-downtown-design-and-memory",
+   "coverageCw": "palm-springs-desert-to-sky",
+   "coverageLocal": "palm-springs-downtown-design-and-memory",
    "packs": [
     {
      "id": "palm-springs-desert-to-sky",
@@ -12341,6 +12599,8 @@
    "aliases": [],
    "cw": "palma-citywide",
    "nb": "palma-local",
+   "coverageCw": "palma-citywide",
+   "coverageLocal": "palma-local",
    "packs": [
     {
      "id": "palma-citywide",
@@ -12437,6 +12697,8 @@
    "aliases": [],
    "cw": "panama-city-beach-coast-and-curiosity",
    "nb": "panama-city-beach-pier-to-park",
+   "coverageCw": "panama-city-beach-coast-and-curiosity",
+   "coverageLocal": "panama-city-beach-pier-to-park",
    "packs": [
     {
      "id": "panama-city-beach-coast-and-curiosity",
@@ -12534,6 +12796,8 @@
    "aliases": [],
    "cw": "paris-citywide-iron-hill-and-garden",
    "nb": "paris-between-the-lines",
+   "coverageCw": "paris-citywide-iron-hill-and-garden",
+   "coverageLocal": "paris-between-the-lines",
    "packs": [
     {
      "id": "paris-between-the-lines",
@@ -12630,6 +12894,8 @@
    "aliases": [],
    "cw": "pasadena-ca-citywide",
    "nb": "pasadena-ca-local",
+   "coverageCw": "pasadena-ca-citywide",
+   "coverageLocal": "pasadena-ca-local",
    "packs": [
     {
      "id": "pasadena-ca-citywide",
@@ -12726,6 +12992,8 @@
    "aliases": [],
    "cw": "pattaya-citywide",
    "nb": "pattaya-local",
+   "coverageCw": "pattaya-citywide",
+   "coverageLocal": "pattaya-local",
    "packs": [
     {
      "id": "pattaya-citywide",
@@ -12823,6 +13091,8 @@
    "aliases": [],
    "cw": "pensacola-wings-forts-and-wetlands",
    "nb": "pensacola-bayfront-to-mess-hall",
+   "coverageCw": "pensacola-wings-forts-and-wetlands",
+   "coverageLocal": "pensacola-bayfront-to-mess-hall",
    "packs": [
     {
      "id": "pensacola-bayfront-to-mess-hall",
@@ -12920,6 +13190,8 @@
    "aliases": [],
    "cw": "philadelphia-landmarks-and-living-city",
    "nb": "philadelphia-old-city-in-detail",
+   "coverageCw": "philadelphia-landmarks-and-living-city",
+   "coverageLocal": "philadelphia-old-city-in-detail",
    "packs": [
     {
      "id": "philadelphia-landmarks-and-living-city",
@@ -13016,6 +13288,8 @@
    "aliases": [],
    "cw": "phoenix-desert-and-discovery",
    "nb": "phoenix-roosevelt-row",
+   "coverageCw": "phoenix-desert-and-discovery",
+   "coverageLocal": "phoenix-roosevelt-row",
    "packs": [
     {
      "id": "phoenix-desert-and-discovery",
@@ -13112,6 +13386,8 @@
    "aliases": [],
    "cw": "phuket-citywide",
    "nb": "phuket-local",
+   "coverageCw": "phuket-citywide",
+   "coverageLocal": "phuket-local",
    "packs": [
     {
      "id": "phuket-citywide",
@@ -13208,6 +13484,8 @@
    "aliases": [],
    "cw": "pigeon-forge-tn-citywide",
    "nb": "pigeon-forge-tn-local",
+   "coverageCw": "pigeon-forge-tn-citywide",
+   "coverageLocal": "pigeon-forge-tn-local",
    "packs": [
     {
      "id": "pigeon-forge-tn-citywide",
@@ -13304,6 +13582,8 @@
    "aliases": [],
    "cw": "pittsburgh-rivers-hills-and-makers",
    "nb": "pittsburgh-golden-triangle-to-north-shore",
+   "coverageCw": "pittsburgh-rivers-hills-and-makers",
+   "coverageLocal": "pittsburgh-golden-triangle-to-north-shore",
    "packs": [
     {
      "id": "pittsburgh-golden-triangle-to-north-shore",
@@ -13401,6 +13681,8 @@
    "aliases": [],
    "cw": "pomona-ca-citywide",
    "nb": "pomona-ca-local",
+   "coverageCw": "pomona-ca-citywide",
+   "coverageLocal": "pomona-ca-local",
    "packs": [
     {
      "id": "pomona-ca-citywide",
@@ -13497,6 +13779,8 @@
    "aliases": [],
    "cw": "portland-me-art-parks-and-shore",
    "nb": "portland-me-congress-to-waterfront",
+   "coverageCw": "portland-me-art-parks-and-shore",
+   "coverageLocal": "portland-me-congress-to-waterfront",
    "packs": [
     {
      "id": "portland-me-art-parks-and-shore",
@@ -13594,6 +13878,8 @@
    "aliases": [],
    "cw": "portland-or-gardens-science-and-river",
    "nb": "portland-or-park-blocks-to-pearl",
+   "coverageCw": "portland-or-gardens-science-and-river",
+   "coverageLocal": "portland-or-park-blocks-to-pearl",
    "packs": [
     {
      "id": "portland-or-gardens-science-and-river",
@@ -13693,6 +13979,8 @@
    ],
    "cw": "porto-citywide-gardens-angles-and-atlantic-air",
    "nb": "porto-blue-lines-river-rhythms",
+   "coverageCw": "porto-citywide-gardens-angles-and-atlantic-air",
+   "coverageLocal": "porto-blue-lines-river-rhythms",
    "packs": [
     {
      "id": "porto-blue-lines-river-rhythms",
@@ -13788,6 +14076,8 @@
    "aliases": [],
    "cw": "portsmouth-nh-citywide",
    "nb": "portsmouth-nh-local",
+   "coverageCw": "portsmouth-nh-citywide",
+   "coverageLocal": "portsmouth-nh-local",
    "packs": [
     {
      "id": "portsmouth-nh-citywide",
@@ -13886,6 +14176,8 @@
    ],
    "cw": "prague-citywide-parks-and-new-perspectives",
    "nb": "prague-stone-sky-and-small-stories",
+   "coverageCw": "prague-citywide-parks-and-new-perspectives",
+   "coverageLocal": "prague-stone-sky-and-small-stories",
    "packs": [
     {
      "id": "prague-citywide-parks-and-new-perspectives",
@@ -13981,6 +14273,8 @@
    "aliases": [],
    "cw": "providence-museums-parks-and-civic-places",
    "nb": "providence-waterplace-to-district-park",
+   "coverageCw": "providence-museums-parks-and-civic-places",
+   "coverageLocal": "providence-waterplace-to-district-park",
    "packs": [
     {
      "id": "providence-museums-parks-and-civic-places",
@@ -14078,6 +14372,8 @@
    "aliases": [],
    "cw": "queenstown-citywide",
    "nb": "queenstown-local",
+   "coverageCw": "queenstown-citywide",
+   "coverageLocal": "queenstown-local",
    "packs": [
     {
      "id": "queenstown-citywide",
@@ -14174,6 +14470,8 @@
    "aliases": [],
    "cw": "raleigh-art-parks-and-stories",
    "nb": "raleigh-downtown-lines-and-layers",
+   "coverageCw": "raleigh-art-parks-and-stories",
+   "coverageLocal": "raleigh-downtown-lines-and-layers",
    "packs": [
     {
      "id": "raleigh-art-parks-and-stories",
@@ -14270,6 +14568,8 @@
    "aliases": [],
    "cw": "reykjavik-citywide-light-stone-green-paths",
    "nb": "reykjavik-local-pond-old-town",
+   "coverageCw": "reykjavik-citywide-light-stone-green-paths",
+   "coverageLocal": "reykjavik-local-pond-old-town",
    "packs": [
     {
      "id": "reykjavik-citywide-light-stone-green-paths",
@@ -14366,6 +14666,8 @@
    "aliases": [],
    "cw": "richmond-art-gardens-and-river",
    "nb": "richmond-capitol-to-church-hill",
+   "coverageCw": "richmond-art-gardens-and-river",
+   "coverageLocal": "richmond-capitol-to-church-hill",
    "packs": [
     {
      "id": "richmond-art-gardens-and-river",
@@ -14463,6 +14765,8 @@
    "aliases": [],
    "cw": "rio-de-janeiro-citywide",
    "nb": "rio-de-janeiro-local",
+   "coverageCw": "rio-de-janeiro-citywide",
+   "coverageLocal": "rio-de-janeiro-local",
    "packs": [
     {
      "id": "rio-de-janeiro-citywide",
@@ -14560,6 +14864,8 @@
    "aliases": [],
    "cw": "rochester-ny-museums-parks-and-lake",
    "nb": "rochester-ny-high-falls-to-center-city",
+   "coverageCw": "rochester-ny-museums-parks-and-lake",
+   "coverageLocal": "rochester-ny-high-falls-to-center-city",
    "packs": [
     {
      "id": "rochester-ny-high-falls-to-center-city",
@@ -14659,6 +14965,8 @@
    ],
    "cw": "rome-stone-keeps-stories",
    "nb": "rome-local-clay-and-steel",
+   "coverageCw": "rome-stone-keeps-stories",
+   "coverageLocal": "rome-local-clay-and-steel",
    "packs": [
     {
      "id": "rome-local-clay-and-steel",
@@ -14754,6 +15062,8 @@
    "aliases": [],
    "cw": "sacramento-capital-river-and-neighborhoods",
    "nb": "sacramento-old-waterfront-on-foot",
+   "coverageCw": "sacramento-capital-river-and-neighborhoods",
+   "coverageLocal": "sacramento-old-waterfront-on-foot",
    "packs": [
     {
      "id": "sacramento-capital-river-and-neighborhoods",
@@ -14850,6 +15160,8 @@
    "aliases": [],
    "cw": "salem-ma-citywide",
    "nb": "salem-ma-local",
+   "coverageCw": "salem-ma-citywide",
+   "coverageLocal": "salem-ma-local",
    "packs": [
     {
      "id": "salem-ma-citywide",
@@ -14946,6 +15258,8 @@
    "aliases": [],
    "cw": "salt-lake-city-mountains-museums-and-gardens",
    "nb": "salt-lake-city-gateway-to-library-square",
+   "coverageCw": "salt-lake-city-mountains-museums-and-gardens",
+   "coverageLocal": "salt-lake-city-gateway-to-library-square",
    "packs": [
     {
      "id": "salt-lake-city-gateway-to-library-square",
@@ -15043,6 +15357,8 @@
    "aliases": [],
    "cw": "salzburg-citywide",
    "nb": "salzburg-local",
+   "coverageCw": "salzburg-citywide",
+   "coverageLocal": "salzburg-local",
    "packs": [
     {
      "id": "salzburg-citywide",
@@ -15140,6 +15456,8 @@
    "aliases": [],
    "cw": "san-antonio-icons-and-waterways",
    "nb": "san-antonio-river-walk",
+   "coverageCw": "san-antonio-icons-and-waterways",
+   "coverageLocal": "san-antonio-river-walk",
    "packs": [
     {
      "id": "san-antonio-icons-and-waterways",
@@ -15236,6 +15554,8 @@
    "aliases": [],
    "cw": "san-diego-park-bay-and-pacific",
    "nb": "san-diego-balboa-park",
+   "coverageCw": "san-diego-park-bay-and-pacific",
+   "coverageLocal": "san-diego-balboa-park",
    "packs": [
     {
      "id": "san-diego-balboa-park",
@@ -15335,6 +15655,8 @@
    ],
    "cw": "san-francisco-bay-hills-and-pacific",
    "nb": "san-francisco-garden-intervals",
+   "coverageCw": "san-francisco-bay-hills-and-pacific",
+   "coverageLocal": "san-francisco-garden-intervals",
    "packs": [
     {
      "id": "san-francisco-bay-hills-and-pacific",
@@ -15474,6 +15796,8 @@
    "aliases": [],
    "cw": "san-jose-invention-gardens-and-sky",
    "nb": "san-jose-street-frames-small-stages",
+   "coverageCw": "san-jose-invention-gardens-and-sky",
+   "coverageLocal": "san-jose-street-frames-small-stages",
    "packs": [
     {
      "id": "san-jose-invention-gardens-and-sky",
@@ -15570,6 +15894,8 @@
    "aliases": [],
    "cw": "san-juan-pr-citywide",
    "nb": "san-juan-pr-local",
+   "coverageCw": "san-juan-pr-citywide",
+   "coverageLocal": "san-juan-pr-local",
    "packs": [
     {
      "id": "san-juan-pr-citywide",
@@ -15666,6 +15992,8 @@
    "aliases": [],
    "cw": "san-luis-obispo-rails-gardens-and-hills",
    "nb": "san-luis-obispo-mission-palm-and-higuera",
+   "coverageCw": "san-luis-obispo-rails-gardens-and-hills",
+   "coverageLocal": "san-luis-obispo-mission-palm-and-higuera",
    "packs": [
     {
      "id": "san-luis-obispo-mission-palm-and-higuera",
@@ -15763,6 +16091,8 @@
    "aliases": [],
    "cw": "santa-barbara-mission-gardens-and-coast",
    "nb": "santa-barbara-downtown-to-the-waterfront",
+   "coverageCw": "santa-barbara-mission-gardens-and-coast",
+   "coverageLocal": "santa-barbara-downtown-to-the-waterfront",
    "packs": [
     {
      "id": "santa-barbara-downtown-to-the-waterfront",
@@ -15859,6 +16189,8 @@
    "aliases": [],
    "cw": "santa-cruz-coast-gardens-and-stories",
    "nb": "santa-cruz-west-cliff-to-beach",
+   "coverageCw": "santa-cruz-coast-gardens-and-stories",
+   "coverageLocal": "santa-cruz-west-cliff-to-beach",
    "packs": [
     {
      "id": "santa-cruz-coast-gardens-and-stories",
@@ -15956,6 +16288,8 @@
    "aliases": [],
    "cw": "santa-fe-lines-across-town",
    "nb": "santa-fe-canyon-road-close-up",
+   "coverageCw": "santa-fe-lines-across-town",
+   "coverageLocal": "santa-fe-canyon-road-close-up",
    "packs": [
     {
      "id": "santa-fe-canyon-road-close-up",
@@ -16052,6 +16386,8 @@
    "aliases": [],
    "cw": "santa-monica-coast-and-culture",
    "nb": "santa-monica-downtown-to-pier",
+   "coverageCw": "santa-monica-coast-and-culture",
+   "coverageLocal": "santa-monica-downtown-to-pier",
    "packs": [
     {
      "id": "santa-monica-coast-and-culture",
@@ -16148,6 +16484,8 @@
    "aliases": [],
    "cw": "sarasota-bay-arts-and-wild-places",
    "nb": "sarasota-downtown-and-bayfront-on-foot",
+   "coverageCw": "sarasota-bay-arts-and-wild-places",
+   "coverageLocal": "sarasota-downtown-and-bayfront-on-foot",
    "packs": [
     {
      "id": "sarasota-bay-arts-and-wild-places",
@@ -16244,6 +16582,8 @@
    "aliases": [],
    "cw": "savannah-city-marsh-and-sea",
    "nb": "savannah-squares-to-the-river",
+   "coverageCw": "savannah-city-marsh-and-sea",
+   "coverageLocal": "savannah-squares-to-the-river",
    "packs": [
     {
      "id": "savannah-city-marsh-and-sea",
@@ -16341,6 +16681,8 @@
    "aliases": [],
    "cw": "scottsdale-az-citywide",
    "nb": "scottsdale-az-local",
+   "coverageCw": "scottsdale-az-citywide",
+   "coverageLocal": "scottsdale-az-local",
    "packs": [
     {
      "id": "scottsdale-az-citywide",
@@ -16435,19 +16777,22 @@
    "title": "Seattle",
    "sort": 0,
    "aliases": [],
-   "cw": "seattle-between-market-and-sound",
-   "nb": null,
+   "cw": "seattle-open-sky-small-details",
+   "nb": "seattle-between-market-and-sound",
+   "coverageCw": "seattle-open-sky-small-details",
+   "coverageLocal": "seattle-between-market-and-sound",
    "packs": [
     {
      "id": "seattle-between-market-and-sound",
      "city": "Seattle",
-     "scope": "citywide",
+     "scope": "neighborhood",
      "sort": 0,
      "live": true,
      "title": "Seattle: Between Market and Sound",
      "heroTitle": "Between Market and Sound",
      "promise": "Find small stories between the market’s bustle and the open waterfront.",
      "description": "Ten independent missions through market details, elevated paths, a pocket of shoreline and open-air sculpture. Three optional riddles lead into observation, creative play and a quiet finish.",
+     "neighborhood": "Pike Place Market and the waterfront",
      "questCount": 10,
      "valueLabels": [
       "10 quests",
@@ -16532,6 +16877,8 @@
    "aliases": [],
    "cw": "sedona-red-rock-routes",
    "nb": "sedona-uptown-to-creek",
+   "coverageCw": "sedona-red-rock-routes",
+   "coverageLocal": "sedona-uptown-to-creek",
    "packs": [
     {
      "id": "sedona-red-rock-routes",
@@ -16630,6 +16977,8 @@
    ],
    "cw": "seoul-citywide-metal-trees-and-monuments",
    "nb": "seoul-rooflines-and-ripples",
+   "coverageCw": "seoul-citywide-metal-trees-and-monuments",
+   "coverageLocal": "seoul-rooflines-and-ripples",
    "packs": [
     {
      "id": "seoul-citywide-metal-trees-and-monuments",
@@ -16725,6 +17074,8 @@
    "aliases": [],
    "cw": "seville-citywide-river-and-realms",
    "nb": "seville-santa-cruz-and-triana",
+   "coverageCw": "seville-citywide-river-and-realms",
+   "coverageLocal": "seville-santa-cruz-and-triana",
    "packs": [
     {
      "id": "seville-citywide-river-and-realms",
@@ -16824,6 +17175,8 @@
    ],
    "cw": "singapore-citywide-gardens-ridges-and-coast",
    "nb": "singapore-river-in-detail",
+   "coverageCw": "singapore-citywide-gardens-ridges-and-coast",
+   "coverageLocal": "singapore-river-in-detail",
    "packs": [
     {
      "id": "singapore-citywide-gardens-ridges-and-coast",
@@ -16920,6 +17273,8 @@
    "aliases": [],
    "cw": "south-lake-tahoe-ca-citywide",
    "nb": "south-lake-tahoe-ca-local",
+   "coverageCw": "south-lake-tahoe-ca-citywide",
+   "coverageLocal": "south-lake-tahoe-ca-local",
    "packs": [
     {
      "id": "south-lake-tahoe-ca-citywide",
@@ -17016,6 +17371,8 @@
    "aliases": [],
    "cw": "spokane-gardens-to-gorge",
    "nb": "spokane-riverfront-walk",
+   "coverageCw": "spokane-gardens-to-gorge",
+   "coverageLocal": "spokane-riverfront-walk",
    "packs": [
     {
      "id": "spokane-gardens-to-gorge",
@@ -17112,6 +17469,8 @@
    "aliases": [],
    "cw": "springfield-mo-citywide",
    "nb": "springfield-mo-local",
+   "coverageCw": "springfield-mo-citywide",
+   "coverageLocal": "springfield-mo-local",
    "packs": [
     {
      "id": "springfield-mo-citywide",
@@ -17207,6 +17566,8 @@
    "aliases": [],
    "cw": "st-augustine-coquina-coast-and-stories",
    "nb": "st-augustine-gates-to-bayfront",
+   "coverageCw": "st-augustine-coquina-coast-and-stories",
+   "coverageLocal": "st-augustine-gates-to-bayfront",
    "packs": [
     {
      "id": "st-augustine-coquina-coast-and-stories",
@@ -17303,6 +17664,8 @@
    "aliases": [],
    "cw": "st-louis-citywide-discoveries",
    "nb": "st-louis-downtown-to-riverfront",
+   "coverageCw": "st-louis-citywide-discoveries",
+   "coverageLocal": "st-louis-downtown-to-riverfront",
    "packs": [
     {
      "id": "st-louis-citywide-discoveries",
@@ -17400,6 +17763,8 @@
    "aliases": [],
    "cw": "st-petersburg-fl-art-gardens-and-bay",
    "nb": "st-petersburg-fl-central-to-the-pier",
+   "coverageCw": "st-petersburg-fl-art-gardens-and-bay",
+   "coverageLocal": "st-petersburg-fl-central-to-the-pier",
    "packs": [
     {
      "id": "st-petersburg-fl-art-gardens-and-bay",
@@ -17496,6 +17861,8 @@
    "aliases": [],
    "cw": "stockholm-citywide-islands-and-inventions",
    "nb": "stockholm-local-sodermalm-in-layers",
+   "coverageCw": "stockholm-citywide-islands-and-inventions",
+   "coverageLocal": "stockholm-local-sodermalm-in-layers",
    "packs": [
     {
      "id": "stockholm-citywide-islands-and-inventions",
@@ -17592,6 +17959,8 @@
    "aliases": [],
    "cw": "sydney-citywide-park-lines-and-coast",
    "nb": "sydney-harbour-in-the-details",
+   "coverageCw": "sydney-citywide-park-lines-and-coast",
+   "coverageLocal": "sydney-harbour-in-the-details",
    "packs": [
     {
      "id": "sydney-citywide-park-lines-and-coast",
@@ -17688,6 +18057,8 @@
    "aliases": [],
    "cw": "taipei-citywide",
    "nb": "taipei-local",
+   "coverageCw": "taipei-citywide",
+   "coverageLocal": "taipei-local",
    "packs": [
     {
      "id": "taipei-citywide",
@@ -17784,6 +18155,8 @@
    "aliases": [],
    "cw": "tallahassee-fl-citywide",
    "nb": "tallahassee-fl-local",
+   "coverageCw": "tallahassee-fl-citywide",
+   "coverageLocal": "tallahassee-fl-local",
    "packs": [
     {
      "id": "tallahassee-fl-citywide",
@@ -17880,6 +18253,8 @@
    "aliases": [],
    "cw": "tampa-bay-stories-and-shorelines",
    "nb": "tampa-ybor-city-on-foot",
+   "coverageCw": "tampa-bay-stories-and-shorelines",
+   "coverageLocal": "tampa-ybor-city-on-foot",
    "packs": [
     {
      "id": "tampa-bay-stories-and-shorelines",
@@ -17977,6 +18352,8 @@
    "aliases": [],
    "cw": "taos-nm-citywide",
    "nb": "taos-nm-local",
+   "coverageCw": "taos-nm-citywide",
+   "coverageLocal": "taos-nm-local",
    "packs": [
     {
      "id": "taos-nm-citywide",
@@ -18073,6 +18450,8 @@
    "aliases": [],
    "cw": "tempe-az-citywide",
    "nb": "tempe-az-local",
+   "coverageCw": "tempe-az-citywide",
+   "coverageLocal": "tempe-az-local",
    "packs": [
     {
      "id": "tempe-az-citywide",
@@ -18172,6 +18551,8 @@
    ],
    "cw": "tokyo-citywide-city-frames",
    "nb": "tokyo-roofs-and-river",
+   "coverageCw": "tokyo-citywide-city-frames",
+   "coverageLocal": "tokyo-roofs-and-river",
    "packs": [
     {
      "id": "tokyo-citywide-city-frames",
@@ -18268,6 +18649,8 @@
    "aliases": [],
    "cw": "tucson-desert-to-sky",
    "nb": "tucson-streetcar-and-side-streets",
+   "coverageCw": "tucson-desert-to-sky",
+   "coverageLocal": "tucson-streetcar-and-side-streets",
    "packs": [
     {
      "id": "tucson-desert-to-sky",
@@ -18362,6 +18745,8 @@
    "aliases": [],
    "cw": "tulsa-river-road-and-stories",
    "nb": "tulsa-arts-and-greenwood",
+   "coverageCw": "tulsa-river-road-and-stories",
+   "coverageLocal": "tulsa-arts-and-greenwood",
    "packs": [
     {
      "id": "tulsa-arts-and-greenwood",
@@ -18458,6 +18843,8 @@
    "aliases": [],
    "cw": "valencia-citywide-river-to-lagoon",
    "nb": "valencia-local-cabanyal-marina",
+   "coverageCw": "valencia-citywide-river-to-lagoon",
+   "coverageLocal": "valencia-local-cabanyal-marina",
    "packs": [
     {
      "id": "valencia-citywide-river-to-lagoon",
@@ -18556,6 +18943,8 @@
    ],
    "cw": "venice-citywide-arcades-gardens-and-open-views",
    "nb": "venice-between-stone-and-tide",
+   "coverageCw": "venice-citywide-arcades-gardens-and-open-views",
+   "coverageLocal": "venice-between-stone-and-tide",
    "packs": [
     {
      "id": "venice-between-stone-and-tide",
@@ -18653,6 +19042,8 @@
    ],
    "cw": "vienna-citywide-circles-fragments-and-open-space",
    "nb": "vienna-between-ornament-and-pause",
+   "coverageCw": "vienna-citywide-circles-fragments-and-open-space",
+   "coverageLocal": "vienna-between-ornament-and-pause",
    "packs": [
     {
      "id": "vienna-between-ornament-and-pause",
@@ -18748,6 +19139,8 @@
    "aliases": [],
    "cw": "virginia-beach-bays-to-back-bay",
    "nb": "virginia-beach-oceanfront-and-vibe",
+   "coverageCw": "virginia-beach-bays-to-back-bay",
+   "coverageLocal": "virginia-beach-oceanfront-and-vibe",
    "packs": [
     {
      "id": "virginia-beach-bays-to-back-bay",
@@ -18844,6 +19237,8 @@
    "aliases": [],
    "cw": "waco-tx-citywide",
    "nb": "waco-tx-local",
+   "coverageCw": "waco-tx-citywide",
+   "coverageLocal": "waco-tx-local",
    "packs": [
     {
      "id": "waco-tx-citywide",
@@ -18942,6 +19337,8 @@
    ],
    "cw": "warsaw-citywide-gardens-and-riverlines",
    "nb": "warsaw-colourlines-and-quiet-corners",
+   "coverageCw": "warsaw-citywide-gardens-and-riverlines",
+   "coverageLocal": "warsaw-colourlines-and-quiet-corners",
    "packs": [
     {
      "id": "warsaw-citywide-gardens-and-riverlines",
@@ -19042,6 +19439,8 @@
    ],
    "cw": "washington-dc-memorials-museums-and-civic-life",
    "nb": "washington-dc-small-wonders",
+   "coverageCw": "washington-dc-memorials-museums-and-civic-life",
+   "coverageLocal": "washington-dc-small-wonders",
    "packs": [
     {
      "id": "washington-dc-memorials-museums-and-civic-life",
@@ -19139,6 +19538,8 @@
    "aliases": [],
    "cw": "west-palm-beach-art-gardens-and-lagoon",
    "nb": "west-palm-beach-waterfront-on-foot",
+   "coverageCw": "west-palm-beach-art-gardens-and-lagoon",
+   "coverageLocal": "west-palm-beach-waterfront-on-foot",
    "packs": [
     {
      "id": "west-palm-beach-art-gardens-and-lagoon",
@@ -19235,6 +19636,8 @@
    "aliases": [],
    "cw": "williamsburg-va-citywide",
    "nb": "williamsburg-va-local",
+   "coverageCw": "williamsburg-va-citywide",
+   "coverageLocal": "williamsburg-va-local",
    "packs": [
     {
      "id": "williamsburg-va-citywide",
@@ -19331,6 +19734,8 @@
    "aliases": [],
    "cw": "wilmington-nc-river-to-sea",
    "nb": "wilmington-nc-downtown-river-stories",
+   "coverageCw": "wilmington-nc-river-to-sea",
+   "coverageLocal": "wilmington-nc-downtown-river-stories",
    "packs": [
     {
      "id": "wilmington-nc-downtown-river-stories",
@@ -19427,6 +19832,8 @@
    "aliases": [],
    "cw": "winston-salem-nc-citywide",
    "nb": "winston-salem-nc-local",
+   "coverageCw": "winston-salem-nc-citywide",
+   "coverageLocal": "winston-salem-nc-local",
    "packs": [
     {
      "id": "winston-salem-nc-citywide",
@@ -19523,6 +19930,8 @@
    "aliases": [],
    "cw": "zurich-citywide-rails-and-lake",
    "nb": "zurich-local-old-town-threads",
+   "coverageCw": "zurich-citywide-rails-and-lake",
+   "coverageLocal": "zurich-local-old-town-threads",
    "packs": [
     {
      "id": "zurich-citywide-rails-and-lake",

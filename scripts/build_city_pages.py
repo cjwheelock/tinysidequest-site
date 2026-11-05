@@ -145,12 +145,18 @@ def load() -> tuple[list[dict], set[str]]:
         else:
             raise SystemExit(f"No country or state for {cid}; add it to build_city_pages.py")
         city["name"] = display_name(city)
-        live = [p for p in city["packs"] if p.get("live")]
-        core = [p for p in live if p["id"] in (city.get("cw"), city.get("nb"))]
-        core.sort(key=lambda p: 0 if p["id"] == city.get("cw") else 1)
-        if len(core) < 2:  # A few cities hold two packs without the citywide/local split.
-            core = (core + [p for p in live if p not in core])[:2]
-        city["core"], city["extra"] = core, [p for p in live if p not in core]
+        live = {p["id"]: p for p in city["packs"] if p.get("live")}
+        # Same rule as the app (sidequest_private.city_core_pack_ids): the scope-based
+        # Citywide/Local pair, else the city's reviewed coverage pair.
+        pair = [city.get("cw"), city.get("nb")]
+        if not all(pid in live for pid in pair):
+            pair = [city.get("coverageCw"), city.get("coverageLocal")]
+        if not all(pid in live for pid in pair) or pair[0] == pair[1]:
+            pair = [pid for pid in pair if pid in live] or list(live)[:1]
+        core = [live[pid] for pid in pair]
+        for index, pack in enumerate(core):
+            pack["role"] = "Citywide" if index == 0 else "Local"
+        city["core"], city["extra"] = core, [p for p in live.values() if p not in core]
         by_name.setdefault(city["name"], []).append(city)
     for same in by_name.values():
         for city in same:
@@ -159,6 +165,8 @@ def load() -> tuple[list[dict], set[str]]:
 
 
 def role(pack: dict, index: int) -> str:
+    if pack.get("role"):
+        return pack["role"]
     scope = pack.get("scope") or pack.get("editionScope")
     if scope == "citywide":
         return "Citywide"
