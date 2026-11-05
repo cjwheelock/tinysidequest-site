@@ -1,5 +1,7 @@
 (() => {
   const cities = JSON.parse(document.querySelector('#city-data').textContent);
+  let directory = [];
+  try { directory = JSON.parse(document.querySelector('#city-directory')?.textContent || '[]'); } catch { directory = []; }
   const stage = document.querySelector('.stage');
   const cards = [...document.querySelectorAll('.city-card')];
   const input = document.querySelector('#city-search');
@@ -52,6 +54,7 @@
       ...city.editorial,
       storyEyebrow: `Explore ${city.name} with SideQuest`,
       questLink: `See a few ${city.name} quests`,
+      pageLink: `Open the ${city.name} page`,
       total: city.packs.reduce((sum, pack) => sum + pack.questCount, 0),
       totalLabel: `quests across ${city.name}`,
       place: city.editorial.previews.map((quest, i) => `${String(i + 1).padStart(2, '0')} / ${quest.place}`),
@@ -61,6 +64,8 @@
     });
     content.querySelector('.city-included').setAttribute('aria-label', `${city.name} City Edition includes`);
     content.querySelector('.city-quest-link').href = `#city=${city.id}&section=quests`;
+    const pageLink = content.querySelector('.city-page-link');
+    if (pageLink) pageLink.href = `/city-editions/${city.id}/`;
     imageSpecs(city).forEach((spec, i) => {
       const img = images[i];
       const previous = spec.slot.startsWith('pack-')
@@ -141,26 +146,47 @@
     wheel += e.deltaX;
     if (Math.abs(wheel) > 40) { select(requested + Math.sign(wheel)); wheel = 0; wheelAt = performance.now(); }
   }, {passive:false});
-  function matches() { const q = normal(input.value); return cities.filter(c => normal([c.name,c.region,...c.aliases].join(' ')).includes(q)); }
+  const featuredIds = new Set(cities.map(c => c.id));
+  const searchable = [
+    ...cities.map(c => ({id:c.id, name:c.name, region:c.region, terms:normal([c.name, c.region, ...c.aliases].join(' ')), city:c})),
+    ...directory.filter(d => !featuredIds.has(d.id)),
+  ];
+  function matches() {
+    const q = normal(input.value);
+    if (!q) return searchable.filter(item => item.city);
+    const words = q.split(/\s+/);
+    const hits = searchable.filter(item => words.every(w => item.terms.includes(w) || normal(item.name).includes(w)));
+    const rank = item => normal(item.name).startsWith(q) ? 0 : normal(item.name).split(/[\s-]+/).some(w => w.startsWith(q)) ? 1 : 2;
+    return hits.sort((a, b) => rank(a) - rank(b) || a.name.localeCompare(b.name)).slice(0, 40);
+  }
   function closeSearch() { results.hidden = true; input.setAttribute('aria-expanded','false'); }
   function choose(city) { input.value = city.name; clear.hidden = false; closeSearch(); input.focus({preventScroll:true}); select(cities.indexOf(city), true); }
+  function open(item) { if (item.city) choose(item.city); else location.href = `/city-editions/${item.id}/`; }
   function search() {
     const list = matches(); results.replaceChildren(); clear.hidden = !input.value;
-    list.forEach(city => {
-      const li = document.createElement('li'), button = document.createElement('button'), place = document.createElement('span');
-      button.type = 'button'; button.textContent = city.name; place.textContent = city.region; button.append(place); button.addEventListener('click', () => choose(city)); li.append(button); results.append(li);
+    list.forEach(item => {
+      const li = document.createElement('li'), place = document.createElement('span');
+      const control = document.createElement(item.city ? 'button' : 'a');
+      if (item.city) { control.type = 'button'; control.addEventListener('click', () => choose(item.city)); }
+      else control.href = `/city-editions/${item.id}/`;
+      control.textContent = item.name; place.textContent = item.region; control.append(place); li.append(control); results.append(li);
     });
-    if (!list.length) { const li = document.createElement('li'); li.className = 'no-results'; li.textContent = 'No matching cities. Try another name.'; results.append(li); }
+    if (!list.length) { const li = document.createElement('li'); li.className = 'no-results'; li.textContent = 'No matching cities yet. Try another name or a country.'; results.append(li); }
+    if (!input.value && directory.length) {
+      const li = document.createElement('li'), all = document.createElement('a');
+      li.className = 'all-cities-link'; all.href = '#all-cities'; all.textContent = `Browse all ${directory.length} cities`;
+      all.addEventListener('click', () => closeSearch()); li.append(all); results.append(li);
+    }
     results.hidden = false; input.setAttribute('aria-expanded','true');
   }
   input.addEventListener('input', search); input.addEventListener('focus', search);
   input.addEventListener('keydown', e => {
     if (e.key === 'Escape') closeSearch();
-    if (e.key === 'ArrowDown') { e.preventDefault(); if (results.hidden) search(); results.querySelector('button')?.focus(); }
-    if (e.key === 'Enter' && matches().length) { e.preventDefault(); choose(matches()[0]); }
+    if (e.key === 'ArrowDown') { e.preventDefault(); if (results.hidden) search(); results.querySelector('button, a')?.focus(); }
+    if (e.key === 'Enter' && input.value && matches().length) { e.preventDefault(); open(matches()[0]); }
   });
   results.addEventListener('keydown', e => {
-    const buttons = [...results.querySelectorAll('button')], i = buttons.indexOf(document.activeElement);
+    const buttons = [...results.querySelectorAll('button, a')], i = buttons.indexOf(document.activeElement);
     if (e.key === 'Escape') { input.focus(); closeSearch(); }
     if (['ArrowDown','ArrowUp'].includes(e.key)) { e.preventDefault(); buttons[(i + (e.key === 'ArrowDown' ? 1 : -1) + buttons.length) % buttons.length]?.focus(); }
   });

@@ -10,7 +10,7 @@
   if (!canonical) return;
   let page;
   try { page = new URL(canonical.href); } catch { return; }
-  const publicPath = /^(?:\/$|\/blog\/(?:[a-z0-9-]+\/)?$|\/(?:support|privacy|terms|contact)\/$)/;
+  const publicPath = /^(?:\/$|\/blog\/(?:[a-z0-9-]+\/)?$|\/city-editions\/(?:[a-z0-9-]+\/)?$|\/(?:support|privacy|terms|contact)\/$)/;
   const actualPath = location.pathname.endsWith('/') ? location.pathname : location.pathname + '/';
   if (page.origin !== 'https://tinysidequest.com' || !publicPath.test(page.pathname) || actualPath !== page.pathname) return;
 
@@ -52,7 +52,7 @@
     let target;
     try { target = new URL(link.href); } catch { return; }
     if (target.protocol !== 'https:' || target.hostname !== 'apps.apple.com' || !/\/id6781441096$/.test(target.pathname)) return;
-    const placement = link.closest('.hero') ? 'hero' : link.closest('.closing') ? 'closing' : link.closest('.product-faq') ? 'product_answers' : 'other';
+    const placement = link.closest('.hero') ? 'hero' : link.closest('.closing') ? 'closing' : link.closest('.product-faq') ? 'product_answers' : link.closest('.city-cta, .cp-hero') ? 'city_edition' : 'other';
     const properties = {store: 'apple_app_store', placement};
     if (config) send('website_store_link_clicked', properties);
     else if (pendingClicks.length < 5) pendingClicks.push(properties);
