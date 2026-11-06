@@ -4,5 +4,7 @@ Disallow: /code
 Disallow: /guest
 Disallow: /r
 Disallow: /together
+Disallow: /sign
+Disallow: /CRM
 
 Sitemap: https://tinysidequest.com/sitemap.xml
