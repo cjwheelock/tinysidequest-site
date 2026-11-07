@@ -76,6 +76,9 @@ US_STATES = {
     "st-petersburg-fl": "Florida", "tallahassee-fl": "Florida", "tampa": "Florida", "taos-nm": "New Mexico",
     "tempe-az": "Arizona", "tucson": "Arizona", "tulsa": "Oklahoma", "virginia-beach": "Virginia",
     "waco-tx": "Texas", "washington-dc": "District of Columbia", "west-palm-beach": "Florida",
+    "long-beach": "California", "fresno": "California", "arlington-tx": "Texas", "lexington-ky": "Kentucky",
+    "irvine-ca": "California", "durham-nc": "North Carolina", "riverside-ca": "California", "lincoln-ne": "Nebraska",
+    "baton-rouge-la": "Louisiana", "reno-nv": "Nevada",
     "williamsburg-va": "Virginia", "wilmington-nc": "North Carolina", "winston-salem-nc": "North Carolina",
 }
 

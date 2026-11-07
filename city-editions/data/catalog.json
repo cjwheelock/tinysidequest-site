@@ -1,5 +1,5 @@
 {
- "source": "SideQuest live City catalog (Supabase), exported 2026-11-05 (after scope alignment)",
+ "source": "SideQuest live City catalog (Supabase), exported 2026-11-05 (after scope alignment); 10 cities added 2026-11-07",
  "cities": [
   {
    "id": "albany-ny",
@@ -587,6 +587,105 @@
        "heroUrl": "https://qoxoutfmmmuzjneyvryi.supabase.co/storage/v1/object/public/sidequest-city-previews/v1/f4bede4246c38840879a6de0-240-q60.jpg"
       }
      ]
+    }
+   ]
+  },
+  {
+   "id": "arlington-tx",
+   "title": "Arlington, Texas",
+   "sort": 0,
+   "aliases": [],
+   "cw": "arlington-tx-citywide",
+   "nb": "arlington-tx-local",
+   "coverageCw": "arlington-tx-citywide",
+   "coverageLocal": "arlington-tx-local",
+   "packs": [
+    {
+     "id": "arlington-tx-citywide",
+     "city": "Arlington, Texas",
+     "live": true,
+     "sort": 0,
+     "scope": "citywide",
+     "title": "Arlington at full scale",
+     "accent": "#C36D32",
+     "promise": "Stadium shapes, museum stories and room to breathe.",
+     "coverUrl": "https://qoxoutfmmmuzjneyvryi.supabase.co/storage/v1/object/public/sidequest-city-previews/v1/896a5421c79f619b01902d3f-400-q60.jpg",
+     "previews": [
+      {
+       "title": "Three details behind a medal",
+       "heroUrl": "https://qoxoutfmmmuzjneyvryi.supabase.co/storage/v1/object/public/sidequest-city-previews/v1/92c541b8cd3956ee9945a2f6-240-q60.jpg",
+       "subtitle": "Collect a person’s story with care."
+      },
+      {
+       "title": "Out, notice, return",
+       "heroUrl": "https://qoxoutfmmmuzjneyvryi.supabase.co/storage/v1/object/public/sidequest-city-previews/v1/d04dd8f1ef45914078b6bb41-240-q60.jpg",
+       "subtitle": "Walk a short paved River Legacy segment."
+      },
+      {
+       "title": "Three quiet minutes",
+       "heroUrl": "https://qoxoutfmmmuzjneyvryi.supabase.co/storage/v1/object/public/sidequest-city-previews/v1/282c775a87ecb442dc932dc9-240-q60.jpg",
+       "subtitle": "Give a memorial space your attention."
+      }
+     ],
+     "heroTitle": "Arlington, Texas",
+     "accentSoft": "#F4DEC8",
+     "questCount": 10,
+     "description": "Ten missions across Arlington: read stadium design, explore admitted museum and planetarium experiences, and notice the city’s parks. Plan separate outings, paid entries and transport between areas.",
+     "valueLabels": [
+      "10 citywide missions",
+      "3 optional riddles",
+      "Separate outings"
+     ],
+     "neighborhood": null,
+     "mobilityModes": [
+      "walk",
+      "car"
+     ],
+     "portraitCoverUrl": "https://qoxoutfmmmuzjneyvryi.supabase.co/storage/v1/object/public/sidequest-city-previews/v1/arlington-tx-citywide-c52891beafdcf6fba5c61319-960-q80.jpg",
+     "coverAccessibilityLabel": "Explorer drawing the paired roof arches outside AT&T Stadium in Arlington."
+    },
+    {
+     "id": "arlington-tx-local",
+     "city": "Arlington, Texas",
+     "live": true,
+     "sort": 0,
+     "scope": "neighborhood",
+     "title": "Arlington, one block at a time",
+     "accent": "#41786E",
+     "promise": "A downtown walk that reaches College Park.",
+     "coverUrl": "https://qoxoutfmmmuzjneyvryi.supabase.co/storage/v1/object/public/sidequest-city-previews/v1/922ad5d7d07cab7138e3ebef-400-q60.jpg",
+     "previews": [
+      {
+       "title": "Three small buildings, three clues",
+       "heroUrl": "https://qoxoutfmmmuzjneyvryi.supabase.co/storage/v1/object/public/sidequest-city-previews/v1/df918cd29fb28b0b5d50f49a-240-q60.jpg",
+       "subtitle": "Collect how old structures differ."
+      },
+      {
+       "title": "A tower in five lines",
+       "heroUrl": "https://qoxoutfmmmuzjneyvryi.supabase.co/storage/v1/object/public/sidequest-city-previews/v1/85d5482cbf5df716c6233ff0-240-q60.jpg",
+       "subtitle": "Draw a public landmark without its labels."
+      },
+      {
+       "title": "A small sound score",
+       "heroUrl": "https://qoxoutfmmmuzjneyvryi.supabase.co/storage/v1/object/public/sidequest-city-previews/v1/59d131e952cde691ed363c0d-240-q60.jpg",
+       "subtitle": "End the walk with three minutes of listening."
+      }
+     ],
+     "heroTitle": "Arlington, Texas",
+     "accentSoft": "#D7E8E3",
+     "questCount": 10,
+     "description": "Ten missions through downtown and the connected College Park area: compare heritage buildings, browse books, make small drawings and finish with a quiet campus-green pause. Plan two afternoons around Knapp and library opening hours.",
+     "valueLabels": [
+      "10 local missions",
+      "3 optional riddles",
+      "Two afternoons"
+     ],
+     "neighborhood": "Downtown and College Park",
+     "mobilityModes": [
+      "walk"
+     ],
+     "portraitCoverUrl": "https://qoxoutfmmmuzjneyvryi.supabase.co/storage/v1/object/public/sidequest-city-previews/v1/arlington-tx-local-f04330e14ed75b5547fc09ae-960-q80.jpg",
+     "coverAccessibilityLabel": "Explorer framing the Levitt Pavilion from an open path in Arlington’s Founders Plaza."
     }
    ]
   },
@@ -1671,6 +1770,105 @@
        "heroUrl": "https://qoxoutfmmmuzjneyvryi.supabase.co/storage/v1/object/public/sidequest-city-previews/v1/a32be37933112013d3cfd466-240-q60.jpg"
       }
      ]
+    }
+   ]
+  },
+  {
+   "id": "baton-rouge-la",
+   "title": "Baton Rouge, Louisiana",
+   "sort": 0,
+   "aliases": [],
+   "cw": "baton-rouge-la-citywide",
+   "nb": "baton-rouge-la-local",
+   "coverageCw": "baton-rouge-la-citywide",
+   "coverageLocal": "baton-rouge-la-local",
+   "packs": [
+    {
+     "id": "baton-rouge-la-citywide",
+     "city": "Baton Rouge, Louisiana",
+     "live": true,
+     "sort": 0,
+     "scope": "citywide",
+     "title": "Historic rooms, source records and park paths",
+     "accent": "#8A654B",
+     "promise": "Read a historic house, collect city evidence and make from actual public paths.",
+     "coverUrl": "https://qoxoutfmmmuzjneyvryi.supabase.co/storage/v1/object/public/sidequest-city-previews/v1/c9583bee4bfd3ecd032e571f-400-q60.jpg",
+     "previews": [
+      {
+       "title": "A greenway postcard",
+       "heroUrl": "https://qoxoutfmmmuzjneyvryi.supabase.co/storage/v1/object/public/sidequest-city-previews/v1/af74042c16a6bef8d3686bb3-240-q60.jpg",
+       "subtitle": "Give a short park view four lines of your own."
+      },
+      {
+       "title": "Three local-history source records",
+       "heroUrl": "https://qoxoutfmmmuzjneyvryi.supabase.co/storage/v1/object/public/sidequest-city-previews/v1/342533f382fd901de50318b3-240-q60.jpg",
+       "subtitle": "Collect the identities of three sources that describe this city."
+      },
+      {
+       "title": "Three art-material records",
+       "heroUrl": "https://qoxoutfmmmuzjneyvryi.supabase.co/storage/v1/object/public/sidequest-city-previews/v1/7b0415a633eb806c72307377-240-q60.jpg",
+       "subtitle": "Put a material named by a label beside what you can see."
+      }
+     ],
+     "heroTitle": "Baton Rouge",
+     "accentSoft": "#F1E9DF",
+     "questCount": 10,
+     "description": "Ten missions in three groups of separate visits. An admitted Magnolia Mound Main House tour sits beside the former gallery poolhouse, a greenway verse and a bounded Perkins path return. Goodwood adds local-history source records and garden-layout clues. Finish with an admitted LSU Museum of Art visit, a former fire-station facade and two northern park experiences.",
+     "valueLabels": [
+      "10 missions",
+      "Separate outings",
+      "Written proof"
+     ],
+     "neighborhood": null,
+     "mobilityModes": [
+      "walk",
+      "car"
+     ],
+     "portraitCoverUrl": "https://qoxoutfmmmuzjneyvryi.supabase.co/storage/v1/object/public/sidequest-city-previews/v1/baton-rouge-la-citywide-4a0e87b3db3011ceb091504c-960-q80.jpg",
+     "coverAccessibilityLabel": "Explorer viewing Baton Rouge Gallery’s actual former poolhouse from an opened public exterior path."
+    },
+    {
+     "id": "baton-rouge-la-local",
+     "city": "Baton Rouge, Louisiana",
+     "live": true,
+     "sort": 0,
+     "scope": "neighborhood",
+     "title": "Downtown riverfront and Capitol afternoons",
+     "accent": "#8A654B",
+     "promise": "Follow architecture, hands-on exhibits and public grounds across two downtown afternoons.",
+     "coverUrl": "https://qoxoutfmmmuzjneyvryi.supabase.co/storage/v1/object/public/sidequest-city-previews/v1/89e47f21ec99a5973a7aa5f6-400-q60.jpg",
+     "previews": [
+      {
+       "title": "Three inputs, three changes",
+       "heroUrl": "https://qoxoutfmmmuzjneyvryi.supabase.co/storage/v1/object/public/sidequest-city-previews/v1/1844226af55daa05dce29719-240-q60.jpg",
+       "subtitle": "Collect what changes when you use a real exhibit control."
+      },
+      {
+       "title": "A short levee return",
+       "heroUrl": "https://qoxoutfmmmuzjneyvryi.supabase.co/storage/v1/object/public/sidequest-city-previews/v1/7d755eb33409b3c854f87ce7-240-q60.jpg",
+       "subtitle": "Let a dry river path become an outward view and a return."
+      },
+      {
+       "title": "A powder-magazine pattern",
+       "heroUrl": "https://qoxoutfmmmuzjneyvryi.supabase.co/storage/v1/object/public/sidequest-city-previews/v1/ef60703773981827901ead75-240-q60.jpg",
+       "subtitle": "Make a new pattern from a small historic building’s exterior."
+      }
+     ],
+     "heroTitle": "Baton Rouge",
+     "accentSoft": "#F1E9DF",
+     "questCount": 10,
+     "description": "Two connected five-mission afternoons. The first joins the former governor’s mansion, Old State Capitol Rotunda, admitted LASM STEAM Station, a short levee return and River Center library. The second links admitted Capitol Park Museum, the ground-level Capitol tower view, Arsenal exterior, a memorial-park pause and The Bosque public seating area.",
+     "valueLabels": [
+      "10 missions",
+      "Two afternoons",
+      "Written proof"
+     ],
+     "neighborhood": "Downtown riverfront and Capitol grounds",
+     "mobilityModes": [
+      "walk"
+     ],
+     "portraitCoverUrl": "https://qoxoutfmmmuzjneyvryi.supabase.co/storage/v1/object/public/sidequest-city-previews/v1/baton-rouge-la-local-6ac93a6c62fe4616ab5870ff-960-q80.jpg",
+     "coverAccessibilityLabel": "Explorer beside the actual Old State Capitol exterior after studying its Rotunda architecture."
     }
    ]
   },
@@ -5160,6 +5358,105 @@
    ]
   },
   {
+   "id": "durham-nc",
+   "title": "Durham, North Carolina",
+   "sort": 0,
+   "aliases": [],
+   "cw": "durham-nc-citywide",
+   "nb": "durham-nc-local",
+   "coverageCw": "durham-nc-citywide",
+   "coverageLocal": "durham-nc-local",
+   "packs": [
+    {
+     "id": "durham-nc-citywide",
+     "city": "Durham, North Carolina",
+     "live": true,
+     "sort": 0,
+     "scope": "citywide",
+     "title": "Homes, collections and open paths",
+     "accent": "#416A64",
+     "promise": "Follow city histories, look closely at living and art collections, and make room for a short outdoor return.",
+     "coverUrl": "https://qoxoutfmmmuzjneyvryi.supabase.co/storage/v1/object/public/sidequest-city-previews/v1/1f1784662a133814a4fa326d-400-q60.jpg",
+     "previews": [
+      {
+       "title": "Wings in three records",
+       "heroUrl": "https://qoxoutfmmmuzjneyvryi.supabase.co/storage/v1/object/public/sidequest-city-previews/v1/b68c54fd718298d12f772550-240-q60.jpg",
+       "subtitle": "Build a field note from pattern, behavior and lifecycle."
+      },
+      {
+       "title": "Follow an exhibition thread",
+       "heroUrl": "https://qoxoutfmmmuzjneyvryi.supabase.co/storage/v1/object/public/sidequest-city-previews/v1/a75ba2fac23986221f6a60e3-240-q60.jpg",
+       "subtitle": "Test a curatorial idea against two details you can see."
+      },
+      {
+       "title": "Three observation panels",
+       "heroUrl": "https://qoxoutfmmmuzjneyvryi.supabase.co/storage/v1/object/public/sidequest-city-previews/v1/c3ded780a3be351d6666732c-240-q60.jpg",
+       "subtitle": "Make a short storyboard from a booked lemur visit."
+      }
+     ],
+     "heroTitle": "Durham",
+     "accentSoft": "#E2EEEB",
+     "questCount": 10,
+     "description": "Ten separate Durham visits span visitor-center history, Pauli Murray’s outdoor exhibits, a butterfly conservatory, two art museums, a reserved seasonal lemur tour, Hayti’s historic exterior, a short rail-trail return and a park pause. Opening days, admission and reservations vary.",
+     "valueLabels": [
+      "10 missions",
+      "Separate arrivals",
+      "Seasonal reservation"
+     ],
+     "neighborhood": null,
+     "mobilityModes": [
+      "walk",
+      "car"
+     ],
+     "portraitCoverUrl": "https://qoxoutfmmmuzjneyvryi.supabase.co/storage/v1/object/public/sidequest-city-previews/v1/durham-nc-citywide-3f9aed99ff07d4e01a915231-960-q80.jpg",
+     "coverAccessibilityLabel": "Explorer beside the Pauli Murray Center’s historic home and outdoor visitor exhibits."
+    },
+    {
+     "id": "durham-nc-local",
+     "city": "Durham, North Carolina",
+     "live": true,
+     "sort": 0,
+     "scope": "neighborhood",
+     "title": "Two downtown afternoons",
+     "accent": "#A8663F",
+     "promise": "Connect warehouse streets, public galleries, local history and a park through two walking afternoons.",
+     "coverUrl": "https://qoxoutfmmmuzjneyvryi.supabase.co/storage/v1/object/public/sidequest-city-previews/v1/1c5a48d940844d545ff8abaf-400-q60.jpg",
+     "previews": [
+      {
+       "title": "Three dated city records",
+       "heroUrl": "https://qoxoutfmmmuzjneyvryi.supabase.co/storage/v1/object/public/sidequest-city-previews/v1/b704cacd330b67d34d4661d7-240-q60.jpg",
+       "subtitle": "Place three museum facts in order."
+      },
+      {
+       "title": "Look again with context",
+       "heroUrl": "https://qoxoutfmmmuzjneyvryi.supabase.co/storage/v1/object/public/sidequest-city-previews/v1/dda143e1896e53a8cb563723-240-q60.jpg",
+       "subtitle": "Collect what changed between two views of one work."
+      },
+      {
+       "title": "Three panels from a mill",
+       "heroUrl": "https://qoxoutfmmmuzjneyvryi.supabase.co/storage/v1/object/public/sidequest-city-previews/v1/c5908584b401d6acb0057f6c-240-q60.jpg",
+       "subtitle": "Make a small sequence from the exterior’s rhythm."
+      }
+     ],
+     "heroTitle": "Durham",
+     "accentSoft": "#F5E6D9",
+     "questCount": 10,
+     "description": "Ten downtown missions connect Brightleaf, a small history museum, free public galleries, a bronze bull, former factory structures, a historic County facade, Golden Belt, the Main Library and Central Park. Split the connected area across two afternoons and leave time for street crossings and gallery entry.",
+     "valueLabels": [
+      "10 missions",
+      "Two afternoons",
+      "Free visitor activities"
+     ],
+     "neighborhood": "Brightleaf, Downtown and Golden Belt",
+     "mobilityModes": [
+      "walk"
+     ],
+     "portraitCoverUrl": "https://qoxoutfmmmuzjneyvryi.supabase.co/storage/v1/object/public/sidequest-city-previews/v1/durham-nc-local-b99fa2259c872c1219e9c4a5-960-q80.jpg",
+     "coverAccessibilityLabel": "Explorer on an open visitor path with American Tobacco Campus’s raised water tank and former factory buildings visible."
+    }
+   ]
+  },
+  {
    "id": "edinburgh",
    "title": "Edinburgh",
    "sort": 0,
@@ -6037,6 +6334,105 @@
        "heroUrl": "https://qoxoutfmmmuzjneyvryi.supabase.co/storage/v1/object/public/sidequest-city-previews/v1/3761250de72294e836dba795-240-q60.jpg"
       }
      ]
+    }
+   ]
+  },
+  {
+   "id": "fresno",
+   "title": "Fresno",
+   "sort": 0,
+   "aliases": [],
+   "cw": "fresno-citywide",
+   "nb": "fresno-local",
+   "coverageCw": "fresno-citywide",
+   "coverageLocal": "fresno-local",
+   "packs": [
+    {
+     "id": "fresno-citywide",
+     "city": "Fresno",
+     "live": true,
+     "sort": 0,
+     "scope": "citywide",
+     "title": "Fresno: Gardens, Art and County Stories",
+     "accent": "#55786C",
+     "promise": "Explore Fresno through admitted gardens, museums, zoo spaces and public street architecture.",
+     "coverUrl": "https://qoxoutfmmmuzjneyvryi.supabase.co/storage/v1/object/public/sidequest-city-previews/v1/6a99bb5c2c0416866c026bc0-400-q60.jpg",
+     "previews": [
+      {
+       "title": "A Habitat Built in Layers",
+       "heroUrl": "https://qoxoutfmmmuzjneyvryi.supabase.co/storage/v1/object/public/sidequest-city-previews/v1/00eeed36bcc6a118b06055f0-240-q60.jpg",
+       "subtitle": "Collect design clues from a real zoo viewing area."
+      },
+      {
+       "title": "Two Works, One Comparison",
+       "heroUrl": "https://qoxoutfmmmuzjneyvryi.supabase.co/storage/v1/object/public/sidequest-city-previews/v1/9923fb0f18c219ae55a3fcd3-240-q60.jpg",
+       "subtitle": "Follow one visual question across two available artworks."
+      },
+      {
+       "title": "Instructions for Air",
+       "heroUrl": "https://qoxoutfmmmuzjneyvryi.supabase.co/storage/v1/object/public/sidequest-city-previews/v1/b8e22bf2b8c4238afcc9b125-240-q60.jpg",
+       "subtitle": "Turn a real experiment into an original instruction card."
+      }
+     ],
+     "heroTitle": "Gardens and City Stories",
+     "accentSoft": "#D9E5DC",
+     "questCount": 10,
+     "description": "Ten missions across three flexible outings connect northwest gardens, central art and theatre stops, and southeast history and science. Paid entries, booked openings and travel between separate districts are part of the plan.",
+     "valueLabels": [
+      "10 quests",
+      "3 optional riddles",
+      "Separate district outings"
+     ],
+     "neighborhood": null,
+     "mobilityModes": [
+      "walk",
+      "car"
+     ],
+     "portraitCoverUrl": "https://qoxoutfmmmuzjneyvryi.supabase.co/storage/v1/object/public/sidequest-city-previews/v1/fresno-citywide-9398ba8a105b7b2c864c86d1-960-q80.jpg",
+     "coverAccessibilityLabel": "The complete SideQuest explorer viewing the distinctive underground courtyard forms at Forestiere Underground Gardens."
+    },
+    {
+     "id": "fresno-local",
+     "city": "Fresno",
+     "live": true,
+     "sort": 0,
+     "scope": "neighborhood",
+     "title": "Fresno: Civic Corners and Fulton Art",
+     "accent": "#81644E",
+     "promise": "Explore the connected downtown streets through public exterior landmarks, art, movement and a park pause.",
+     "coverUrl": "https://qoxoutfmmmuzjneyvryi.supabase.co/storage/v1/object/public/sidequest-city-previews/v1/6256932379f0b1d17492aa1f-400-q60.jpg",
+     "previews": [
+      {
+       "title": "City Hall in Five Lines",
+       "heroUrl": "https://qoxoutfmmmuzjneyvryi.supabase.co/storage/v1/object/public/sidequest-city-previews/v1/d18a591f269382cd9af24acc-240-q60.jpg",
+       "subtitle": "Reduce an actual civic exterior to a small original drawing."
+      },
+      {
+       "title": "The Shape Around an Opening",
+       "heroUrl": "https://qoxoutfmmmuzjneyvryi.supabase.co/storage/v1/object/public/sidequest-city-previews/v1/e9c5537ef43829c0069be731-240-q60.jpg",
+       "subtitle": "Collect form clues from a specific street sculpture."
+      },
+      {
+       "title": "A Building in Three Shapes",
+       "heroUrl": "https://qoxoutfmmmuzjneyvryi.supabase.co/storage/v1/object/public/sidequest-city-previews/v1/291056e8ff7536a79d3d56a8-240-q60.jpg",
+       "subtitle": "Make an original exterior composition beside Fulton."
+      }
+     ],
+     "heroTitle": "Civic Corners and Fulton",
+     "accentSoft": "#EAE1D5",
+     "questCount": 10,
+     "description": "Ten missions fit two unhurried downtown afternoons: civic exteriors and north Fulton, then Mariposa Plaza, the southern art block and Courthouse Park. The activities use ordinary open public spaces without theatre tickets or private building entry.",
+     "valueLabels": [
+      "10 quests",
+      "3 optional riddles",
+      "Two downtown afternoons"
+     ],
+     "neighborhood": "Downtown civic centre and Fulton Street",
+     "mobilityModes": [
+      "walk"
+     ],
+     "portraitCoverUrl": "https://qoxoutfmmmuzjneyvryi.supabase.co/storage/v1/object/public/sidequest-city-previews/v1/fresno-local-87f568f7bdecefe3a54c0c12-960-q80.jpg",
+     "coverAccessibilityLabel": "The complete SideQuest explorer on lawful public paving near Mariposa Plaza with the recognizable Pacific Southwest Building beyond."
     }
    ]
   },
@@ -7711,6 +8107,105 @@
    ]
   },
   {
+   "id": "irvine-ca",
+   "title": "Irvine, California",
+   "sort": 0,
+   "aliases": [],
+   "cw": "irvine-ca-citywide",
+   "nb": "irvine-ca-local",
+   "coverageCw": "irvine-ca-citywide",
+   "coverageLocal": "irvine-ca-local",
+   "packs": [
+    {
+     "id": "irvine-ca-citywide",
+     "city": "Irvine, California",
+     "live": true,
+     "sort": 0,
+     "scope": "citywide",
+     "title": "Collections, habitats and open paths",
+     "accent": "#587D62",
+     "promise": "Read local records, look closely at habitats and make something on an open path.",
+     "coverUrl": "https://qoxoutfmmmuzjneyvryi.supabase.co/storage/v1/object/public/sidequest-city-previews/v1/3916d6da2cd97841b4f979a7-400-q60.jpg",
+     "previews": [
+      {
+       "title": "Three books, one question",
+       "heroUrl": "https://qoxoutfmmmuzjneyvryi.supabase.co/storage/v1/object/public/sidequest-city-previews/v1/b4ff2a5214314bafcc6c06a5-240-q60.jpg",
+       "subtitle": "Build a small reading trail from an actual public collection."
+      },
+      {
+       "title": "Three edges of a marsh",
+       "heroUrl": "https://qoxoutfmmmuzjneyvryi.supabase.co/storage/v1/object/public/sidequest-city-previews/v1/1b41511f0abd8d927a3c05c2-240-q60.jpg",
+       "subtitle": "Record a wetland’s forms without collecting its wildlife."
+      },
+      {
+       "title": "A lake built for looking",
+       "heroUrl": "https://qoxoutfmmmuzjneyvryi.supabase.co/storage/v1/object/public/sidequest-city-previews/v1/26cace22bed6d232e695b1ff-240-q60.jpg",
+       "subtitle": "Collect three ways a park frames its water."
+      }
+     ],
+     "heroTitle": "Irvine",
+     "accentSoft": "#E5EFE6",
+     "questCount": 10,
+     "description": "Ten separate Irvine arrivals combine a historical museum, public arts exterior, small nature preserve, city-library collection, IRWD marsh, developed lake-side park, daily-access canyon trail, public photographic-process exhibition, short shared-trail return and memorial pause. Visitor windows and arrival requirements differ; choose the outings that fit your dates.",
+     "valueLabels": [
+      "10 missions",
+      "Separate arrivals",
+      "Written proof"
+     ],
+     "neighborhood": null,
+     "mobilityModes": [
+      "walk",
+      "car"
+     ],
+     "portraitCoverUrl": "https://qoxoutfmmmuzjneyvryi.supabase.co/storage/v1/object/public/sidequest-city-previews/v1/irvine-ca-citywide-8b61471ea01be50ae29b0099-960-q80.jpg",
+     "coverAccessibilityLabel": "Explorer on an open Fledgling Loop visitor path beside the IRWD San Joaquin Marsh’s pond edges and wetland planting."
+    },
+    {
+     "id": "irvine-ca-local",
+     "city": "Irvine, California",
+     "live": true,
+     "sort": 0,
+     "scope": "neighborhood",
+     "title": "Great Park in two afternoons",
+     "accent": "#B36F45",
+     "promise": "Follow two connected afternoons of gardens, aviation, art and open park views.",
+     "coverUrl": "https://qoxoutfmmmuzjneyvryi.supabase.co/storage/v1/object/public/sidequest-city-previews/v1/70251ef7607a98f5bbf4b894-400-q60.jpg",
+     "previews": [
+      {
+       "title": "Three beds, three questions",
+       "heroUrl": "https://qoxoutfmmmuzjneyvryi.supabase.co/storage/v1/object/public/sidequest-city-previews/v1/06c7f9fa3776a862cb1be62c-240-q60.jpg",
+       "subtitle": "Use a demonstration garden’s actual labels to start a growing notebook."
+      },
+      {
+       "title": "Three media, three messages",
+       "heroUrl": "https://qoxoutfmmmuzjneyvryi.supabase.co/storage/v1/object/public/sidequest-city-previews/v1/07c589af5ca4207632ad1481-240-q60.jpg",
+       "subtitle": "Check how an actual exhibition uses different forms."
+      },
+      {
+       "title": "A score of palm shadows",
+       "heroUrl": "https://qoxoutfmmmuzjneyvryi.supabase.co/storage/v1/object/public/sidequest-city-previews/v1/2610f8138341eff63e00b231-240-q60.jpg",
+       "subtitle": "Turn repeated shapes in a plaza into six original lines."
+      }
+     ],
+     "heroTitle": "Irvine",
+     "accentSoft": "#F5E7DC",
+     "questCount": 10,
+     "description": "One connected Great Park area, explored over two afternoons. Begin with labelled demonstration beds, admitted aviation and gallery displays, then create from Palm Court and the carousel exterior. Return for ground-level balloon and tennis views, a short timeline section, a comfortable South Lawn return and a quiet reflecting pond.",
+     "valueLabels": [
+      "10 missions",
+      "Two afternoons",
+      "Written proof"
+     ],
+     "neighborhood": "Great Park",
+     "mobilityModes": [
+      "walk"
+     ],
+     "portraitCoverUrl": "https://qoxoutfmmmuzjneyvryi.supabase.co/storage/v1/object/public/sidequest-city-previews/v1/irvine-ca-local-70ee316fe7654e9b0b1a8cb0-960-q80.jpg",
+     "coverAccessibilityLabel": "Explorer observing the orange tethered Great Park Balloon and its gondola from the public path outside the launch enclosure."
+    }
+   ]
+  },
+  {
    "id": "istanbul",
    "title": "Istanbul",
    "sort": 0,
@@ -8893,6 +9388,105 @@
    ]
   },
   {
+   "id": "lexington-ky",
+   "title": "Lexington, Kentucky",
+   "sort": 0,
+   "aliases": [],
+   "cw": "lexington-ky-citywide",
+   "nb": "lexington-ky-local",
+   "coverageCw": "lexington-ky-citywide",
+   "coverageLocal": "lexington-ky-local",
+   "packs": [
+    {
+     "id": "lexington-ky-citywide",
+     "city": "Lexington, Kentucky",
+     "live": true,
+     "sort": 0,
+     "scope": "citywide",
+     "title": "Lexington beyond the centre",
+     "accent": "#927139",
+     "promise": "Horses, museum questions and the shapes of a living landscape.",
+     "coverUrl": "https://qoxoutfmmmuzjneyvryi.supabase.co/storage/v1/object/public/sidequest-city-previews/v1/617969e80834a4aaf38be31f-400-q60.jpg",
+     "previews": [
+      {
+       "title": "Three horse roles",
+       "heroUrl": "https://qoxoutfmmmuzjneyvryi.supabase.co/storage/v1/object/public/sidequest-city-previews/v1/b635dba21660fa7fdcc57c68-240-q60.jpg",
+       "subtitle": "Build a small timeline from the open museum galleries."
+      },
+      {
+       "title": "A return you recognize",
+       "heroUrl": "https://qoxoutfmmmuzjneyvryi.supabase.co/storage/v1/object/public/sidequest-city-previews/v1/8233c142049e03e569c09675-240-q60.jpg",
+       "subtitle": "Notice one stretch of the paved Legacy Trail twice."
+      },
+      {
+       "title": "Canopy and time",
+       "heroUrl": "https://qoxoutfmmmuzjneyvryi.supabase.co/storage/v1/object/public/sidequest-city-previews/v1/62414ab7a5ef688ae9c3f2b8-240-q60.jpg",
+       "subtitle": "Give a quiet garden setting three undistracted minutes."
+      }
+     ],
+     "heroTitle": "Lexington, Kentucky",
+     "accentSoft": "#EEE3CB",
+     "questCount": 10,
+     "description": "Ten missions across Lexington-Fayette: horse and aviation collections, a public university museum, gardens, springs and quiet movement. Choose separate outings, current access windows and required tickets.",
+     "valueLabels": [
+      "10 citywide missions",
+      "3 optional riddles",
+      "Separate outings"
+     ],
+     "neighborhood": null,
+     "mobilityModes": [
+      "walk",
+      "car"
+     ],
+     "portraitCoverUrl": "https://qoxoutfmmmuzjneyvryi.supabase.co/storage/v1/object/public/sidequest-city-previews/v1/lexington-ky-citywide-49b7e2545e89eafba2978a13-960-q80.jpg",
+     "coverAccessibilityLabel": "Explorer studying the limestone grandstand at Keeneland from a permitted public morning area."
+    },
+    {
+     "id": "lexington-ky-local",
+     "city": "Lexington, Kentucky",
+     "live": true,
+     "sort": 0,
+     "scope": "neighborhood",
+     "title": "Lexington between Main and Gratz",
+     "accent": "#506D86",
+     "promise": "Historic rooms, street fronts and small acts of making.",
+     "coverUrl": "https://qoxoutfmmmuzjneyvryi.supabase.co/storage/v1/object/public/sidequest-city-previews/v1/5a0820a170330e2ee5d66c48-400-q60.jpg",
+     "previews": [
+      {
+       "title": "Objects and a life",
+       "heroUrl": "https://qoxoutfmmmuzjneyvryi.supabase.co/storage/v1/object/public/sidequest-city-previews/v1/1c469752206ecd1b7abf7c5d-240-q60.jpg",
+       "subtitle": "Follow two artefacts beyond their first impression."
+      },
+      {
+       "title": "Commons under your feet",
+       "heroUrl": "https://qoxoutfmmmuzjneyvryi.supabase.co/storage/v1/object/public/sidequest-city-previews/v1/2fdf394d1c28f79522e7d589-240-q60.jpg",
+       "subtitle": "Follow a short path above a buried creek."
+      },
+      {
+       "title": "Brickwork and a name",
+       "heroUrl": "https://qoxoutfmmmuzjneyvryi.supabase.co/storage/v1/object/public/sidequest-city-previews/v1/6abe714c06e29aae4a3c3102-240-q60.jpg",
+       "subtitle": "Make room for the worker behind a civic building."
+      }
+     ],
+     "heroTitle": "Lexington, Kentucky",
+     "accentSoft": "#E0E8EE",
+     "questCount": 10,
+     "description": "Ten missions in the connected Main Street–Gratz Park area. Explore an admitted historic house, public museum and library displays, then make small stories and drawings from the street. Plan two afternoons.",
+     "valueLabels": [
+      "10 local missions",
+      "3 optional riddles",
+      "Two afternoons"
+     ],
+     "neighborhood": "Main Street and Gratz Park",
+     "mobilityModes": [
+      "walk"
+     ],
+     "portraitCoverUrl": "https://qoxoutfmmmuzjneyvryi.supabase.co/storage/v1/object/public/sidequest-city-previews/v1/lexington-ky-local-3c2b4c3d0a2866128cecaaad-960-q80.jpg",
+     "coverAccessibilityLabel": "Explorer drawing Old Morrison’s columned front from the public Gratz Park side of Third Street."
+    }
+   ]
+  },
+  {
    "id": "lima",
    "title": "Lima",
    "sort": 0,
@@ -8991,6 +9585,105 @@
        "heroUrl": "https://qoxoutfmmmuzjneyvryi.supabase.co/storage/v1/object/public/sidequest-city-previews/v1/3260f1be0135b366ef10ec44-240-q60.jpg"
       }
      ]
+    }
+   ]
+  },
+  {
+   "id": "lincoln-ne",
+   "title": "Lincoln, Nebraska",
+   "sort": 0,
+   "aliases": [],
+   "cw": "lincoln-ne-citywide",
+   "nb": "lincoln-ne-local",
+   "coverageCw": "lincoln-ne-citywide",
+   "coverageLocal": "lincoln-ne-local",
+   "packs": [
+    {
+     "id": "lincoln-ne-citywide",
+     "city": "Lincoln, Nebraska",
+     "live": true,
+     "sort": 0,
+     "scope": "citywide",
+     "title": "Mosaics, collections and open paths",
+     "accent": "#6D7951",
+     "promise": "Read civic mosaics and collections, make from garden details and take an easy path return.",
+     "coverUrl": "https://qoxoutfmmmuzjneyvryi.supabase.co/storage/v1/object/public/sidequest-city-previews/v1/85f9305566868b11062fd824-400-q60.jpg",
+     "previews": [
+      {
+       "title": "Three fossil evidence cards",
+       "heroUrl": "https://qoxoutfmmmuzjneyvryi.supabase.co/storage/v1/object/public/sidequest-city-previews/v1/7dafb1c57dbd25fccb3372be-240-q60.jpg",
+       "subtitle": "Let specimen labels limit the story you tell."
+      },
+      {
+       "title": "Parts with a purpose",
+       "heroUrl": "https://qoxoutfmmmuzjneyvryi.supabase.co/storage/v1/object/public/sidequest-city-previews/v1/9670c456303a0aaf322bd0b9-240-q60.jpg",
+       "subtitle": "Read three mechanical objects through their visible parts."
+      },
+      {
+       "title": "A small material index",
+       "heroUrl": "https://qoxoutfmmmuzjneyvryi.supabase.co/storage/v1/object/public/sidequest-city-previews/v1/88be0baaf0570641a2e9c4dd-240-q60.jpg",
+       "subtitle": "Find three ways materials carry an artwork."
+      }
+     ],
+     "heroTitle": "Lincoln",
+     "accentSoft": "#EDF0E5",
+     "questCount": 10,
+     "description": "Ten separate Lincoln arrivals combine the Capitol Foyer, admitted zoo habitats and quilt galleries, natural-history and mechanical collections, public arts galleries, two small garden creations, a short Rock Island return and an east lake-side pause. Visitor windows and admission differ; choose the outings that fit your dates.",
+     "valueLabels": [
+      "10 missions",
+      "Separate arrivals",
+      "Written proof"
+     ],
+     "neighborhood": null,
+     "mobilityModes": [
+      "walk",
+      "car"
+     ],
+     "portraitCoverUrl": "https://qoxoutfmmmuzjneyvryi.supabase.co/storage/v1/object/public/sidequest-city-previews/v1/lincoln-ne-citywide-447c7e12a6b26d5bdc2d9903-960-q80.jpg",
+     "coverAccessibilityLabel": "Explorer on public ground before the Nebraska State Capitol’s limestone north entrance and distinctive tower."
+    },
+    {
+     "id": "lincoln-ne-local",
+     "city": "Lincoln, Nebraska",
+     "live": true,
+     "sort": 0,
+     "scope": "neighborhood",
+     "title": "Downtown and Haymarket in two afternoons",
+     "accent": "#A76843",
+     "promise": "Connect public collections, street details and railway history across two afternoons.",
+     "coverUrl": "https://qoxoutfmmmuzjneyvryi.supabase.co/storage/v1/object/public/sidequest-city-previews/v1/8d1d4bc3bbe0f63254e7f81b-400-q60.jpg",
+     "previews": [
+      {
+       "title": "Three objects, three records",
+       "heroUrl": "https://qoxoutfmmmuzjneyvryi.supabase.co/storage/v1/object/public/sidequest-city-previews/v1/4251793f0067fbca26e6caaf-240-q60.jpg",
+       "subtitle": "Build a small history sequence from museum evidence."
+      },
+      {
+       "title": "Three ways to keep music",
+       "heroUrl": "https://qoxoutfmmmuzjneyvryi.supabase.co/storage/v1/object/public/sidequest-city-previews/v1/575300e44a9e9865da704645-240-q60.jpg",
+       "subtitle": "Read music through books, scores and recording cases."
+      },
+      {
+       "title": "A window becomes a tile",
+       "heroUrl": "https://qoxoutfmmmuzjneyvryi.supabase.co/storage/v1/object/public/sidequest-city-previews/v1/260ef3887807cca53473fb8f-240-q60.jpg",
+       "subtitle": "Translate two facade details into a small original design."
+      }
+     ],
+     "heroTitle": "Lincoln",
+     "accentSoft": "#F5E8DF",
+     "questCount": 10,
+     "description": "Two connected Downtown and Haymarket afternoons with measured return walking. Begin with Nebraska history and a public music collection, then create from a church exterior, read a working residence from the sidewalk and pause at Tower Square. Return for current regional art, the former depot, a preserved railway park, an original roofline strip and a short Canopy Street return.",
+     "valueLabels": [
+      "10 missions",
+      "Two afternoons",
+      "Written proof"
+     ],
+     "neighborhood": "Downtown and Haymarket",
+     "mobilityModes": [
+      "walk"
+     ],
+     "portraitCoverUrl": "https://qoxoutfmmmuzjneyvryi.supabase.co/storage/v1/object/public/sidequest-city-previews/v1/lincoln-ne-local-41bc1af0f50561a7ba96af5f-960-q80.jpg",
+     "coverAccessibilityLabel": "Explorer outside Lincoln Station’s former Burlington depot, with its east colonnade and historic canopy."
     }
    ]
   },
@@ -9187,6 +9880,106 @@
        "heroUrl": "https://qoxoutfmmmuzjneyvryi.supabase.co/storage/v1/object/public/sidequest-city-previews/v1/2fb6ed57b4956b611be401c2-240-q60.jpg"
       }
      ]
+    }
+   ]
+  },
+  {
+   "id": "long-beach",
+   "title": "Long Beach",
+   "sort": 0,
+   "aliases": [],
+   "cw": "long-beach-citywide",
+   "nb": "long-beach-local",
+   "coverageCw": "long-beach-citywide",
+   "coverageLocal": "long-beach-local",
+   "packs": [
+    {
+     "id": "long-beach-citywide",
+     "city": "Long Beach",
+     "live": true,
+     "sort": 0,
+     "scope": "citywide",
+     "title": "Long Beach: Across the City",
+     "accent": "#2E738B",
+     "promise": "Explore ranch materials, wetland clues, art and coastal shapes.",
+     "coverUrl": "https://qoxoutfmmmuzjneyvryi.supabase.co/storage/v1/object/public/sidequest-city-previews/v1/a439fd8754bdb67d5d552e24-400-q60.jpg",
+     "previews": [
+      {
+       "title": "A Ranch in Three Materials",
+       "heroUrl": "https://qoxoutfmmmuzjneyvryi.supabase.co/storage/v1/object/public/sidequest-city-previews/v1/137a1944e981eb7d04b27329-240-q60.jpg",
+       "subtitle": "Collect textures from a historic house and its garden."
+      },
+      {
+       "title": "A Trail Changes the View",
+       "heroUrl": "https://qoxoutfmmmuzjneyvryi.supabase.co/storage/v1/object/public/sidequest-city-previews/v1/e73f02a0c6590cab0d2d6653-240-q60.jpg",
+       "subtitle": "Follow an open nature path and track three transitions."
+      },
+      {
+       "title": "A Coastline in Three Bands",
+       "heroUrl": "https://qoxoutfmmmuzjneyvryi.supabase.co/storage/v1/object/public/sidequest-city-previews/v1/9f3d59c0625552919ee1dbbd-240-q60.jpg",
+       "subtitle": "Create a small composition from beach, water and sky."
+      }
+     ],
+     "heroTitle": "Across the City",
+     "accentSoft": "#E8F1F4",
+     "questCount": 10,
+     "description": "Ten varied missions form separate outings across northern, eastern and coastal Long Beach. One gallery mission has paid admission on most days and is free on Sunday.",
+     "valueLabels": [
+      "10 quests",
+      "3 optional riddles",
+      "Separate city outings"
+     ],
+     "neighborhood": null,
+     "mobilityModes": [
+      "walk",
+      "transit",
+      "car"
+     ],
+     "portraitCoverUrl": "https://qoxoutfmmmuzjneyvryi.supabase.co/storage/v1/object/public/sidequest-city-previews/v1/long-beach-citywide-8f25e26efbf52d6d15901424-960-q80.jpg",
+     "coverAccessibilityLabel": "Long Beach citywide edition illustration"
+    },
+    {
+     "id": "long-beach-local",
+     "city": "Long Beach",
+     "live": true,
+     "sort": 0,
+     "scope": "neighborhood",
+     "title": "Long Beach: Civic Center to the Harbor",
+     "accent": "#A56843",
+     "promise": "Explore civic details, downtown architecture and the harbor’s open edges.",
+     "coverUrl": "https://qoxoutfmmmuzjneyvryi.supabase.co/storage/v1/object/public/sidequest-city-previews/v1/5a7fcefebaa2f527fa344a7b-400-q60.jpg",
+     "previews": [
+      {
+       "title": "Wood, Glass and an Opening",
+       "heroUrl": "https://qoxoutfmmmuzjneyvryi.supabase.co/storage/v1/object/public/sidequest-city-previews/v1/4f95ee4cd508533954ac0dc4-240-q60.jpg",
+       "subtitle": "Create a façade study from the sidewalk."
+      },
+      {
+       "title": "A Bridge in the Reflection",
+       "heroUrl": "https://qoxoutfmmmuzjneyvryi.supabase.co/storage/v1/object/public/sidequest-city-previews/v1/2af24c7b6252164336f056f9-240-q60.jpg",
+       "subtitle": "Pause beside a lagoon without crossing its bridges."
+      },
+      {
+       "title": "A Boardwalk’s Color Rhythm",
+       "heroUrl": "https://qoxoutfmmmuzjneyvryi.supabase.co/storage/v1/object/public/sidequest-city-previews/v1/d7e1577568e5622976e3a407-240-q60.jpg",
+       "subtitle": "Create an original pattern from a waterfront village."
+      }
+     ],
+     "heroTitle": "Civic Center to the Harbor",
+     "accentSoft": "#F4EDE7",
+     "questCount": 10,
+     "description": "Ten varied missions form two connected downtown afternoons. The Aquarium requires paid admission; East Village Arts Park uses its published Tuesday/Thursday afternoon window.",
+     "valueLabels": [
+      "10 quests",
+      "3 optional riddles",
+      "2 afternoons"
+     ],
+     "neighborhood": "Civic Center and Downtown Shoreline",
+     "mobilityModes": [
+      "walk"
+     ],
+     "portraitCoverUrl": "https://qoxoutfmmmuzjneyvryi.supabase.co/storage/v1/object/public/sidequest-city-previews/v1/long-beach-local-803deb0f161c8fb3e3b9239a-960-q80.jpg",
+     "coverAccessibilityLabel": "Long Beach local edition illustration"
     }
    ]
   },
@@ -14562,6 +15355,105 @@
    ]
   },
   {
+   "id": "reno-nv",
+   "title": "Reno, Nevada",
+   "sort": 0,
+   "aliases": [],
+   "cw": "reno-nv-citywide",
+   "nb": "reno-nv-local",
+   "coverageCw": "reno-nv-citywide",
+   "coverageLocal": "reno-nv-local",
+   "packs": [
+    {
+     "id": "reno-nv-citywide",
+     "city": "Reno, Nevada",
+     "live": true,
+     "sort": 0,
+     "scope": "citywide",
+     "title": "Collections, gardens and open paths",
+     "accent": "#52766D",
+     "promise": "Look closely at city collections, compare garden forms and make original records of parks and historic architecture.",
+     "coverUrl": "https://qoxoutfmmmuzjneyvryi.supabase.co/storage/v1/object/public/sidequest-city-previews/v1/c4ede1ae1d2b4d8f472e4623-400-q60.jpg",
+     "previews": [
+      {
+       "title": "Three cars, three designs",
+       "heroUrl": "https://qoxoutfmmmuzjneyvryi.supabase.co/storage/v1/object/public/sidequest-city-previews/v1/5c64c805e7bf1eec98ee12cf-240-q60.jpg",
+       "subtitle": "Build a small timeline from labeled vehicles."
+      },
+      {
+       "title": "Four frames at the lake",
+       "heroUrl": "https://qoxoutfmmmuzjneyvryi.supabase.co/storage/v1/object/public/sidequest-city-previews/v1/a211bd2ac0d85dc11513588f-240-q60.jpg",
+       "subtitle": "Make a sequence from a real shoreline view."
+      },
+      {
+       "title": "Three forms beside the river",
+       "heroUrl": "https://qoxoutfmmmuzjneyvryi.supabase.co/storage/v1/object/public/sidequest-city-previews/v1/af3285d722b8bde08e877a72-240-q60.jpg",
+       "subtitle": "Compare vegetation, a built detail and the river boundary."
+      }
+     ],
+     "heroTitle": "Reno",
+     "accentSoft": "#E5EEEA",
+     "questCount": 10,
+     "description": "Ten Reno missions span two museums and an automobile collection, a library, lakeside and garden visits, a former school exterior, a short park-path return and a nature-area pause. Paid entry and opening windows vary; plan separate arrivals across the city.",
+     "valueLabels": [
+      "10 missions",
+      "Separate arrivals",
+      "Museums and parks"
+     ],
+     "neighborhood": null,
+     "mobilityModes": [
+      "walk",
+      "car"
+     ],
+     "portraitCoverUrl": "https://qoxoutfmmmuzjneyvryi.supabase.co/storage/v1/object/public/sidequest-city-previews/v1/reno-nv-citywide-41e193ef83be960d5f509b7b-960-q80.jpg",
+     "coverAccessibilityLabel": "Explorer beside the National Automobile Museum’s Reno building."
+    },
+    {
+     "id": "reno-nv-local",
+     "city": "Reno, Nevada",
+     "live": true,
+     "sort": 0,
+     "scope": "neighborhood",
+     "title": "Two downtown afternoons",
+     "accent": "#A56642",
+     "promise": "Connect downtown landmarks, public art, riverfront paths and an indoor garden through two walking afternoons.",
+     "coverUrl": "https://qoxoutfmmmuzjneyvryi.supabase.co/storage/v1/object/public/sidequest-city-previews/v1/fa4a6c102d373a1addcea17d-400-q60.jpg",
+     "previews": [
+      {
+       "title": "Glass, steel and a whale",
+       "heroUrl": "https://qoxoutfmmmuzjneyvryi.supabase.co/storage/v1/object/public/sidequest-city-previews/v1/fe90f9c52618adcade584e19-240-q60.jpg",
+       "subtitle": "Collect three relationships in one public artwork."
+      },
+      {
+       "title": "A sculpture in four lines",
+       "heroUrl": "https://qoxoutfmmmuzjneyvryi.supabase.co/storage/v1/object/public/sidequest-city-previews/v1/b5f3edececaff220ea4aa4d0-240-q60.jpg",
+       "subtitle": "Write an original response to a visible form."
+      },
+      {
+       "title": "Three reading places",
+       "heroUrl": "https://qoxoutfmmmuzjneyvryi.supabase.co/storage/v1/object/public/sidequest-city-previews/v1/b4c0b88cbe2a3ab40da2ac39-240-q60.jpg",
+       "subtitle": "Map the library’s indoor garden through an original diagram."
+      }
+     ],
+     "heroTitle": "Reno",
+     "accentSoft": "#F3E6DC",
+     "questCount": 10,
+     "description": "Ten connected downtown missions combine architecture, public sculpture, a short north-bank return, small parks and the Downtown Reno Library. The first afternoon uses outdoor public areas; the second finishes inside the library during its weekday window.",
+     "valueLabels": [
+      "10 missions",
+      "Two afternoons",
+      "Downtown walking"
+     ],
+     "neighborhood": "Downtown and Riverwalk",
+     "mobilityModes": [
+      "walk"
+     ],
+     "portraitCoverUrl": "https://qoxoutfmmmuzjneyvryi.supabase.co/storage/v1/object/public/sidequest-city-previews/v1/reno-nv-local-74030a8adc36f19bffba284e-960-q80.jpg",
+     "coverAccessibilityLabel": "Explorer on a public north-bank path beside Reno’s current Virginia Street Bridge."
+    }
+   ]
+  },
+  {
    "id": "reykjavik",
    "title": "Reykjavík",
    "sort": 0,
@@ -14854,6 +15746,105 @@
        "heroUrl": "https://qoxoutfmmmuzjneyvryi.supabase.co/storage/v1/object/public/sidequest-city-previews/v1/913a28b266f6a75b2e0e2d30-240-q60.jpg"
       }
      ]
+    }
+   ]
+  },
+  {
+   "id": "riverside-ca",
+   "title": "Riverside, California",
+   "sort": 0,
+   "aliases": [],
+   "cw": "riverside-ca-citywide",
+   "nb": "riverside-ca-local",
+   "coverageCw": "riverside-ca-citywide",
+   "coverageLocal": "riverside-ca-local",
+   "packs": [
+    {
+     "id": "riverside-ca-citywide",
+     "city": "Riverside, California",
+     "live": true,
+     "sort": 0,
+     "scope": "citywide",
+     "title": "Groves, collections and open paths",
+     "accent": "#A66E33",
+     "promise": "Trace citrus stories, inspect living collections and make room for a short outdoor return.",
+     "coverUrl": "https://qoxoutfmmmuzjneyvryi.supabase.co/storage/v1/object/public/sidequest-city-previews/v1/d3bb0d84338183dbb6941397-400-q60.jpg",
+     "previews": [
+      {
+       "title": "A mineral, three ways",
+       "heroUrl": "https://qoxoutfmmmuzjneyvryi.supabase.co/storage/v1/object/public/sidequest-city-previews/v1/cd7ef5dbef5a4186de68dce6-240-q60.jpg",
+       "subtitle": "Separate a specimen’s visible form from its label."
+      },
+      {
+       "title": "Household evidence",
+       "heroUrl": "https://qoxoutfmmmuzjneyvryi.supabase.co/storage/v1/object/public/sidequest-city-previews/v1/7d143fe37802ad1f44dec06d-240-q60.jpg",
+       "subtitle": "Let a house tour check three object guesses."
+      },
+      {
+       "title": "Labels across climates",
+       "heroUrl": "https://qoxoutfmmmuzjneyvryi.supabase.co/storage/v1/object/public/sidequest-city-previews/v1/e7ad3a08c696fc2e257afd55-240-q60.jpg",
+       "subtitle": "Collect three living-collection records without collecting a plant."
+      }
+     ],
+     "heroTitle": "Riverside",
+     "accentSoft": "#F5E8D4",
+     "questCount": 10,
+     "description": "Ten separate Riverside arrivals join citrus interpretation, a protected historic tree, a working steam railway, mineral and house collections, a living garden, canyon paths, boulevard planting, a lower hill return and a lake pause. Opening windows and arrival requirements differ; choose outings that fit your dates.",
+     "valueLabels": [
+      "10 missions",
+      "Separate arrivals",
+      "Seasonal windows"
+     ],
+     "neighborhood": null,
+     "mobilityModes": [
+      "walk",
+      "car"
+     ],
+     "portraitCoverUrl": "https://qoxoutfmmmuzjneyvryi.supabase.co/storage/v1/object/public/sidequest-city-previews/v1/riverside-ca-citywide-c1afc36be312f13f63db4448-960-q80.jpg",
+     "coverAccessibilityLabel": "Explorer on an open visitor path beside California Citrus State Historic Park’s visitor center and citrus-grove rows."
+    },
+    {
+     "id": "riverside-ca-local",
+     "city": "Riverside, California",
+     "live": true,
+     "sort": 0,
+     "scope": "neighborhood",
+     "title": "Mission Inn Avenue and Main Street",
+     "accent": "#44777F",
+     "promise": "Two downtown afternoons of art, architecture and close looking.",
+     "coverUrl": "https://qoxoutfmmmuzjneyvryi.supabase.co/storage/v1/object/public/sidequest-city-previews/v1/a84749a2584afb8001ab1af5-400-q60.jpg",
+     "previews": [
+      {
+       "title": "Two works, one material",
+       "heroUrl": "https://qoxoutfmmmuzjneyvryi.supabase.co/storage/v1/object/public/sidequest-city-previews/v1/634d0cef7ff01d65a878df3d-240-q60.jpg",
+       "subtitle": "Test a material comparison in an open museum gallery."
+      },
+      {
+       "title": "A title to sit with",
+       "heroUrl": "https://qoxoutfmmmuzjneyvryi.supabase.co/storage/v1/object/public/sidequest-city-previews/v1/41144c758b2070228779c2f0-240-q60.jpg",
+       "subtitle": "Let a library title hold your attention for three minutes."
+      },
+      {
+       "title": "A score for a facade",
+       "heroUrl": "https://qoxoutfmmmuzjneyvryi.supabase.co/storage/v1/object/public/sidequest-city-previews/v1/9a617b16a1c3d153598618b5-240-q60.jpg",
+       "subtitle": "Turn visible building patterns into a silent sound sketch."
+      }
+     ],
+     "heroTitle": "Riverside",
+     "accentSoft": "#DDECEE",
+     "questCount": 10,
+     "description": "A connected downtown pair of afternoons. Begin with admitted art museums, then compare public hotel and theatre exteriors and pause in the Main Library. Return for the auditorium exterior, an admitted photography collection, a short pedestrian-mall return, a memorial and a courthouse design study.",
+     "valueLabels": [
+      "10 missions",
+      "Two afternoons",
+      "Written proof"
+     ],
+     "neighborhood": "Mission Inn Avenue and Main Street",
+     "mobilityModes": [
+      "walk"
+     ],
+     "portraitCoverUrl": "https://qoxoutfmmmuzjneyvryi.supabase.co/storage/v1/object/public/sidequest-city-previews/v1/riverside-ca-local-aa540fe9f7c0a1605f0fdc74-960-q80.jpg",
+     "coverAccessibilityLabel": "Explorer viewing the Mission Inn’s domes, arches and towers from a public downtown sidewalk."
     }
    ]
   },
