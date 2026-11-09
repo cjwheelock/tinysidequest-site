@@ -41,10 +41,10 @@ Error generating stack: `+n.message+`
   setStatus("loading");
   const mount=()=>{if(!alive)return;try{if(!window.SQGrowth)throw Error();window.SQGrowth.mount(target,{loadReport});setStatus("ready");}catch{if(script)script.dataset.sqGrowthFailed="1";setStatus("error");}};
   const failed=()=>{if(alive)setStatus("error");if(script)script.dataset.sqGrowthFailed="1";};
-  let css=document.querySelector('link[data-sq-growth]');if(!css){css=document.createElement("link");css.rel="stylesheet";css.href="/CRM/analytics/embed.css?v=cb4680a6fcf03cde";css.dataset.sqGrowth="1";document.head.appendChild(css);}
+  let css=document.querySelector('link[data-sq-growth]');if(!css){css=document.createElement("link");css.rel="stylesheet";css.href="/CRM/analytics/embed.css?v=1e22634aa6f983c4";css.dataset.sqGrowth="1";document.head.appendChild(css);}
   if(window.SQGrowth)mount();else{
    script=document.querySelector('script[data-sq-growth]');if(script?.dataset.sqGrowthFailed){script.remove();script=null;}
-   if(!script){script=document.createElement("script");script.src="/CRM/analytics/embed.js?v=cb4680a6fcf03cde";script.dataset.sqGrowth="1";script.addEventListener("load",mount);script.addEventListener("error",failed);document.head.appendChild(script);}
+   if(!script){script=document.createElement("script");script.src="/CRM/analytics/embed.js?v=1e22634aa6f983c4";script.dataset.sqGrowth="1";script.addEventListener("load",mount);script.addEventListener("error",failed);document.head.appendChild(script);}
    else{script.addEventListener("load",mount);script.addEventListener("error",failed);}
   }
   return()=>{alive=false;if(script){script.removeEventListener("load",mount);script.removeEventListener("error",failed);}window.SQGrowth?.unmount(target);};
