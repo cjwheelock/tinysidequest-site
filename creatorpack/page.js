@@ -155,10 +155,10 @@ async function mountPhonePreview() {
     const track = wrapper.querySelector('.phone-track');
     const coverScreen = document.createElement('section');
     coverScreen.className = 'phone-slide phone-cover-screen';
-    coverScreen.setAttribute('aria-label', '1 of 4: CJ’s Side Plot pack');
+    coverScreen.setAttribute('aria-label', '1 of 4: Pack cover');
     const cover = originalCover.cloneNode(true);
-    const edition = document.createElement('span'); edition.className = 'phone-edition'; edition.textContent = '✦ CREATOR EDITION';
-    cover.append(edition); coverScreen.append(cover);
+    cover.querySelector('.cover-title > span')?.remove();
+    coverScreen.append(cover);
     const open = document.createElement('button');
     open.type = 'button'; open.className = 'phone-open-pack';
     open.innerHTML = 'Explore the quests <span aria-hidden="true">→</span>';
@@ -186,13 +186,12 @@ async function mountPhonePreview() {
       const subtitle = document.createElement('p'); subtitle.className = 'phone-subtitle'; subtitle.textContent = quest.subtitle;
       const steps = document.createElement('ol'); steps.className = 'phone-steps';
       quest.steps.forEach(step => { const li = document.createElement('li'); li.textContent = step; steps.append(li); });
-      const packName = document.createElement('p'); packName.className = 'phone-pack-name'; packName.textContent = 'CJ’s Side Plot';
-      copy.append(packName, title, subtitle);
+      copy.append(title, subtitle);
       const hero = document.createElement('div'); hero.className = 'phone-quest-hero'; hero.append(image, copy);
       const panel = document.createElement('div'); panel.className = 'phone-step-panel';
       const heading = document.createElement('h3'); heading.textContent = 'How to do it'; panel.append(heading, steps);
       if (quest.safety) { const safety = document.createElement('p'); safety.className = 'phone-safety'; safety.textContent = quest.safety; panel.append(safety); }
-      screen.append(hero, duration, panel); track.append(screen);
+      screen.append(hero, panel); track.append(screen);
     });
     const tabs = wrapper.querySelector('.phone-tabs');
     let current = 0;

@@ -40,3 +40,8 @@
 @media(max-width:360px){.phone-preview{--device-scale:.66;width:257.4px}.phone-tab{padding:8px 5px}.phone-arrow{width:29px;height:29px;flex-basis:29px}.phone-cover-screen .cover-title span{font-size:36px}}
 
 .phone-list-heading{font-size:21px;font-weight:900;color:#080936;margin:26px 0 12px}.phone-quest-row{display:flex;align-items:center;gap:12px;min-height:88px;border:1.5px solid #e4e2f6;border-radius:22px;padding:14px;background:#ffffffd1;width:100%;margin-bottom:12px;text-align:left;color:#080936}.phone-list-number{display:grid;place-items:center;width:46px;height:46px;border-radius:15px;background:#e9deff;color:#6d38f5;font-size:13px;font-weight:900;flex-shrink:0}.phone-quest-row strong{display:block;font-size:15px;font-weight:900}.phone-quest-row span>span{display:block;font-size:13px;line-height:18px;font-weight:700;color:#34365f;margin-top:5px}
+
+/* Legibility refinement approved by CJ. */
+.phone-quest-copy h2{font-size:32px;line-height:36px;margin-top:0}.phone-subtitle{font-size:18px;line-height:25px}.phone-step-panel h3{font-size:22px}.phone-steps li{font-size:18px;line-height:26px}.phone-steps li:before{font-size:15px;width:30px;height:30px}.phone-safety{font-size:17px;line-height:24px}.phone-quest-row strong{font-size:17px;line-height:22px}.phone-quest-row span>span{font-size:15px;line-height:20px}.phone-cover-screen .cover-title p{font-size:18px;line-height:25px}
+@media(max-width:760px){.phone-preview{--device-scale:.80;width:312px}.phone-quest-copy h2{font-size:32px}.phone-hint{margin-left:0;margin-right:0}}
+@media(max-width:360px){.phone-preview{--device-scale:.72;width:280.8px}.intro-with-phone{padding-left:17px;padding-right:17px}}
