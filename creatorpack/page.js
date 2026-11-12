@@ -9,6 +9,8 @@ const progress = $('upload-progress');
 const button = form.querySelector('[type=submit]');
 let pending = null;
 let busy = false;
+let selectedAudio = null;
+let recordingInProgress = false;
 const previewURLs = { photos: [], audio: [] };
 
 function report(message, error = false) {
@@ -40,7 +42,8 @@ function showFiles(kind) {
     }
   }
 }
-for (const kind of ['photos', 'audio']) $(kind).addEventListener('change', () => showFiles(kind));
+$('photos').addEventListener('change', () => showFiles('photos'));
+$('audio').addEventListener('change', () => { selectedAudio = $('audio').files[0] || null; pending = null; updateAudioSelection(); });
 form.addEventListener('input', () => { if (!busy) pending = null; });
 
 const formats = {
@@ -81,11 +84,12 @@ function upload(url, file, type, completed, total) {
 form.addEventListener('submit', async (event) => {
   event.preventDefault();
   if (busy) return;
+  if (recordingInProgress) { report('Stop your recording before sending your ideas.', true); return; }
   if (!form.reportValidity()) return;
   try {
     const photos = [...$('photos').files];
     if (photos.length < 1 || photos.length > 3) throw new Error('Choose between one and three photos.');
-    const audio = $('audio').files[0];
+    const audio = selectedAudio;
     if (!audio) throw new Error('Choose a voice recording.');
     const files = [...photos, audio];
     const descriptors = files.map((file, i) => describe(file, i < photos.length ? 'photo' : 'audio'));
@@ -127,6 +131,97 @@ form.addEventListener('submit', async (event) => {
   }
 });
 
+
+// Recording stays in this tab until the normal authenticated submission flow.
+const audioInput = $('audio');
+audioInput.required = false;
+const recorderUI = document.createElement('div');
+recorderUI.className = 'voice-recorder';
+recorderUI.innerHTML = `<div class="record-actions"><button type="button" id="record-voice">Record a voice note</button><button type="button" id="stop-voice" hidden>Stop recording</button><button type="button" id="delete-voice" hidden>Delete recording</button></div><p id="record-status" role="status" aria-live="polite">Record here for up to 5 minutes, or upload a recording below.</p><label class="upload-alternative" for="audio">Or upload a recording</label>`;
+audioInput.before(recorderUI);
+const recordButton = $('record-voice'), stopButton = $('stop-voice'), deleteButton = $('delete-voice'), recordStatus = $('record-status');
+let capture = null, recorder = null, chunks = [], tick = null, startedAt = 0, captureGeneration = 0, stopReason = '';
+const maxAudioBytes = 25 * 1024 * 1024;
+function updateAudioSelection() {
+  $('audio-files').replaceChildren();
+  const file = selectedAudio;
+  if (file) { const label = document.createElement('span'); label.textContent = `${file.name} · ${(file.size / 1024 / 1024).toFixed(1)} MB · Ready to send`; $('audio-files').append(label); }
+  deleteButton.hidden = !file;
+  recordButton.textContent = file ? 'Delete & re-record' : 'Record a voice note';
+}
+function releaseCapture() {
+  clearInterval(tick); tick = null;
+  if (capture) { for (const track of capture.getTracks()) track.stop(); capture = null; }
+}
+function idleRecordingUI() {
+  recordingInProgress = false; recordButton.disabled = false; recordButton.hidden = false;
+  stopButton.hidden = true; audioInput.disabled = false; button.disabled = false;
+  updateAudioSelection();
+}
+function finishRecording(reason = '') {
+  stopReason = reason;
+  if (!recorder || recorder.state === 'inactive') {
+    captureGeneration++; releaseCapture(); idleRecordingUI();
+    recordStatus.textContent = 'Recording canceled. Record again or upload a file.'; return;
+  }
+  if (recorder?.state === 'recording' || recorder?.state === 'paused') {
+    stopButton.disabled = true; recordStatus.textContent = 'Finishing recording…'; recorder.stop();
+  }
+  releaseCapture();
+}
+function discardRecording() {
+  selectedAudio = null; audioInput.value = ''; pending = null; updateAudioSelection();
+}
+deleteButton.addEventListener('click', () => { discardRecording(); recordStatus.textContent = 'Recording deleted. Record again or upload a file.'; });
+recordButton.addEventListener('click', async () => {
+  if (recordingInProgress || busy) return;
+  if (!navigator.mediaDevices?.getUserMedia || !window.MediaRecorder) {
+    recordStatus.textContent = 'Recording isn’t available in this browser. Open this page in Safari or Chrome, or upload a recording below.'; return;
+  }
+  discardRecording();
+  recordingInProgress = true; recordButton.disabled = true; audioInput.disabled = true; button.disabled = true;
+  recordStatus.textContent = 'Allow microphone access to start recording.';
+  stopButton.hidden = false; stopButton.disabled = false; stopButton.textContent = 'Cancel';
+  recorder = null;
+  const generation = ++captureGeneration;
+  try {
+    const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+    if (generation !== captureGeneration) { stream.getTracks().forEach(track => track.stop()); return; }
+    if (document.hidden) { stream.getTracks().forEach(track => track.stop()); throw new Error('interrupted'); }
+    capture = stream;
+    const type = ['audio/mp4', 'audio/webm;codecs=opus', 'audio/webm', 'audio/ogg;codecs=opus', 'audio/ogg'].find(type => MediaRecorder.isTypeSupported(type));
+    if (!type) throw new Error('unsupported');
+    recorder = new MediaRecorder(stream, { mimeType: type, audioBitsPerSecond: 128000 });
+    chunks = []; let bytes = 0; stopReason = '';
+    recorder.ondataavailable = event => { if (event.data.size) { chunks.push(event.data); bytes += event.data.size; if (bytes > maxAudioBytes && recorder.state === 'recording') finishRecording('size'); } };
+    recorder.onerror = () => { stopReason = 'error'; finishRecording('error'); };
+    recorder.onstop = () => {
+      const mime = recorder.mimeType.split(';')[0];
+      const blob = new Blob(chunks, { type: mime }); chunks = []; releaseCapture();
+      if (blob.size && blob.size <= maxAudioBytes && stopReason !== 'error') {
+        const extension = mime === 'audio/mp4' ? 'm4a' : mime === 'audio/ogg' ? 'ogg' : 'webm';
+        selectedAudio = new File([blob], `voice-note.${extension}`, { type: mime }); pending = null;
+        recordStatus.textContent = stopReason === 'interrupted' ? 'Recording stopped because this page was interrupted. The captured audio is ready to send, or delete it and record again.' : stopReason === 'limit' ? 'Five-minute limit reached. Your recording is ready to send.' : 'Your recording is ready to send. You can delete it and record again.';
+      } else { selectedAudio = null; recordStatus.textContent = 'We couldn’t save that recording. Please record again or upload a file (up to 25 MB).'; }
+      idleRecordingUI();
+    };
+    capture.getAudioTracks().forEach(track => { track.onended = () => { if (recordingInProgress) finishRecording('interrupted'); }; });
+    recorder.start(1000); startedAt = performance.now();
+    recordButton.hidden = true; stopButton.hidden = false; stopButton.disabled = false; stopButton.textContent = 'Stop recording'; deleteButton.hidden = true;
+    const updateTimer = () => { const seconds = Math.floor((performance.now() - startedAt) / 1000); recordStatus.textContent = `Recording ${Math.floor(seconds / 60)}:${String(seconds % 60).padStart(2, '0')} / 5:00. Keep this page open.`; if (seconds >= 300) finishRecording('limit'); };
+    updateTimer(); tick = setInterval(updateTimer, 250);
+  } catch (error) {
+    if (generation !== captureGeneration) return;
+    releaseCapture(); idleRecordingUI();
+    recordStatus.textContent = error.name === 'NotAllowedError' ? 'Microphone access wasn’t allowed. Enable it in your browser settings, or upload a recording below.' : error.name === 'NotFoundError' ? 'No microphone was found. Connect one, or upload a recording below.' : 'Recording couldn’t start. Please try again in Safari or Chrome, or upload a recording below.';
+  }
+});
+stopButton.addEventListener('click', () => finishRecording());
+document.addEventListener('visibilitychange', () => {
+  if (document.hidden && recordingInProgress) finishRecording('interrupted');
+});
+window.addEventListener('pagehide', () => { captureGeneration++; if (recordingInProgress) finishRecording('interrupted'); releaseCapture(); });
+
 // Refine the authenticated introduction without changing the intake workflow.
 document.querySelector('.intro-copy h1').innerHTML = 'Give your community a new way to <em>connect with you.</em>';
 document.querySelector('.intro-copy .lede').innerHTML = '<span>Turn your favorite places, ideas, and adventures into a SideQuest pack your fans can actually go do.</span><span>It’s your personality and perspective, brought to life beyond the feed.</span>';
@@ -142,10 +237,10 @@ if (voiceDirections) {
   how.setAttribute('aria-labelledby', 'how-it-works-heading');
   const heading = document.createElement('h3'); heading.id = 'how-it-works-heading'; heading.textContent = 'How it works';
   const list = document.createElement('ol');
-  ['Open Voice Memos on your phone.',
+  ['Record your voice note here, or upload an existing recording.',
    'Talk for about 1–5 minutes. Think out loud, change your mind. It doesn’t need to be polished.',
-   'Save the recording to Files.',
-   'Upload it here.'].forEach(text => { const item = document.createElement('li'); item.textContent = text; list.append(item); });
+   'Add one to three photos of yourself.',
+   'Send your ideas when you’re ready.'].forEach(text => { const item = document.createElement('li'); item.textContent = text; list.append(item); });
   const summary = document.createElement('p'); summary.className = 'recording-summary'; summary.textContent = 'Record a quick voice note about the things you love and share a few photos. We’ll turn them into a SideQuest pack for your community.';
   how.append(heading, list); voiceDirections.replaceWith(summary, how);
 }

@@ -61,3 +61,11 @@
 @media(max-width:760px){.pricing-options{padding:30px 24px 38px}.pricing-options>h2{font-size:34px}.pricing-grid{grid-template-columns:1fr;gap:22px}.pricing-content h2{min-height:0;font-size:29px}.pricing-copy{font-size:22px}.pricing-art{height:190px}.header-link{font-size:14px}.intake-copy>p:not(.eyebrow){font-size:18px}.consent,.file-limits,.privacy-note,.field-note,footer{font-size:16px}.phone-preview-caption{font-size:15px}}
 
 .privacy-note a{display:block;margin-top:5px}
+
+.voice-recorder { margin: 14px 0; }
+.record-actions { display:flex; flex-wrap:wrap; gap:10px; }
+.record-actions button { padding:12px 18px; border:1px solid #7651b7; border-radius:12px; background:#f2ebff; color:#382253; font:inherit; font-weight:600; cursor:pointer; }
+.record-actions button:disabled { opacity:.6; cursor:default; }
+.record-actions [hidden] { display:none; }
+#record-status { font-size:16px; line-height:1.5; }
+.upload-alternative { display:block; margin-top:18px; }
