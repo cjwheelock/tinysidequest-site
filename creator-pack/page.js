@@ -279,3 +279,10 @@ async function mountPhonePreview() {
   }
 }
 mountPhonePreview();
+
+// Approved community-sharing section, below the submission experience.
+const sharing = document.createElement('section');
+sharing.className = 'community-sharing';
+sharing.setAttribute('aria-labelledby', 'community-sharing-heading');
+sharing.innerHTML = `<h2 id="community-sharing-heading">Get your community sharing</h2><p>Encourage your community to post their quests on social media and tag you, so you can see and share the adventures you inspired.</p>`;
+document.querySelector('.intake').after(sharing);
