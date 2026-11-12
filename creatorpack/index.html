@@ -1,3 +1,50 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><meta name="theme-color" content="#fff9ec"><title>Creator packs · SideQuest</title><link rel="canonical" href="https://tinysidequest.com/creatorpack/"><link rel="stylesheet" href="./page.css"><link rel="stylesheet" href="./access.css"><script type="module" src="./access.js"></script></head>
-<body><main class="access-shell"><a href="/" aria-label="SideQuest home"><img src="/assets/wordmark.png" width="190" height="70" alt="SideQuest"></a><p id="access-loading" role="status" aria-live="polite">Loading your creator pack…</p><noscript><p>Enable JavaScript to open this page securely.</p></noscript><form id="access-form" hidden><h1>Creator packs</h1><p>Enter your password to continue.</p><label for="creator-password">Password</label><input id="creator-password" type="password" autocomplete="current-password" required maxlength="160"><button class="button" type="submit">Continue <span aria-hidden="true">↗</span></button><p id="access-status" role="status" aria-live="polite"></p></form></main></body></html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><meta name="theme-color" content="#fff9ec"><title>Creator packs · SideQuest</title><link rel="canonical" href="https://tinysidequest.com/creatorpack/"><link rel="stylesheet" href="./page.css"><link rel="stylesheet" href="./access.css"><script type="module" src="./page.js"></script></head>
+<body>
+  <header class="header"><a href="/" aria-label="SideQuest home"><img src="/assets/wordmark.png" width="190" height="70" alt="SideQuest"></a><a class="header-link" href="#make-your-pack">Make your pack <span aria-hidden="true">↗</span></a></header>
+  <main>
+    <section class="intro">
+      <div class="intro-copy">
+        <p class="eyebrow">Your ideas. Their next adventure.</p>
+        <h1>Give your community<br>something to <em>go do.</em></h1>
+        <p class="lede">Turn the things you love into a SideQuest pack, illustrated with you and written in your voice.</p>
+        <a class="button" href="#make-your-pack">Let’s make your pack <span aria-hidden="true">↗</span></a>
+        <p class="cost">It costs you nothing.</p>
+      </div>
+      <div class="pack-example">
+        <div class="cover"><img src="./assets/cover.jpg" width="1024" height="1536" alt="CJ and Zanna talking on a park bench with Gaston, her tricolor Cavalier, on her lap."><div class="cover-title"><span>CJ’s Side Plot</span><p>Dance, play, and say hello.</p></div></div>
+        <p class="cover-note">A little of CJ’s world. A few things to try in yours.</p>
+      </div>
+    </section>
+
+    <section class="quests" aria-labelledby="quests-heading">
+      <div class="section-heading"><h2 id="quests-heading">Here’s what that can look like.</h2><p>Three quests from CJ’s pack. Tap one to take a look.</p></div>
+      <div class="quest-grid">
+        <button class="quest-card" data-quest="0" aria-haspopup="dialog"><img src="./assets/dance.jpg" width="1536" height="1024" alt="CJ trying West Coast swing in a dance class." loading="lazy"><span class="quest-copy"><span class="quest-meta">45–90 min · Beginner</span><strong>Two Left Feet Welcome</strong><span>Learn a few steps with another human. Looking like you know what you’re doing is optional.</span><span class="quest-link">See the quest <span aria-hidden="true">↗</span></span></span></button>
+        <button class="quest-card" data-quest="1" aria-haspopup="dialog"><img src="./assets/pickleball.jpg" width="1536" height="1024" alt="CJ joining a doubles pickleball game." loading="lazy"><span class="quest-copy"><span class="quest-meta">30–60 min · Beginner</span><strong>A Highly Casual Rivalry</strong><span>Meet a few people. Chase a small plastic ball. Become briefly invested in both.</span><span class="quest-link">See the quest <span aria-hidden="true">↗</span></span></span></button>
+        <button class="quest-card" data-quest="2" aria-haspopup="dialog"><img src="./assets/park.jpg" width="1536" height="1024" alt="CJ chatting with Zanna and Gaston at the park." loading="lazy"><span class="quest-copy"><span class="quest-meta">5–15 min · Easy</span><strong>Meet the Dog’s Plus-One</strong><span>The dog is your opening line. The person has the stories.</span><span class="quest-link">See the quest <span aria-hidden="true">↗</span></span></span></button>
+      </div>
+    </section>
+
+    <section class="intake" id="make-your-pack" aria-labelledby="intake-heading">
+      <div class="intake-copy"><p class="eyebrow">Start with a voice note</p><h2 id="intake-heading">Press record.<br>Be yourself.<br><em>We’ll take it from there.</em></h2><p>Use Voice Memos on your phone. Talk for about 1–5 minutes, then save the recording to Files and upload it here. Think out loud. Change your mind. It doesn’t need to be polished.</p>
+        <div class="prompts"><h3>A few things we’d love to hear</h3><ul><li>What do you love doing, and why?</li><li>What would you like your community to try?</li><li>How playful should it feel? What sounds like you?</li><li>Specific places and steps, or room to explore?</li></ul></div>
+        <p class="review-note">We’ll email you one quest and your illustrated character first. You can fine-tune the words and the look before we build the rest.</p>
+      </div>
+      <form id="creator-form" class="creator-form" novalidate>
+        <div class="form-heading"><h3>Make it yours.</h3><p>A voice note. A few photos. Your kind of adventure.</p></div>
+        <div class="field"><label for="name">Your name</label><input id="name" name="name" autocomplete="name" maxlength="100" required placeholder="Name"></div>
+        <div class="field"><label for="email">Your email</label><input id="email" name="email" type="email" autocomplete="email" maxlength="254" required placeholder="you@example.com"><p class="field-note">We’ll send your pack here for review.</p></div>
+        <div class="field"><label for="photos">Your photos <span>1–3 photos</span></label><p id="photo-help" class="field-note">Two or three clear photos help us get your illustrated character right.</p><input id="photos" type="file" accept="image/jpeg,image/png,image/webp,image/heic,image/heif,.heic,.heif" multiple required aria-describedby="photo-help photo-files"><div id="photo-files" class="file-list" aria-live="polite"></div><p class="file-limits">JPG, PNG, WebP or HEIC · up to 10 MB each</p></div>
+        <div class="field"><label for="audio">Your voice note <span>About 1–5 minutes</span></label><input id="audio" type="file" accept="audio/mp4,audio/x-m4a,audio/mpeg,audio/wav,audio/x-wav,audio/webm,audio/ogg,.m4a,.mp3,.wav,.webm,.ogg" required aria-describedby="audio-files"><div id="audio-files" class="file-list" aria-live="polite"></div><p class="file-limits">M4A, MP3, WAV, WebM or OGG · up to 25 MB</p></div>
+        <div class="honeypot" aria-hidden="true"><label for="website">Website</label><input id="website" name="website" tabindex="-1" autocomplete="off"></div>
+        <label class="consent"><input id="consent" type="checkbox" required><span>I’m sharing my own recording and photos for SideQuest to create my pack and email me for feedback.</span></label>
+        <button class="button submit" type="submit">Send my ideas <span aria-hidden="true">↗</span></button>
+        <p id="form-status" class="form-status" role="status" aria-live="polite"></p><progress id="upload-progress" max="100" value="0" hidden aria-label="Upload progress"></progress>
+        <p class="privacy-note">Your source photos and recording stay private. <a href="/privacy">Privacy policy</a></p>
+      </form>
+    </section>
+  </main>
+  <footer><a href="/">SideQuest</a><div><a href="mailto:cj@tinysidequest.com">Get in touch</a><a href="/privacy">Privacy</a><a href="/terms">Terms</a></div></footer>
+  <dialog id="quest-dialog" aria-labelledby="quest-title"><button class="dialog-close" aria-label="Close quest">×</button><img id="quest-image" width="1536" height="1024" alt=""><div class="dialog-copy"><p id="quest-duration" class="quest-meta"></p><h2 id="quest-title"></h2><p id="quest-subtitle"></p><ol id="quest-steps"></ol><p id="quest-safety" class="quest-safety"></p></div></dialog>
+<noscript>Please enable JavaScript to preview the pack and send your ideas.</noscript></body></html>

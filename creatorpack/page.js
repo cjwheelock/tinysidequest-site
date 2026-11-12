@@ -1,3 +1,4 @@
+import { ensureCreatorAccess } from './access.js';
 const endpoint = location.hostname === 'localhost' || location.hostname === '127.0.0.1'
   ? '/__creator-intake'
   : 'https://qoxoutfmmmuzjneyvryi.supabase.co/functions/v1/creator-pack-intake';
@@ -91,6 +92,7 @@ form.addEventListener('submit', async (event) => {
     pending ||= { id: crypto.randomUUID(), token: crypto.randomUUID() };
     busy = true;
     for (const element of form.elements) element.disabled = true;
+    if (!await ensureCreatorAccess()) { report('Your ideas haven’t been sent. Enter the password when you’re ready.'); return; }
     progress.hidden = false;
     progress.value = 0;
     report('Preparing your upload…');
