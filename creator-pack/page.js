@@ -126,6 +126,8 @@ form.addEventListener('submit', async (event) => {
 });
 
 // Refine the authenticated introduction without changing the intake workflow.
+document.querySelector('.intro-copy h1').textContent = 'Give your community a new way to connect with you.';
+document.querySelector('.intro-copy .lede').textContent = 'Turn your favorite places, ideas, and adventures into a SideQuest pack your fans can actually go do. It’s your personality and perspective, brought to life beyond the feed.';
 form.querySelector('.form-heading h3').textContent = 'See what your Creator Pack could look like';
 form.querySelector('.form-heading p')?.remove();
 document.querySelector('.intro-copy > .eyebrow')?.remove();
