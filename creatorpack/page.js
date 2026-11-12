@@ -124,27 +124,132 @@ form.addEventListener('submit', async (event) => {
   }
 });
 
-const dialog = $('quest-dialog');
-const quests = fetch('./quests.json').then((r) => { if (!r.ok) throw new Error('Quest unavailable'); return r.json(); });
-let questSelection = 0;
-document.querySelectorAll('[data-quest]').forEach((card) => card.addEventListener('click', async () => {
-  const selection = ++questSelection;
-  card.setAttribute('aria-busy', 'true');
+// Enhance the authenticated content only. The server-side password gate and
+// original intake form remain unchanged.
+async function mountPhonePreview() {
+  const example = document.querySelector('.pack-example');
+  const originalCover = example?.querySelector('.cover');
+  const originalQuests = document.querySelector('.quests');
+  if (!example || !originalCover || !originalQuests) return;
   try {
-    const quest = (await quests)[Number(card.dataset.quest)];
-    const preload = new Image(); preload.src = `./assets/${quest.image}.jpg`; await preload.decode();
-    if (selection !== questSelection) return;
-    $('quest-image').src = preload.src;
-    $('quest-image').alt = card.querySelector('img').alt;
-    $('quest-title').textContent = quest.title;
-    $('quest-duration').textContent = quest.duration;
-    $('quest-subtitle').textContent = quest.subtitle;
-    $('quest-safety').textContent = quest.safety;
-    $('quest-steps').replaceChildren(...quest.steps.map((step) => { const li = document.createElement('li'); li.textContent = step; return li; }));
-    if (!dialog.open) dialog.showModal();
-    dialog.scrollTop = 0;
-  } catch { card.querySelector('.quest-link').textContent = 'Couldn’t load the quest. Tap to retry.'; }
-  finally { card.removeAttribute('aria-busy'); }
-}));
-dialog.querySelector('button').addEventListener('click', () => dialog.close());
-dialog.addEventListener('click', (event) => { if (event.target === dialog) { const rect = dialog.getBoundingClientRect(); if (event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom) dialog.close(); } });
+    const response = await fetch('./quests.json');
+    if (!response.ok) throw new Error('Quest preview unavailable');
+    const quests = await response.json();
+    if (!Array.isArray(quests) || quests.length !== 3) throw new Error('Quest preview unavailable');
+    const wrapper = document.createElement('div');
+    wrapper.className = 'phone-preview';
+    wrapper.innerHTML = `
+      <div class="phone-halo" aria-hidden="true"></div>
+      <div class="phone-frame" role="region" aria-label="SideQuest mobile app preview">
+        <div class="phone-status" aria-hidden="true"><span>9:41</span><span class="phone-island"></span><span class="phone-status-icons">▮▮▮ <span class="phone-battery"></span></span></div>
+        <div class="phone-track" tabindex="0" aria-label="Four preview screens. Swipe or use the buttons below."></div>
+        <div class="phone-home" aria-hidden="true"><span></span></div>
+      </div>
+      <div class="phone-navigation" aria-label="Preview navigation">
+        <button type="button" class="phone-arrow phone-previous" aria-label="Previous screen">←</button>
+        <div class="phone-tabs" aria-label="Choose a preview screen"></div>
+        <button type="button" class="phone-arrow phone-next" aria-label="Next screen">→</button>
+      </div>
+      <p class="phone-hint">Swipe through the pack. Scroll each quest to explore.</p>
+      <p class="phone-announcement" aria-live="polite"></p>`;
+    const track = wrapper.querySelector('.phone-track');
+    const coverScreen = document.createElement('section');
+    coverScreen.className = 'phone-slide phone-cover-screen';
+    coverScreen.setAttribute('aria-label', '1 of 4: CJ’s Side Plot pack');
+    const cover = originalCover.cloneNode(true);
+    const coverBar = document.createElement('div');
+    coverBar.className = 'phone-appbar';
+    coverBar.innerHTML = '<span class="phone-app-brand">SideQuest</span><span class="phone-app-count">CREATOR EDITION</span>';
+    coverScreen.append(coverBar, cover);
+    const open = document.createElement('button');
+    open.type = 'button'; open.className = 'phone-open-pack';
+    open.innerHTML = 'Explore the quests <span aria-hidden="true">→</span>';
+    coverScreen.append(open);
+    track.append(coverScreen);
+    const labels = ['Pack', 'Dance', 'Play', 'Connect'];
+    quests.forEach((quest, index) => {
+      const screen = document.createElement('section');
+      screen.className = 'phone-slide phone-quest-screen';
+      screen.setAttribute('aria-label', `${index + 2} of 4: ${quest.title}`);
+      const appbar = document.createElement('div'); appbar.className = 'phone-appbar';
+      const back = document.createElement('button'); back.type = 'button'; back.className = 'phone-back';
+      back.textContent = '‹'; back.setAttribute('aria-label', 'Back to pack cover');
+      back.addEventListener('click', () => goTo(0));
+      const packName = document.createElement('span'); packName.textContent = 'CJ’s Side Plot';
+      const position = document.createElement('span'); position.className = 'phone-quest-position'; position.textContent = `${index + 1} / 3`;
+      appbar.append(back, packName, position);
+      const image = new Image(); image.src = `./assets/${quest.image}.jpg`;
+      image.width = 1536; image.height = 1024;
+      image.alt = originalQuests.querySelectorAll('.quest-card img')[index]?.alt || quest.title;
+      const copy = document.createElement('div'); copy.className = 'phone-quest-copy';
+      const duration = document.createElement('p'); duration.className = 'phone-duration'; duration.textContent = quest.duration;
+      const title = document.createElement('h2'); title.textContent = quest.title;
+      const subtitle = document.createElement('p'); subtitle.className = 'phone-subtitle'; subtitle.textContent = quest.subtitle;
+      const steps = document.createElement('ol'); steps.className = 'phone-steps';
+      quest.steps.forEach(step => { const li = document.createElement('li'); li.textContent = step; steps.append(li); });
+      copy.append(duration, title, subtitle, steps);
+      if (quest.safety) { const safety = document.createElement('p'); safety.className = 'phone-safety'; safety.textContent = quest.safety; copy.append(safety); }
+      screen.append(appbar, image, copy); track.append(screen);
+    });
+    const tabs = wrapper.querySelector('.phone-tabs');
+    let current = 0;
+    const buttons = labels.map((label, index) => {
+      const b = document.createElement('button'); b.type = 'button'; b.className = 'phone-tab';
+      b.textContent = label; b.setAttribute('aria-label', `Show ${label.toLowerCase()} screen`);
+      b.addEventListener('click', () => goTo(index)); tabs.append(b); return b;
+    });
+    const previous = wrapper.querySelector('.phone-previous');
+    const next = wrapper.querySelector('.phone-next');
+    const announcement = wrapper.querySelector('.phone-announcement');
+    function update(index) {
+      current = Math.max(0, Math.min(3, index));
+      buttons.forEach((b, i) => b.setAttribute('aria-pressed', String(i === current)));
+      previous.disabled = current === 0; next.disabled = current === 3;
+      announcement.textContent = current === 0 ? 'Pack cover, screen 1 of 4' : `${quests[current - 1].title}, screen ${current + 1} of 4`;
+    }
+    function goTo(index) {
+      index = Math.max(0, Math.min(3, index));
+      track.scrollTo({left:index * track.clientWidth, behavior:matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth'});
+    }
+    previous.addEventListener('click', () => goTo(current - 1));
+    next.addEventListener('click', () => goTo(current + 1));
+    open.addEventListener('click', () => goTo(1));
+    track.addEventListener('keydown', event => {
+      if (event.key === 'ArrowRight' || event.key === 'ArrowLeft') {
+        event.preventDefault(); goTo(current + (event.key === 'ArrowRight' ? 1 : -1));
+      } else if (event.key === 'Home' || event.key === 'End') {
+        event.preventDefault(); goTo(event.key === 'Home' ? 0 : 3);
+      }
+    });
+    let scrollFrame;
+    track.addEventListener('scroll', () => {
+      cancelAnimationFrame(scrollFrame);
+      scrollFrame = requestAnimationFrame(() => update(Math.round(track.scrollLeft / track.clientWidth)));
+    }, {passive:true});
+    // Retain the selected screen when rotating a phone or resizing a window.
+    const resize = new ResizeObserver(() => track.scrollTo({left:current * track.clientWidth, behavior:'instant'}));
+    resize.observe(track);
+    example.replaceWith(wrapper);
+    originalQuests.remove();
+    $('quest-dialog')?.remove();
+    document.querySelector('.intro').classList.add('intro-with-phone');
+    update(0);
+  } catch (error) {
+    // Keep the original three quest cards usable if loading the carousel fails.
+    const dialog = $('quest-dialog');
+    document.querySelectorAll('[data-quest]').forEach(card => card.addEventListener('click', async () => {
+      try {
+        const r = await fetch('./quests.json'); if (!r.ok) throw new Error();
+        const quest = (await r.json())[Number(card.dataset.quest)];
+        $('quest-image').src = `./assets/${quest.image}.jpg`;
+        $('quest-image').alt = card.querySelector('img').alt;
+        $('quest-title').textContent = quest.title; $('quest-duration').textContent = quest.duration;
+        $('quest-subtitle').textContent = quest.subtitle; $('quest-safety').textContent = quest.safety;
+        $('quest-steps').replaceChildren(...quest.steps.map(step => {const li=document.createElement('li');li.textContent=step;return li;}));
+        if (!dialog.open) dialog.showModal(); dialog.scrollTop=0;
+      } catch { card.querySelector('.quest-link').textContent='Couldn’t load the quest. Tap to retry.'; }
+    }));
+    dialog?.querySelector('button').addEventListener('click', () => dialog.close());
+  }
+}
+mountPhonePreview();
