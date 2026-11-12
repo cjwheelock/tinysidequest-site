@@ -157,27 +157,26 @@ async function mountPhonePreview() {
     coverScreen.className = 'phone-slide phone-cover-screen';
     coverScreen.setAttribute('aria-label', '1 of 4: CJ’s Side Plot pack');
     const cover = originalCover.cloneNode(true);
-    const coverBar = document.createElement('div');
-    coverBar.className = 'phone-appbar';
-    coverBar.innerHTML = '<span class="phone-app-brand">SideQuest</span><span class="phone-app-count">CREATOR EDITION</span>';
-    coverScreen.append(coverBar, cover);
+    const edition = document.createElement('span'); edition.className = 'phone-edition'; edition.textContent = '✦ CREATOR EDITION';
+    cover.append(edition); coverScreen.append(cover);
     const open = document.createElement('button');
     open.type = 'button'; open.className = 'phone-open-pack';
     open.innerHTML = 'Explore the quests <span aria-hidden="true">→</span>';
     coverScreen.append(open);
+    const listHeading = document.createElement('h3'); listHeading.className = 'phone-list-heading'; listHeading.textContent = 'Quests in this pack'; coverScreen.append(listHeading);
+    quests.forEach((quest, index) => {
+      const row = document.createElement('button'); row.type = 'button'; row.className = 'phone-quest-row';
+      const number = document.createElement('span'); number.className = 'phone-list-number'; number.textContent = String(index + 1).padStart(2, '0');
+      const details = document.createElement('span'); const name = document.createElement('strong'); name.textContent = quest.title;
+      const duration = document.createElement('span'); duration.textContent = quest.duration; details.append(name, duration); row.append(number, details);
+      row.addEventListener('click', () => goTo(index + 1)); coverScreen.append(row);
+    });
     track.append(coverScreen);
     const labels = ['Pack', 'Dance', 'Play', 'Connect'];
     quests.forEach((quest, index) => {
       const screen = document.createElement('section');
       screen.className = 'phone-slide phone-quest-screen';
       screen.setAttribute('aria-label', `${index + 2} of 4: ${quest.title}`);
-      const appbar = document.createElement('div'); appbar.className = 'phone-appbar';
-      const back = document.createElement('button'); back.type = 'button'; back.className = 'phone-back';
-      back.textContent = '‹'; back.setAttribute('aria-label', 'Back to pack cover');
-      back.addEventListener('click', () => goTo(0));
-      const packName = document.createElement('span'); packName.textContent = 'CJ’s Side Plot';
-      const position = document.createElement('span'); position.className = 'phone-quest-position'; position.textContent = `${index + 1} / 3`;
-      appbar.append(back, packName, position);
       const image = new Image(); image.src = `./assets/${quest.image}.jpg`;
       image.width = 1536; image.height = 1024;
       image.alt = originalQuests.querySelectorAll('.quest-card img')[index]?.alt || quest.title;
@@ -187,9 +186,13 @@ async function mountPhonePreview() {
       const subtitle = document.createElement('p'); subtitle.className = 'phone-subtitle'; subtitle.textContent = quest.subtitle;
       const steps = document.createElement('ol'); steps.className = 'phone-steps';
       quest.steps.forEach(step => { const li = document.createElement('li'); li.textContent = step; steps.append(li); });
-      copy.append(duration, title, subtitle, steps);
-      if (quest.safety) { const safety = document.createElement('p'); safety.className = 'phone-safety'; safety.textContent = quest.safety; copy.append(safety); }
-      screen.append(appbar, image, copy); track.append(screen);
+      const packName = document.createElement('p'); packName.className = 'phone-pack-name'; packName.textContent = 'CJ’s Side Plot';
+      copy.append(packName, title, subtitle);
+      const hero = document.createElement('div'); hero.className = 'phone-quest-hero'; hero.append(image, copy);
+      const panel = document.createElement('div'); panel.className = 'phone-step-panel';
+      const heading = document.createElement('h3'); heading.textContent = 'How to do it'; panel.append(heading, steps);
+      if (quest.safety) { const safety = document.createElement('p'); safety.className = 'phone-safety'; safety.textContent = quest.safety; panel.append(safety); }
+      screen.append(hero, duration, panel); track.append(screen);
     });
     const tabs = wrapper.querySelector('.phone-tabs');
     let current = 0;
