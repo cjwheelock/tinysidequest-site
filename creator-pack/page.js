@@ -126,12 +126,14 @@ form.addEventListener('submit', async (event) => {
 });
 
 // Refine the authenticated introduction without changing the intake workflow.
-document.querySelector('.intro-copy h1').textContent = 'Give your community a new way to connect with you.';
-document.querySelector('.intro-copy .lede').textContent = 'Turn your favorite places, ideas, and adventures into a SideQuest pack your fans can actually go do. It’s your personality and perspective, brought to life beyond the feed.';
+document.querySelector('.intro-copy h1').innerHTML = 'Give your community a new way to <em>connect with you.</em>';
+document.querySelector('.intro-copy .lede').innerHTML = '<span>Turn your favorite places, ideas, and adventures into a SideQuest pack your fans can actually go do.</span><span>It’s your personality and perspective, brought to life beyond the feed.</span>';
+document.querySelector('.intro-copy .cost').textContent = "It's free, this costs you nothing";
 form.querySelector('.form-heading h3').textContent = 'See what your Creator Pack could look like';
 form.querySelector('.form-heading p')?.remove();
 document.querySelector('.intro-copy > .eyebrow')?.remove();
 document.querySelector('.intake-copy > .eyebrow')?.remove();
+document.querySelector('#intake-heading').textContent = 'Your ideas, turned into a custom adventure pack.';
 const voiceDirections = document.querySelector('.intake-copy > p:not(.review-note)');
 if (voiceDirections) {
   const how = document.createElement('section'); how.className = 'how-it-works';
@@ -142,7 +144,8 @@ if (voiceDirections) {
    'Talk for about 1–5 minutes. Think out loud, change your mind. It doesn’t need to be polished.',
    'Save the recording to Files.',
    'Upload it here.'].forEach(text => { const item = document.createElement('li'); item.textContent = text; list.append(item); });
-  how.append(heading, list); voiceDirections.replaceWith(how);
+  const summary = document.createElement('p'); summary.className = 'recording-summary'; summary.textContent = 'Record a quick voice note about the things you love and share a few photos. We’ll turn them into a SideQuest pack for your community.';
+  how.append(heading, list); voiceDirections.replaceWith(summary, how);
 }
 
 // Enhance the authenticated content only. The server-side password gate and
