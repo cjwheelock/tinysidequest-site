@@ -110,7 +110,8 @@ form.addEventListener('submit', async (event) => {
     progress.hidden = true;
     form.classList.add('success');
     form.querySelector('h3').textContent = 'Your ideas are in.';
-    form.querySelector('.form-heading p').textContent = 'Thanks for sharing a little of your world.';
+    const thanks = document.createElement('p'); thanks.textContent = 'Thanks for sharing a little of your world.';
+    form.querySelector('.form-heading').append(thanks);
     report(`We’ll email ${$('email').value.trim()} with your first quest and illustration for feedback.`);
     status.tabIndex = -1;
     status.focus();
@@ -123,6 +124,24 @@ form.addEventListener('submit', async (event) => {
     button.disabled = form.classList.contains('success');
   }
 });
+
+// Refine the authenticated introduction without changing the intake workflow.
+form.querySelector('.form-heading h3').textContent = 'See what your Creator Pack could look like';
+form.querySelector('.form-heading p')?.remove();
+document.querySelector('.intro-copy > .eyebrow')?.remove();
+document.querySelector('.intake-copy > .eyebrow')?.remove();
+const voiceDirections = document.querySelector('.intake-copy > p:not(.review-note)');
+if (voiceDirections) {
+  const how = document.createElement('section'); how.className = 'how-it-works';
+  how.setAttribute('aria-labelledby', 'how-it-works-heading');
+  const heading = document.createElement('h3'); heading.id = 'how-it-works-heading'; heading.textContent = 'How it works';
+  const list = document.createElement('ol');
+  ['Open Voice Memos on your phone.',
+   'Talk for about 1–5 minutes. Think out loud, change your mind. It doesn’t need to be polished.',
+   'Save the recording to Files.',
+   'Upload it here.'].forEach(text => { const item = document.createElement('li'); item.textContent = text; list.append(item); });
+  how.append(heading, list); voiceDirections.replaceWith(how);
+}
 
 // Enhance the authenticated content only. The server-side password gate and
 // original intake form remain unchanged.
