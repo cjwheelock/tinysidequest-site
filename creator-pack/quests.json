@@ -1,0 +1,41 @@
+[
+  {
+    "title": "Try a Partner Dance",
+    "subtitle": "Learn a few steps with another human. Looking like you know what you're doing is optional.",
+    "steps": [
+      "Find a beginner partner dance class. Salsa, Lindy Hop, or CJ's pick, West Coast swing, are places to start. Check the price, start time, and whether you need a partner.",
+      "Arrive a little early and tell the instructor you're new. Wear something comfortable and follow the studio's shoe guidance. Your feet have enough to think about.",
+      "Say hello to your partner and try the steps together. Lose the beat? Rejoin when you find it. If partners rotate, you get another hello with every change.",
+      "Before you leave, ask someone when they usually come dancing. You now have a few steps and a reason to come back."
+    ],
+    "duration": "45–90 min",
+    "safety": "",
+    "image": "dance"
+  },
+  {
+    "title": "Join Pickleball Open Play",
+    "subtitle": "Meet a few people. Chase a small plastic ball. Become briefly invested in both.",
+    "steps": [
+      "Find beginner-friendly pickleball open play at a park or recreation center. Check the time, fees, and whether you can borrow a paddle.",
+      "Bring water and court shoes. Tell the organizer or a waiting player you're new and ask how to join the rotation. This is a perfectly respectable opening move.",
+      "Learn a few names and join a game at your level. Ask about rules as you go. Keeping score may briefly become a group project.",
+      "Thank your fellow ball-chasers and ask when they play again. If you had fun, put the next session on your calendar."
+    ],
+    "duration": "30–60 min",
+    "safety": "",
+    "image": "pickleball"
+  },
+  {
+    "title": "Say Hello at the Park",
+    "subtitle": "The dog is your opening line. The person has the stories.",
+    "steps": [
+      "Take a walk in a public park. If someone with a dog seems open to a chat, offer a hello and a sincere dog compliment. There is usually material to work with.",
+      "Ask the dog's name. If the person welcomes the conversation, introduce yourself and ask their name too. The human also gets a name.",
+      "Ask how the dog came into their life, or whether they come here often. Then listen. Follow the interesting bit instead of working through a questionnaire.",
+      "Enjoy the conversation for as long as it's welcome. Thank them for the chat when it's time to go. A short, friendly hello counts too."
+    ],
+    "duration": "5–15 min",
+    "safety": "Ask the owner before approaching or touching their dog, and give people space if they are busy or prefer to keep walking.",
+    "image": "park"
+  }
+]
