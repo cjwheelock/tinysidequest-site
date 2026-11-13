@@ -460,20 +460,66 @@ document.querySelector('.intake').after(sharing);
 const why = document.createElement('section');
 why.className = 'why-pack';
 why.setAttribute('aria-labelledby', 'why-pack-heading');
-why.innerHTML = `<div class="why-intro"><h2 id="why-pack-heading">What is this, and why should I care?</h2><p>SideQuest was built to help people get out of the house and try new things. A pack is a handful of real-life quests, written in your voice and starring an illustrated you.</p></div>
-<ul class="why-grid">
-<li class="why-feature"><strong>Followers who show up, not just scroll.</strong><span>Your community does your quests, posts about it and tags you. Every post puts you in front of their friends, and that’s how your audience grows.</span></li>
-<li><strong>Content to repost, all week.</strong><span>Their posts become yours to share. Real people out doing the things you love, with no filming on your end.</span></li>
-<li><strong>Your next videos, already planned.</strong><span>Every quest is a ready-made video idea. Do one yourself and invite your community to join you.</span></li>
-<li><strong>A gift for your community.</strong><span>Give the people who follow you something good to do this weekend, not another link to buy something.</span></li>
-</ul>
-<div class="share-strip" aria-labelledby="share-strip-heading"><h3 id="share-strip-heading">Decide how to share your pack.</h3><div class="share-options">
+why.innerHTML = `<div class="why-layout"><div class="why-copy"><h2 id="why-pack-heading">What is this, and why should I care?</h2><p class="why-lede">SideQuest was built to help people get out of the house and try new things. A pack is a handful of real-life quests, written in your voice and starring an illustrated you.</p>
+<ol class="why-points">
+<li class="why-lead"><span class="why-icon" aria-hidden="true">↗</span><div><strong>Followers who show up, not just scroll.</strong><p>Your community does your quests, posts about it and tags you. Every post puts you in front of their friends, and that’s how your audience grows.</p></div></li>
+<li><span class="why-icon" aria-hidden="true">↻</span><div><strong>Content to repost, all week.</strong><p>Their posts become yours to share, with no filming on your end.</p></div></li>
+<li><span class="why-icon" aria-hidden="true">▶</span><div><strong>Your next videos, already planned.</strong><p>Every quest is a ready-made video idea.</p></div></li>
+<li><span class="why-icon" aria-hidden="true">♥</span><div><strong>A gift for your community.</strong><p>Something good to do this weekend, not another link to buy something.</p></div></li>
+</ol></div>
+<div class="why-visual" aria-hidden="true">
+<figure class="why-post p1"><div class="post-head"><span class="post-avatar a1"></span><b>maya.moves</b></div><figcaption>Did the <b>Two Left Feet</b> quest. Zero rhythm, full send.</figcaption><img src="./assets/dance.jpg" alt="" loading="lazy"><span class="post-tag">Tagged you</span></figure>
+<figure class="why-post p2"><div class="post-head"><span class="post-avatar a2"></span><b>jordan.outside</b></div><figcaption>Highly casual rivalry: achieved.</figcaption><img src="./assets/pickleball.jpg" alt="" loading="lazy"><span class="post-tag">Tagged you</span></figure>
+<figure class="why-post p3"><div class="post-head"><span class="post-avatar a3"></span><b>priya.sayshi</b></div><figcaption>Met the dog. Stayed for the stories.</figcaption><img src="./assets/park.jpg" alt="" loading="lazy"><span class="post-tag">Tagged you</span></figure>
+</div></div>`;
+document.querySelector('.intro').after(why);
+const share = document.createElement('section');
+share.className = 'share-pack';
+share.setAttribute('aria-labelledby', 'share-strip-heading');
+share.innerHTML = `<h2 id="share-strip-heading">Decide how to share your pack.</h2><div class="share-options">
 <article class="share-option"><div class="share-art"><svg viewBox="30 14 166 120" aria-hidden="true" focusable="false"><ellipse cx="115" cy="126" rx="71" ry="9" fill="#d1b7ed" opacity=".4"/><rect x="60" y="28" width="110" height="94" rx="14" fill="#fff" transform="rotate(9 115 75)"/><rect x="56" y="22" width="110" height="94" rx="14" fill="#7040f5" transform="rotate(-8 110 70)"/><path d="M82 61h58v40H82zM78 51h66v16H78z" fill="#fff"/><path d="M111 51v50M111 51C88 51 86 32 98 35C107 37 111 51 111 51ZM111 51C134 51 136 32 124 35C115 37 111 51 111 51Z" fill="none" stroke="#d7c6ff" stroke-width="4"/><path d="M179 23v17M171 31h17M38 86v11M33 92h11" stroke="#e7b638" stroke-width="4" stroke-linecap="round"/></svg></div><div><h4>Give it away for free</h4><p>Free for your community to enjoy.</p></div></article>
 <article class="share-option"><div class="share-art"><svg viewBox="30 14 166 120" aria-hidden="true" focusable="false"><ellipse cx="115" cy="126" rx="71" ry="9" fill="#d1b7ed" opacity=".4"/><rect x="60" y="28" width="110" height="94" rx="14" fill="#fff" transform="rotate(9 115 75)"/><rect x="56" y="22" width="110" height="94" rx="14" fill="#7040f5" transform="rotate(-8 110 70)"/><path d="M111 91S85 76 85 60C85 45 102 42 111 54C120 42 137 45 137 60C137 76 111 91 111 91Z" fill="#fff"/><path d="M179 23v17M171 31h17M38 86v11M33 92h11" stroke="#e7b638" stroke-width="4" stroke-linecap="round"/></svg></div><div><h4>Raise funds for charity</h4><p>Price it at $4.99 or $9.99. All proceeds go to a charity.</p></div></article>
 <article class="share-option"><div class="share-art"><svg viewBox="30 14 166 120" aria-hidden="true" focusable="false"><ellipse cx="115" cy="126" rx="71" ry="9" fill="#d1b7ed" opacity=".4"/><rect x="60" y="28" width="110" height="94" rx="14" fill="#fff" transform="rotate(9 115 75)"/><rect x="56" y="22" width="110" height="94" rx="14" fill="#7040f5" transform="rotate(-8 110 70)"/><circle cx="99" cy="63" r="19" fill="#d9c6ff"/><circle cx="121" cy="77" r="19" fill="#fff"/><path d="M116 77h10M121 72v10" stroke="#7040f5" stroke-width="3" stroke-linecap="round"/><path d="M179 23v17M171 31h17M38 86v11M33 92h11" stroke="#e7b638" stroke-width="4" stroke-linecap="round"/></svg></div><div><h4>50/50 rev share</h4><p>Sell your pack and split the revenue with SideQuest.</p></div></article>
-</div></div>`;
-document.querySelector('.intro').after(why);
+</div>`;
+why.after(share);
 
 // Keep upload guidance concise and the privacy link on its own line.
 form.querySelector('label[for="photos"] span')?.remove();
 form.querySelector('#photo-help').textContent = 'One to three clear photos help us get your illustrated character right.';
+
+// Choosing a tone or topic with a mouse or tap shouldn't scroll the page to the hidden input.
+document.querySelectorAll('#creative-preferences .tone-option, #creative-preferences .choice-chip').forEach(label => {
+  label.addEventListener('click', event => {
+    const input = label.querySelector('input');
+    if (!input || input.disabled || event.target === input || event.detail === 0) return;
+    event.preventDefault();
+    if (input.type === 'radio') { if (input.checked) return; input.checked = true; }
+    else input.checked = !input.checked;
+    input.focus({ preventScroll: true });
+    input.dispatchEvent(new Event('change', { bubbles: true }));
+  });
+});
+
+// Save and Delete controls for the "Something else" topic.
+(() => {
+  const field = document.getElementById('other-topic-field');
+  const input = document.getElementById('topic-other');
+  if (!field || !input) return;
+  const actions = document.createElement('div'); actions.className = 'other-topic-actions';
+  actions.innerHTML = '<button type="button" class="other-save">Save</button><button type="button" class="other-delete">Delete</button><span class="other-status" role="status" aria-live="polite"></span>';
+  input.after(actions);
+  const save = actions.querySelector('.other-save'), del = actions.querySelector('.other-delete'), status = actions.querySelector('.other-status');
+  const sync = () => { const empty = !input.value.trim(); save.disabled = empty && !input.readOnly; del.disabled = empty; };
+  save.addEventListener('click', () => {
+    if (input.readOnly) { input.readOnly = false; save.textContent = 'Save'; status.textContent = ''; input.focus(); }
+    else { input.value = input.value.trim(); if (!input.value) return; input.readOnly = true; save.textContent = 'Edit'; status.textContent = 'Saved'; }
+    field.classList.toggle('is-saved', input.readOnly); sync();
+  });
+  del.addEventListener('click', () => {
+    input.value = ''; input.readOnly = false; save.textContent = 'Save'; status.textContent = 'Deleted';
+    field.classList.remove('is-saved'); input.dispatchEvent(new Event('input', { bubbles: true })); sync(); input.focus();
+  });
+  input.addEventListener('input', () => { if (!input.readOnly) status.textContent = ''; sync(); });
+  input.addEventListener('keydown', e => { if (e.key === 'Enter') { e.preventDefault(); if (!input.readOnly && input.value.trim()) save.click(); } });
+  sync();
+})();

@@ -138,3 +138,59 @@
 .why-grid .why-feature strong{font-size:23px;letter-spacing:-.5px}.why-grid .why-feature span{font-size:18px;color:var(--ink);max-width:760px}
 .share-strip{background:#f6f0ff}
 @media(max-width:760px){.why-grid{grid-template-columns:1fr}.why-grid .why-feature{padding:20px}.why-grid .why-feature strong{font-size:21px}.why-grid .why-feature span{font-size:17px}}
+.other-topic-actions{display:flex;align-items:center;gap:10px;margin-top:10px}
+.other-topic-actions button{min-height:44px;padding:10px 18px;border-radius:12px;font-weight:700;font-size:15px;border:1px solid #ded2ef;background:#fff;color:#5022bd}
+.other-topic-actions .other-save{background:var(--purple);border-color:var(--purple);color:#fff}
+.other-topic-actions button:disabled{opacity:.45;cursor:default}
+.other-status{font-size:15px;color:var(--muted)}
+#other-topic-field.is-saved input{background:#f6f1ff;border-color:#cdb8f7}
+
+/* Share options as their own section, matching the why-section heading. */
+.why-pack{padding-bottom:40px}
+.share-pack{max-width:1160px;margin:0 auto;padding:24px 40px 40px}
+.share-pack h2{font-size:clamp(32px,3.3vw,44px);line-height:1.13;letter-spacing:-1.7px;margin-bottom:24px}
+.share-pack .share-options{gap:14px}
+.share-pack .share-option{border:1px solid #e6dace;border-radius:20px;padding:16px 20px 16px 14px}
+@media(max-width:760px){.why-pack{padding-bottom:28px}.share-pack{padding:16px 24px 28px}.share-pack h2{font-size:32px;letter-spacing:-1.2px;margin-bottom:18px}.share-pack .share-options{gap:10px}}
+@media(max-width:360px){.share-pack{padding-left:17px;padding-right:17px}}
+
+/* Why-section v3: copy + visual of follower posts tagging the creator. */
+.why-pack{padding-top:40px}
+.why-layout{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:56px;align-items:center}
+.why-copy h2{font-size:clamp(32px,3.3vw,44px);line-height:1.13;letter-spacing:-1.7px}
+.why-lede{font-size:19px;line-height:1.6;color:var(--muted);margin-top:16px}
+.why-points{list-style:none;margin:28px 0 0;padding:0;display:grid;gap:18px}
+.why-points li{display:flex;gap:16px;align-items:flex-start}
+.why-points strong{display:block;font-size:19px;letter-spacing:-.3px;line-height:1.3}
+.why-points p{font-size:17px;line-height:1.55;color:var(--muted);margin-top:4px}
+.why-icon{flex:0 0 40px;height:40px;border-radius:12px;background:#efe6ff;color:var(--purple);display:grid;place-items:center;font-weight:800;font-size:18px}
+.why-lead{background:linear-gradient(135deg,#efe5ff,#f8f2ff 70%,#fff4d6);border:1px solid #dccbfb;border-radius:20px;padding:18px 20px}
+.why-lead .why-icon{background:var(--purple);color:#fff}
+.why-lead strong{font-size:22px}.why-lead p{color:var(--ink)}
+.why-visual{position:relative;height:520px}
+.why-post{position:absolute;margin:0;width:62%;background:#fff;border-radius:18px;padding:10px 10px 14px;box-shadow:0 18px 40px #2a184f24,0 2px 6px #2a184f14}
+.why-post img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:10px}
+.post-head{display:flex;align-items:center;gap:8px;padding:2px 4px 9px;font-size:14px}
+.post-avatar{width:24px;height:24px;border-radius:50%}
+.a1{background:linear-gradient(135deg,#ffb36b,#ff6f91)}.a2{background:linear-gradient(135deg,#6bd3ff,#7040f5)}.a3{background:linear-gradient(135deg,#9be38a,#e7b638)}
+.why-post figcaption{font-size:14px;line-height:1.4;padding:9px 4px 0;color:var(--ink)}
+.post-tag{position:absolute;top:-12px;right:14px;background:var(--purple);color:#fff;font-size:12px;font-weight:800;padding:6px 11px;border-radius:999px;box-shadow:0 4px 12px #7040f555}
+.p1{left:0;top:10px;transform:rotate(-5deg);z-index:1}
+.p2{right:0;top:120px;transform:rotate(4deg);z-index:2}
+.p3{left:12%;bottom:0;transform:rotate(-1.5deg);z-index:3}
+@media(max-width:900px){.why-layout{grid-template-columns:1fr;gap:36px}.why-visual{height:460px;max-width:560px;width:100%;margin:0 auto}}
+@media(max-width:760px){.why-pack{padding-top:24px}.why-lede{font-size:17px}.why-points strong{font-size:18px}.why-lead strong{font-size:20px}.why-points p{font-size:16px}.why-visual{height:380px}.why-post{width:66%;padding:8px 8px 11px}.post-head{font-size:12px}.why-post figcaption{font-size:12px}.p2{top:95px}}
+
+/* Posts: caption sits above the image so overlaps only cover photo edges. */
+.why-post figcaption{padding:0 4px 10px}
+.why-post{width:58%}
+.p1{left:0;top:0}.p2{right:0;top:110px}.p3{left:14%;top:250px;bottom:auto}
+.why-visual{height:560px}
+@media(max-width:900px){.why-visual{height:540px}}
+@media(max-width:760px){
+.why-visual{position:static;height:auto;display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding:14px 24px 22px;margin:0 -24px;scrollbar-width:none}
+.why-visual::-webkit-scrollbar{display:none}
+.why-post{position:relative;flex:0 0 72%;width:auto;transform:none;left:auto;right:auto;top:auto;bottom:auto;scroll-snap-align:center}
+.why-post figcaption{font-size:13px}.post-head{font-size:13px}
+}
+@media(max-width:760px){.why-visual{width:calc(100% + 48px);max-width:none}}
