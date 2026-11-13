@@ -270,7 +270,7 @@ window.addEventListener('pagehide', () => { captureGeneration++; if (recordingIn
 
 // Refine the authenticated introduction without changing the intake workflow.
 document.querySelector('.intro-copy h1').innerHTML = 'Give your community a new way to <em>connect with you.</em>';
-document.querySelector('.intro-copy .lede').innerHTML = '<span>Turn your favorite places, ideas, and adventures into a SideQuest pack your fans can actually go do.</span><span>It’s your personality and perspective, brought to life beyond the feed.</span>';
+document.querySelector('.intro-copy .lede').innerHTML = '<span>Turn your favorite places, ideas, and adventures into a SideQuest pack your fans can actually go do.</span><span>SideQuest helps people get out of the house and try new things.</span>';
 document.querySelector('.intro-copy .cost').textContent = "It's free, this costs you nothing";
 form.querySelector('.form-heading h3').textContent = 'See what your Creator Pack could look like';
 form.querySelector('.form-heading p')?.remove();
