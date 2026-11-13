@@ -69,3 +69,22 @@
 .record-actions [hidden] { display:none; }
 #record-status { font-size:16px; line-height:1.5; }
 .upload-alternative { display:block; margin-top:18px; }
+
+#audio-files audio { display:block; width:100%; max-width:100%; margin:12px 0; }
+#audio-files { min-width:0; }
+
+/* Compact, touch-friendly voice controls. Labels stay available to assistive tech. */
+.voice-recorder { padding:18px; border:1px solid #e4daf1; border-radius:18px; background:linear-gradient(135deg,#faf7ff,#fffdf8); }
+.record-actions { align-items:center; justify-content:flex-start; gap:12px; }
+.record-actions button { width:52px; height:52px; padding:14px; display:inline-flex; align-items:center; justify-content:center; border-radius:50%; border:1px solid #ded2ef; color:#6034a0; background:#fff; box-shadow:0 2px 7px #39215a0a; transition:background .15s,transform .15s; }
+.record-actions button svg { width:24px; height:24px; flex-shrink:0; }
+.record-actions button:hover:not(:disabled) { background:#eee5fc; transform:translateY(-1px); }
+.record-actions button:focus-visible { outline:3px solid #b69ae6; outline-offset:4px; }
+.record-actions #record-voice { width:60px; height:60px; color:#fff; border-color:#7438dd; background:#7438dd; box-shadow:0 4px 14px #7438dd26; }
+.record-actions #record-voice:hover:not(:disabled) { background:#6227c5; }
+.record-actions #stop-voice { color:#b33849; background:#fff2f3; border-color:#f0cfd5; }
+.record-actions #delete-voice { color:#7d677d; }
+#record-status { margin:12px 0 0; font-size:16px; line-height:1.5; color:#655775; }
+.is-recording #record-status { color:#a12a43; font-variant-numeric:tabular-nums; }
+.upload-alternative { margin-top:18px; padding-top:14px; border-top:1px solid #e8deef; font-size:15px; color:#655775; }
+@media (max-width:560px) { .voice-recorder { padding:16px; } .record-actions { gap:14px; } }

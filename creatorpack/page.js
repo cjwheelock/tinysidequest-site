@@ -137,25 +137,52 @@ const audioInput = $('audio');
 audioInput.required = false;
 const recorderUI = document.createElement('div');
 recorderUI.className = 'voice-recorder';
-recorderUI.innerHTML = `<div class="record-actions"><button type="button" id="record-voice">Record a voice note</button><button type="button" id="stop-voice" hidden>Stop recording</button><button type="button" id="delete-voice" hidden>Delete recording</button></div><p id="record-status" role="status" aria-live="polite">Record here for up to 5 minutes, or upload a recording below.</p><label class="upload-alternative" for="audio">Or upload a recording</label>`;
+recorderUI.innerHTML = `<div class="record-actions"><button type="button" id="record-voice">Record a voice note</button><button type="button" id="stop-voice" hidden>Stop recording</button><button type="button" id="pause-voice" hidden>Pause</button><button type="button" id="delete-voice" hidden>Delete</button></div><p id="record-status" role="status" aria-live="polite">Tap the mic to record · up to 5 minutes</p><label class="upload-alternative" for="audio">Or upload a recording</label>`;
 audioInput.before(recorderUI);
+const pauseButton = $('pause-voice');
 const recordButton = $('record-voice'), stopButton = $('stop-voice'), deleteButton = $('delete-voice'), recordStatus = $('record-status');
+const recorderIcons = {
+  record: '<rect x="9" y="3" width="6" height="12" rx="3"/><path d="M5 10v2a7 7 0 0 0 14 0v-2M12 19v3M8 22h8"/>',
+  stop: '<rect x="6" y="6" width="12" height="12" rx="2" fill="currentColor" stroke="none"/>',
+  pause: '<path d="M8 5v14M16 5v14" stroke-width="4"/>',
+  resume: '<path d="m8 4 12 8-12 8Z" fill="currentColor" stroke="none"/>',
+  delete: '<path d="M3 6h18M9 6V3h6v3M5 6l1 15h12l1-15M10 10v7M14 10v7"/>',
+  cancel: '<path d="m6 6 12 12M18 6 6 18"/>'
+};
+function setRecorderControl(control, label, icon) {
+  control.title = label; control.setAttribute('aria-label', label);
+  control.innerHTML = `<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">${recorderIcons[icon]}</svg>`;
+}
+setRecorderControl(recordButton, 'Record a voice note', 'record');
+setRecorderControl(stopButton, 'Stop recording', 'stop');
+setRecorderControl(pauseButton, 'Pause recording', 'pause');
+setRecorderControl(deleteButton, 'Delete recording', 'delete');
 let capture = null, recorder = null, chunks = [], tick = null, startedAt = 0, captureGeneration = 0, stopReason = '';
+let activeMilliseconds = 0, recordingPaused = false, audioPreviewURL = null, audioPreview = null;
 const maxAudioBytes = 25 * 1024 * 1024;
 function updateAudioSelection() {
+  if (audioPreview) { audioPreview.pause(); audioPreview.removeAttribute('src'); audioPreview = null; }
+  if (audioPreviewURL) { URL.revokeObjectURL(audioPreviewURL); audioPreviewURL = null; }
   $('audio-files').replaceChildren();
   const file = selectedAudio;
-  if (file) { const label = document.createElement('span'); label.textContent = `${file.name} · ${(file.size / 1024 / 1024).toFixed(1)} MB · Ready to send`; $('audio-files').append(label); }
+  if (file) {
+    audioPreviewURL = URL.createObjectURL(file);
+    audioPreview = document.createElement('audio'); audioPreview.controls = true; audioPreview.preload = 'metadata'; audioPreview.src = audioPreviewURL; audioPreview.setAttribute('aria-label', 'Listen to your voice note');
+    audioPreview.onerror = () => { recordStatus.textContent = 'This browser cannot play the recording. You can still send it, or delete it and try another recording.'; };
+    $('audio-files').append(audioPreview);
+    const label = document.createElement('span'); label.textContent = `${file.name} · ${(file.size / 1024 / 1024).toFixed(1)} MB · Ready to send`; $('audio-files').append(label); }
   deleteButton.hidden = !file;
-  recordButton.textContent = file ? 'Delete & re-record' : 'Record a voice note';
+  setRecorderControl(recordButton, 'Record a voice note', 'record');
+  recordButton.hidden = !!file;
 }
 function releaseCapture() {
   clearInterval(tick); tick = null;
   if (capture) { for (const track of capture.getTracks()) track.stop(); capture = null; }
 }
 function idleRecordingUI() {
+  recorderUI.classList.remove('is-recording');
   recordingInProgress = false; recordButton.disabled = false; recordButton.hidden = false;
-  stopButton.hidden = true; audioInput.disabled = false; button.disabled = false;
+  stopButton.hidden = true; pauseButton.hidden = true; recordingPaused = false; audioInput.disabled = false; button.disabled = false;
   updateAudioSelection();
 }
 function finishRecording(reason = '') {
@@ -165,7 +192,7 @@ function finishRecording(reason = '') {
     recordStatus.textContent = 'Recording canceled. Record again or upload a file.'; return;
   }
   if (recorder?.state === 'recording' || recorder?.state === 'paused') {
-    stopButton.disabled = true; recordStatus.textContent = 'Finishing recording…'; recorder.stop();
+    stopButton.disabled = true; pauseButton.disabled = true; recordStatus.textContent = 'Finishing recording…'; recorder.stop();
   }
   releaseCapture();
 }
@@ -179,9 +206,10 @@ recordButton.addEventListener('click', async () => {
     recordStatus.textContent = 'Recording isn’t available in this browser. Open this page in Safari or Chrome, or upload a recording below.'; return;
   }
   discardRecording();
+  recorderUI.classList.add('is-recording');
   recordingInProgress = true; recordButton.disabled = true; audioInput.disabled = true; button.disabled = true;
   recordStatus.textContent = 'Allow microphone access to start recording.';
-  stopButton.hidden = false; stopButton.disabled = false; stopButton.textContent = 'Cancel';
+  stopButton.hidden = false; stopButton.disabled = false; setRecorderControl(stopButton, 'Cancel microphone request', 'cancel');
   recorder = null;
   const generation = ++captureGeneration;
   try {
@@ -201,19 +229,37 @@ recordButton.addEventListener('click', async () => {
       if (blob.size && blob.size <= maxAudioBytes && stopReason !== 'error') {
         const extension = mime === 'audio/mp4' ? 'm4a' : mime === 'audio/ogg' ? 'ogg' : 'webm';
         selectedAudio = new File([blob], `voice-note.${extension}`, { type: mime }); pending = null;
-        recordStatus.textContent = stopReason === 'interrupted' ? 'Recording stopped because this page was interrupted. The captured audio is ready to send, or delete it and record again.' : stopReason === 'limit' ? 'Five-minute limit reached. Your recording is ready to send.' : 'Your recording is ready to send. You can delete it and record again.';
+        recordStatus.textContent = stopReason === 'interrupted' ? 'Recording stopped because this page was interrupted. The captured audio is ready to send, or delete it and record again.' : stopReason === 'limit' ? 'Five-minute limit reached. Your recording is ready to send.' : 'Your recording is ready. Listen to it below, or delete it to record again.';
       } else { selectedAudio = null; recordStatus.textContent = 'We couldn’t save that recording. Please record again or upload a file (up to 25 MB).'; }
       idleRecordingUI();
     };
     capture.getAudioTracks().forEach(track => { track.onended = () => { if (recordingInProgress) finishRecording('interrupted'); }; });
-    recorder.start(1000); startedAt = performance.now();
-    recordButton.hidden = true; stopButton.hidden = false; stopButton.disabled = false; stopButton.textContent = 'Stop recording'; deleteButton.hidden = true;
-    const updateTimer = () => { const seconds = Math.floor((performance.now() - startedAt) / 1000); recordStatus.textContent = `Recording ${Math.floor(seconds / 60)}:${String(seconds % 60).padStart(2, '0')} / 5:00. Keep this page open.`; if (seconds >= 300) finishRecording('limit'); };
+    recorder.start(1000); startedAt = performance.now(); activeMilliseconds = 0; recordingPaused = false;
+    pauseButton.hidden = !(typeof recorder.pause === 'function' && typeof recorder.resume === 'function'); pauseButton.disabled = false; setRecorderControl(pauseButton, 'Pause recording', 'pause');
+    recordButton.hidden = true; stopButton.hidden = false; stopButton.disabled = false; setRecorderControl(stopButton, 'Stop recording', 'stop'); deleteButton.hidden = true;
+    const updateTimer = () => { const seconds = Math.floor((activeMilliseconds + (recordingPaused ? 0 : performance.now() - startedAt)) / 1000); recordStatus.textContent = `${recordingPaused ? 'Paused' : 'Recording'} ${Math.floor(seconds / 60)}:${String(seconds % 60).padStart(2, '0')} / 5:00. Keep this page open.`; if (seconds >= 300) finishRecording('limit'); };
     updateTimer(); tick = setInterval(updateTimer, 250);
   } catch (error) {
     if (generation !== captureGeneration) return;
     releaseCapture(); idleRecordingUI();
     recordStatus.textContent = error.name === 'NotAllowedError' ? 'Microphone access wasn’t allowed. Enable it in your browser settings, or upload a recording below.' : error.name === 'NotFoundError' ? 'No microphone was found. Connect one, or upload a recording below.' : 'Recording couldn’t start. Please try again in Safari or Chrome, or upload a recording below.';
+  }
+});
+pauseButton.addEventListener('click', () => {
+  if (!recorder || !recordingInProgress || pauseButton.disabled) return;
+  try {
+    if (!recordingPaused && recorder.state === 'recording') {
+      recorder.pause(); activeMilliseconds += performance.now() - startedAt; recordingPaused = true;
+      capture?.getAudioTracks().forEach(track => { track.enabled = false; });
+      setRecorderControl(pauseButton, 'Resume recording', 'resume'); recordStatus.textContent = 'Paused. Tap Resume to continue, or Stop recording to finish.';
+    } else if (recordingPaused && recorder.state === 'paused') {
+      recorder.resume(); capture?.getAudioTracks().forEach(track => { track.enabled = true; });
+      startedAt = performance.now(); recordingPaused = false; setRecorderControl(pauseButton, 'Pause recording', 'pause');
+    }
+  } catch {
+    // If resuming failed, finish safely rather than leave the microphone active.
+    if (recordingPaused) finishRecording('interrupted');
+    else { pauseButton.hidden = true; recordStatus.textContent = 'Pause isn’t available in this browser. You can stop your recording when you’re done.'; }
   }
 });
 stopButton.addEventListener('click', () => finishRecording());
