@@ -133,3 +133,8 @@
 @media(max-width:900px){.share-options{grid-template-columns:1fr}}
 @media(max-width:760px){.why-pack{padding:6px 24px 40px}.why-intro h2{font-size:32px;letter-spacing:-1.2px}.why-intro p{font-size:17px}.why-grid{grid-template-columns:1fr;gap:10px;margin-top:22px}.why-grid li{padding:16px 18px}.why-grid strong{font-size:18px}.why-grid span{font-size:16px}.share-strip{margin-top:24px;padding:18px 14px}.share-strip h3{font-size:22px;margin-bottom:12px}}
 @media(max-width:360px){.why-pack{padding-left:17px;padding-right:17px}}
+.why-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+.why-grid .why-feature{grid-column:1/-1;background:linear-gradient(135deg,#efe5ff,#f8f2ff 70%,#fff4d6);border-color:#dccbfb;padding:24px 26px}
+.why-grid .why-feature strong{font-size:23px;letter-spacing:-.5px}.why-grid .why-feature span{font-size:18px;color:var(--ink);max-width:760px}
+.share-strip{background:#f6f0ff}
+@media(max-width:760px){.why-grid{grid-template-columns:1fr}.why-grid .why-feature{padding:20px}.why-grid .why-feature strong{font-size:21px}.why-grid .why-feature span{font-size:17px}}

@@ -460,14 +460,12 @@ document.querySelector('.intake').after(sharing);
 const why = document.createElement('section');
 why.className = 'why-pack';
 why.setAttribute('aria-labelledby', 'why-pack-heading');
-why.innerHTML = `<div class="why-intro"><h2 id="why-pack-heading">What is this, and why should I care?</h2><p>SideQuest was built to help people get out of the house and try new things. A pack is a handful of real-life quests, written in your voice and starring an illustrated you.</p><p class="why-punch">Your audience already watches what you do. A pack lets them go do it too.</p></div>
+why.innerHTML = `<div class="why-intro"><h2 id="why-pack-heading">What is this, and why should I care?</h2><p>SideQuest was built to help people get out of the house and try new things. A pack is a handful of real-life quests, written in your voice and starring an illustrated you.</p></div>
 <ul class="why-grid">
-<li><strong>Content ideas, already planned.</strong><span>Every quest is a ready-made video. Film yourself doing one, or film your followers trying it.</span></li>
-<li><strong>Followers who show up, not just scroll.</strong><span>Your community posts their quests and tags you, so new people find you through them.</span></li>
-<li><strong>Your name on something real.</strong><span>A pack in an app, with your character on the cover and your ideas inside. Something you made, and something you can link to.</span></li>
+<li class="why-feature"><strong>Followers who show up, not just scroll.</strong><span>Your community does your quests, posts about it and tags you. Every post puts you in front of their friends, and that’s how your audience grows.</span></li>
+<li><strong>Content to repost, all week.</strong><span>Their posts become yours to share. Real people out doing the things you love, with no filming on your end.</span></li>
+<li><strong>Your next videos, already planned.</strong><span>Every quest is a ready-made video idea. Do one yourself and invite your community to join you.</span></li>
 <li><strong>A gift for your community.</strong><span>Give the people who follow you something good to do this weekend, not another link to buy something.</span></li>
-<li><strong>Your call on money.</strong><span>Give it away, raise funds for a cause, or earn half of every sale. Pick below.</span></li>
-<li><strong>You stay in charge.</strong><span>You see your first quest and character before we build the rest. Your photos and recording stay private.</span></li>
 </ul>
 <div class="share-strip" aria-labelledby="share-strip-heading"><h3 id="share-strip-heading">Decide how to share your pack.</h3><div class="share-options">
 <article class="share-option"><div class="share-art"><svg viewBox="30 14 166 120" aria-hidden="true" focusable="false"><ellipse cx="115" cy="126" rx="71" ry="9" fill="#d1b7ed" opacity=".4"/><rect x="60" y="28" width="110" height="94" rx="14" fill="#fff" transform="rotate(9 115 75)"/><rect x="56" y="22" width="110" height="94" rx="14" fill="#7040f5" transform="rotate(-8 110 70)"/><path d="M82 61h58v40H82zM78 51h66v16H78z" fill="#fff"/><path d="M111 51v50M111 51C88 51 86 32 98 35C107 37 111 51 111 51ZM111 51C134 51 136 32 124 35C115 37 111 51 111 51Z" fill="none" stroke="#d7c6ff" stroke-width="4"/><path d="M179 23v17M171 31h17M38 86v11M33 92h11" stroke="#e7b638" stroke-width="4" stroke-linecap="round"/></svg></div><div><h4>Give it away for free</h4><p>Free for your community to enjoy.</p></div></article>
