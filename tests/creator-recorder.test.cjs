@@ -2,7 +2,7 @@ const fs = require('node:fs'), vm = require('node:vm'), assert = require('node:a
 const source = fs.readFileSync('creatorpack/page.js','utf8');
 const block = source.slice(source.indexOf('// Recording stays'), source.indexOf('// Refine the authenticated'));
 function setup({mime='audio/webm',permissionError=null,supported=true,permissionWait=null,pauseSupported=true,pauseThrows=false}={}) {
-  const nodes = {}; const node = id => nodes[id] ||= {hidden:false,disabled:false,value:'',files:[],textContent:'',listeners:{},addEventListener(e,f){this.listeners[e]=f},before(){},append(){},replaceChildren(){},pause(){},removeAttribute(){},setAttribute(k,v){this[k]=v},classList:{add(){},remove(){}}};
+  const nodes = {}; const node = id => nodes[id] ||= {hidden:false,disabled:false,value:'',files:[],textContent:'',listeners:{},addEventListener(e,f){this.listeners[e]=f},before(){},after(){},append(){},replaceChildren(){},pause(){},removeAttribute(){},setAttribute(k,v){this[k]=v},classList:{add(){},remove(){}}};
   let time=0, interval, stopped=0, instance;
   const track={stop(){stopped++}};
   const document={hidden:false,createElement:()=>node('created'+Math.random()),addEventListener(e,f){this[e]=f}};
@@ -24,6 +24,6 @@ t=setup();await t.node('record-voice').listeners.click();t.advance(60000);t.node
 t=setup();await t.node('record-voice').listeners.click();t.node('pause-voice').listeners.click();t.node('stop-voice').listeners.click();await flush();assert(t.context.selectedAudio);console.log('stop while paused produces recording');
 t=setup({pauseSupported:false});await t.node('record-voice').listeners.click();assert.equal(t.node('pause-voice').hidden,true);t.node('stop-voice').listeners.click();await flush();console.log('unsupported pause hides control');
 t=setup({pauseThrows:true});await t.node('record-voice').listeners.click();t.node('pause-voice').listeners.click();assert.equal(t.node('pause-voice').hidden,true);assert.equal(t.instance().state,'recording');t.node('stop-voice').listeners.click();await flush();console.log('pause exception retains stop fallback');
-assert(source.includes("audioPreview.controls = true"));assert(source.includes("URL.revokeObjectURL(audioPreviewURL)"));console.log('playback and preview cleanup present');
+assert(source.includes("audioPreview.controls = false"));assert(source.includes("recordStatus.after($('audio-files'))"));assert(source.includes("playButton.className = 'voice-play'"));assert(source.includes("URL.revokeObjectURL(audioPreviewURL)"));console.log('playback and preview cleanup present');
 assert(source.includes('const audio = selectedAudio;'));assert(source.indexOf('await ensureCreatorAccess()')<source.indexOf("action: 'prepare'"));assert(!block.includes('fetch('));console.log('shared upload state, password precedes upload, recording does not transmit');
 })().catch(e=>{console.error(e);process.exitCode=1});

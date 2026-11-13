@@ -43,7 +43,7 @@ function showFiles(kind) {
   }
 }
 $('photos').addEventListener('change', () => showFiles('photos'));
-$('audio').addEventListener('change', () => { selectedAudio = $('audio').files[0] || null; pending = null; updateAudioSelection(); });
+$('audio').addEventListener('change', () => { selectedAudio = $('audio').files[0] || null; pending = null; updateAudioSelection(); recordStatus.textContent = selectedAudio ? 'Your recording is ready. Listen to it again below or delete it to record it again.' : 'Tap the mic to record · up to 5 minutes'; });
 form.addEventListener('input', () => { if (!busy) pending = null; });
 
 const formats = {
@@ -141,6 +141,7 @@ recorderUI.innerHTML = `<div class="record-actions"><button type="button" id="re
 audioInput.before(recorderUI);
 const pauseButton = $('pause-voice');
 const recordButton = $('record-voice'), stopButton = $('stop-voice'), deleteButton = $('delete-voice'), recordStatus = $('record-status');
+recordStatus.after($('audio-files'));
 const recorderIcons = {
   record: '<rect x="9" y="3" width="6" height="12" rx="3"/><path d="M5 10v2a7 7 0 0 0 14 0v-2M12 19v3M8 22h8"/>',
   stop: '<rect x="6" y="6" width="12" height="12" rx="2" fill="currentColor" stroke="none"/>',
@@ -167,9 +168,32 @@ function updateAudioSelection() {
   const file = selectedAudio;
   if (file) {
     audioPreviewURL = URL.createObjectURL(file);
-    audioPreview = document.createElement('audio'); audioPreview.controls = true; audioPreview.preload = 'metadata'; audioPreview.src = audioPreviewURL; audioPreview.setAttribute('aria-label', 'Listen to your voice note');
+    audioPreview = document.createElement('audio'); audioPreview.controls = false; audioPreview.preload = 'metadata'; audioPreview.src = audioPreviewURL; audioPreview.setAttribute('aria-label', 'Listen to your voice note');
     audioPreview.onerror = () => { recordStatus.textContent = 'This browser cannot play the recording. You can still send it, or delete it and try another recording.'; };
-    $('audio-files').append(audioPreview);
+    audioPreview.hidden = true;
+    const player = document.createElement('div'); player.className = 'voice-player';
+    const playButton = document.createElement('button'); playButton.type = 'button'; playButton.className = 'voice-play';
+    setRecorderControl(playButton, 'Play recording', 'resume');
+    const timeline = document.createElement('div'); timeline.className = 'voice-timeline';
+    const seek = document.createElement('input'); seek.type = 'range'; seek.min = '0'; seek.max = '100'; seek.step = '0.1'; seek.value = '0'; seek.disabled = true; seek.setAttribute('aria-label', 'Recording playback position');
+    const time = document.createElement('span'); time.className = 'voice-playback-time'; time.textContent = '0:00';
+    const preview = audioPreview;
+    const formatTime = seconds => `${Math.floor(seconds / 60)}:${String(Math.floor(seconds % 60)).padStart(2, '0')}`;
+    const updatePlayback = () => {
+      const duration = preview.duration; const current = preview.currentTime || 0;
+      seek.disabled = !Number.isFinite(duration) || duration <= 0;
+      if (!seek.disabled) { seek.value = String(current / duration * 100); seek.setAttribute('aria-valuetext', `${formatTime(current)} of ${formatTime(duration)}`); }
+      time.textContent = `${formatTime(current)}${!seek.disabled ? ' / ' + formatTime(duration) : ''}`;
+      setRecorderControl(playButton, preview.paused ? 'Play recording' : 'Pause playback', preview.paused ? 'resume' : 'pause');
+    };
+    playButton.addEventListener('click', async () => {
+      if (!preview.paused) preview.pause();
+      else { try { await preview.play(); } catch { recordStatus.textContent = 'Playback couldn’t start. Try again, or delete this recording and make another.'; } }
+      updatePlayback();
+    });
+    seek.addEventListener('input', () => { if (Number.isFinite(preview.duration) && preview.duration > 0) preview.currentTime = Number(seek.value) / 100 * preview.duration; });
+    for (const event of ['loadedmetadata', 'durationchange', 'timeupdate', 'play', 'pause', 'ended']) preview.addEventListener(event, updatePlayback);
+    timeline.append(seek, time); player.append(playButton, timeline); $('audio-files').append(audioPreview, player);
     const label = document.createElement('span'); label.textContent = `${file.name} · ${(file.size / 1024 / 1024).toFixed(1)} MB · Ready to send`; $('audio-files').append(label); }
   deleteButton.hidden = !file;
   setRecorderControl(recordButton, 'Record a voice note', 'record');
@@ -229,7 +253,7 @@ recordButton.addEventListener('click', async () => {
       if (blob.size && blob.size <= maxAudioBytes && stopReason !== 'error') {
         const extension = mime === 'audio/mp4' ? 'm4a' : mime === 'audio/ogg' ? 'ogg' : 'webm';
         selectedAudio = new File([blob], `voice-note.${extension}`, { type: mime }); pending = null;
-        recordStatus.textContent = stopReason === 'interrupted' ? 'Recording stopped because this page was interrupted. The captured audio is ready to send, or delete it and record again.' : stopReason === 'limit' ? 'Five-minute limit reached. Your recording is ready to send.' : 'Your recording is ready. Listen to it below, or delete it to record again.';
+        recordStatus.textContent = stopReason === 'interrupted' ? 'Recording stopped because this page was interrupted. The captured audio is ready to send, or delete it and record again.' : stopReason === 'limit' ? 'Five-minute limit reached. Your recording is ready to send.' : 'Your recording is ready. Listen to it again below or delete it to record it again.';
       } else { selectedAudio = null; recordStatus.textContent = 'We couldn’t save that recording. Please record again or upload a file (up to 25 MB).'; }
       idleRecordingUI();
     };

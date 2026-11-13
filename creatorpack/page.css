@@ -88,3 +88,17 @@
 .is-recording #record-status { color:#a12a43; font-variant-numeric:tabular-nums; }
 .upload-alternative { margin-top:18px; padding-top:14px; border-top:1px solid #e8deef; font-size:15px; color:#655775; }
 @media (max-width:560px) { .voice-recorder { padding:16px; } .record-actions { gap:14px; } }
+
+/* Keep finished audio with its status and provide generous playback targets. */
+.voice-recorder #audio-files { display:block; margin-top:16px; }
+.voice-recorder #audio-files:empty { display:none; }
+.voice-recorder #audio-files audio[hidden] { display:none; }
+.voice-player { display:flex; align-items:center; gap:14px; width:100%; padding:12px; border-radius:16px; background:#eee5fc; }
+.voice-play { flex:0 0 60px; width:60px; height:60px; display:flex; align-items:center; justify-content:center; border:0; border-radius:50%; background:#7438dd; color:#fff; padding:14px; }
+.voice-play svg { width:32px; height:32px; }
+.voice-play:hover { background:#6227c5; }
+.voice-timeline { flex:1; min-width:0; }
+.voice-timeline input[type=range] { display:block; width:100%; height:44px; padding:0; border:0; margin:0; background:transparent; accent-color:#7438dd; cursor:pointer; }
+.voice-playback-time { display:block; font-size:15px; line-height:1.4; font-variant-numeric:tabular-nums; color:#59446e; }
+.voice-recorder #audio-files>span { display:block; margin-top:10px; font-size:14px; }
+@media(max-width:560px) { .voice-player { gap:10px; padding:10px; } .voice-play { flex-basis:60px; } }
