@@ -73,10 +73,10 @@ return {appleCodeInventory,refreshAppleCodes,saveAppleCodeMapping};}const sqAppl
   let alive=true,script;const target=node.current;setStatus("loading");
   const mount=()=>{if(!alive)return;try{if(!window.SQCodeInventory)throw Error();window.SQCodeInventory.mount(target,{loadReport,loadAppleReport,refreshApple,saveAppleMapping,mode});setStatus("ready");}catch{if(script)script.dataset.sqCodeInventoryFailed="1";setStatus("error");}};
   const failed=()=>{if(alive)setStatus("error");if(script)script.dataset.sqCodeInventoryFailed="1";};
-  let css=document.querySelector('link[data-sq-code-inventory]');if(!css){css=document.createElement("link");css.rel="stylesheet";css.href="/CRM/codes/embed.css?v=5340fdb09ad9071d";css.dataset.sqCodeInventory="1";document.head.appendChild(css);}
+  let css=document.querySelector('link[data-sq-code-inventory]');if(!css){css=document.createElement("link");css.rel="stylesheet";css.href="/CRM/codes/embed.css?v=53286299a711cbce";css.dataset.sqCodeInventory="1";document.head.appendChild(css);}
   if(window.SQCodeInventory)mount();else{
    script=document.querySelector('script[data-sq-code-inventory]');if(script?.dataset.sqCodeInventoryFailed){script.remove();script=null;}
-   if(!script){script=document.createElement("script");script.src="/CRM/codes/embed.js?v=5340fdb09ad9071d";script.dataset.sqCodeInventory="1";script.addEventListener("load",mount);script.addEventListener("error",failed);document.head.appendChild(script);}
+   if(!script){script=document.createElement("script");script.src="/CRM/codes/embed.js?v=53286299a711cbce";script.dataset.sqCodeInventory="1";script.addEventListener("load",mount);script.addEventListener("error",failed);document.head.appendChild(script);}
    else{script.addEventListener("load",mount);script.addEventListener("error",failed);}
   }
   return()=>{alive=false;if(script){script.removeEventListener("load",mount);script.removeEventListener("error",failed);}window.SQCodeInventory?.unmount(target);};
