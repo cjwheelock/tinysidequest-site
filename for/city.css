@@ -36,3 +36,5 @@
 @media(max-width:760px){.stage{height:auto;--first:186px;--step:150px}.city-card{width:150px;height:240px;top:80px;border-radius:14px}.city-card .card-art{height:190px}.city-card .card-label{height:50px;padding:6px 9px}.city-card .card-label strong{font-size:15px}.city-card .card-label small,.city-card .card-arrow{display:none}.explorer .search{margin-bottom:16px}}
 .explorer .phone-tab{white-space:nowrap;padding-left:9px;padding-right:9px}
 .city-hero{padding-top:28px}.city-hero h1{font-size:clamp(38px,4.4vw,58px)}.city-hero .lede{margin:16px auto 20px}.city-hero .cost{margin-top:10px}
+.explorer-cta{text-align:center;margin-top:26px;padding:0 24px}.explorer-cta .cost{margin-top:22px}
+.city-hero{padding-bottom:10px}
