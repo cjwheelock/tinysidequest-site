@@ -1,0 +1,38 @@
+:root{--violet:#7040f5}
+.city-hero{max-width:860px;margin:0 auto;padding:40px 40px 22px;text-align:center}.city-hero .lede{margin:22px auto 26px;max-width:600px}.city-hero h1 em[data-city-name]{white-space:nowrap}
+.picker-head{text-align:center;margin-bottom:18px;padding:0 24px}.picker-head h2{font-size:clamp(28px,3vw,38px);letter-spacing:-1.3px}.picker-head p{font-size:17px;color:var(--muted);margin-top:6px}
+.search{max-width:440px;margin:0 auto;position:relative;z-index:300;text-align:left;padding:0 20px}
+.input-shell{display:flex;align-items:center;border:1px solid #d7cbe8;background:white;border-radius:13px;box-shadow:0 4px 15px #21154105;padding:0 14px;gap:10px;height:49px}.input-shell svg{width:20px;height:20px;flex:none;color:#81758f}
+.search input{width:100%;border:0;background:none;color:var(--ink);outline:none;font-size:16px;min-width:0}.search input::-webkit-search-cancel-button{display:none}
+.clear-search{border:0;background:none;font-size:22px;padding:4px;color:var(--muted)}
+.search-results{position:absolute;top:55px;left:20px;right:20px;max-height:295px;overflow:auto;background:white;border:1px solid #e5daef;border-radius:13px;box-shadow:0 14px 40px #29134126;padding:7px;list-style:none;margin:0}.search-results[hidden]{display:none}
+.search-results button{width:100%;display:flex;justify-content:space-between;align-items:center;gap:12px;border:0;border-radius:8px;background:white;padding:12px;text-align:left;font-size:15px;color:var(--ink)}.search-results button span{font-size:12px;color:var(--muted)}.search-results button:hover,.search-results button:focus{background:#f0e7ff;outline:0}.search-results .no-results{padding:14px;font-size:14px;color:var(--muted)}
+.city-card[aria-pressed=true]{border:2px solid var(--violet);box-shadow:0 16px 34px #7040f52b}
+.card-art{height:360px;display:block;background:#f1eadc}.card-art img{width:100%;height:100%;object-fit:cover;pointer-events:none}
+.card-label{height:64px;padding:10px 16px 12px;display:flex;justify-content:space-between;align-items:center;text-align:left;gap:10px}.card-label strong{font-size:20px;letter-spacing:-.025em;display:block}.card-label small{font-size:11px;color:var(--muted);display:block;margin-top:3px}
+.card-arrow{width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:#efe5ff;color:var(--violet);font-size:18px;flex:none}
+.carousel-controls{display:flex;justify-content:center;align-items:center;gap:25px;padding:0 20px 10px}.carousel-controls .arrow{width:40px;height:40px;border-radius:50%;border:1px solid #d5c9e4;background:white;font-size:20px;color:var(--ink)}.carousel-count{font-size:14px;color:var(--muted)}.carousel-count strong{color:var(--ink)}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap}
+.city-preview{scroll-margin-top:12px;padding-top:40px}.city-preview h2{font-size:clamp(32px,3.3vw,44px);line-height:1.13;letter-spacing:-1.7px}
+.pack-line{font-size:18px;color:var(--muted);margin-top:14px}.pack-line strong{color:var(--ink)}
+.quest-picks{display:flex;flex-direction:column;gap:10px;margin-top:24px}
+.quest-pick{display:flex;gap:14px;align-items:center;text-align:left;background:#fffdf9;border:1px solid #e6dace;border-radius:16px;padding:10px 14px 10px 10px;color:var(--ink)}.quest-pick[aria-pressed=true]{border-color:var(--violet);box-shadow:0 0 0 1px var(--violet)}.quest-pick img{width:96px;height:64px;border-radius:10px;object-fit:cover;flex:none;background:#f1eadc}
+.quest-pick strong{display:block;font-size:17px;line-height:1.25}.qp-sub{display:block;font-size:14px;line-height:1.4;color:var(--muted);margin-top:3px}.qp-dur{display:block;font-size:12px;font-weight:700;color:#6441a5;margin-top:5px}
+.starting-point{margin-top:20px;font-size:16px;color:var(--muted);border-left:3px solid #d9c6ff;padding-left:14px}
+.phone-steps:empty:before{content:"Loading…";color:var(--muted)}
+@media(max-width:760px){.city-hero{padding:26px 24px 8px}.city-hero h1 em[data-city-name]{white-space:normal}.stage{height:402px;--step:193px}.city-card{width:222px;height:355px;top:23px;border-radius:16px}.card-art{height:296px}.card-label{height:57px;padding:8px 11px}.card-label strong{font-size:18px}.card-label small{font-size:10px}.city-preview{padding-top:28px}.city-preview .intro-copy{text-align:left}.quest-pick img{width:80px;height:56px}.quest-pick strong{font-size:16px}}
+.city-preview .phone-tab{white-space:nowrap;padding-left:9px;padding-right:9px}
+
+.explorer{padding:4px 0 34px;overflow:hidden}
+.explorer .search{margin-bottom:22px}
+.stage{height:auto;position:relative;perspective:1300px;display:flex;justify-content:center;touch-action:pan-y;--first:268px;--step:205px;outline:none}
+.side-cards{position:absolute;inset:0;pointer-events:none}
+.city-card{position:absolute;left:50%;top:70px;width:220px;height:350px;padding:0;background:#fffdf7;border:1px solid #d5c5ed;border-radius:18px;overflow:hidden;transform-origin:center;box-shadow:0 15px 28px #4025681c;transition:transform 450ms cubic-bezier(.2,.75,.2,1),opacity 350ms;will-change:transform;color:var(--ink);cursor:pointer;user-select:none}
+.city-card .card-art{height:288px}.city-card .card-label{height:62px;padding:8px 13px}.city-card .card-label strong{font-size:18px}
+.city-card:hover{border-color:var(--violet)}
+.explorer .phone-preview{position:relative;z-index:200}
+.carousel-controls{padding-top:18px}.carousel-count strong{color:var(--violet)}
+.explorer-note{max-width:520px;margin:6px auto 0;text-align:center;font-size:16px;color:var(--muted);padding:0 24px}
+@media(max-width:760px){.stage{height:auto;--first:186px;--step:150px}.city-card{width:150px;height:240px;top:80px;border-radius:14px}.city-card .card-art{height:190px}.city-card .card-label{height:50px;padding:6px 9px}.city-card .card-label strong{font-size:15px}.city-card .card-label small,.city-card .card-arrow{display:none}.explorer .search{margin-bottom:16px}}
+.explorer .phone-tab{white-space:nowrap;padding-left:9px;padding-right:9px}
+.city-hero{padding-top:28px}.city-hero h1{font-size:clamp(38px,4.4vw,58px)}.city-hero .lede{margin:16px auto 20px}.city-hero .cost{margin-top:10px}

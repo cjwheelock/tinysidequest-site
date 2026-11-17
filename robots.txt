@@ -6,5 +6,6 @@ Disallow: /r
 Disallow: /together
 Disallow: /sign
 Disallow: /CRM
+Disallow: /for/
 
 Sitemap: https://tinysidequest.com/sitemap.xml
