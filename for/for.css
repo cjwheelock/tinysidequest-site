@@ -2,14 +2,4 @@
 .ideas{max-width:1160px;margin:0 auto;padding:8px 40px 40px}.ideas h2{font-size:clamp(32px,3.3vw,44px);line-height:1.13;letter-spacing:-1.7px}.ideas>p{font-size:19px;color:var(--muted);margin-top:14px;max-width:640px}.idea-list{list-style:none;padding:0;margin:24px 0 0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;counter-reset:idea}.idea-list li{counter-increment:idea;background:#fffdf9;border:1px solid #e6dace;border-radius:20px;padding:22px 22px 24px}.idea-list li:before{content:counter(idea);display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:50%;background:#eee4ff;color:#5632a2;font-weight:850;font-size:15px;margin-bottom:14px}.idea-list strong{display:block;font-size:20px;line-height:1.25;letter-spacing:-.4px}.idea-list p{font-size:16px;line-height:1.5;color:var(--muted);margin-top:8px}
 @media(max-width:760px){.ideas{padding:8px 24px 28px}.ideas h2{font-size:32px;letter-spacing:-1.2px}.ideas>p{font-size:17px}.idea-list{grid-template-columns:1fr;gap:10px}.idea-list li{padding:18px 20px}}
 .cost{margin-top:22px}
-.share-pack{text-align:center;padding-top:36px;padding-bottom:52px}.share-pack h2{margin-bottom:28px}
-.share-pack .share-options{gap:16px}
-.share-pack .share-option{flex-direction:column;align-items:center;text-align:center;gap:14px;padding:30px 24px 28px;border-radius:22px;background:#fffdf9;box-shadow:0 12px 30px #3d225c10}
-.share-pack .share-art svg{width:150px;height:auto}
-.share-pack .share-option h4{font-size:22px;letter-spacing:-.4px}
-.share-pack .share-option p{font-size:17px;margin-top:6px}
-@media(max-width:760px){.share-pack{padding-top:24px;padding-bottom:36px}.share-pack .share-option{padding:24px 20px}.share-pack .share-art svg{width:130px}}
-.share-pack .share-art{flex:none;width:150px;height:110px}.share-pack .share-art svg{width:100%;height:100%}
-@media(max-width:760px){.share-pack .share-art{width:130px;height:95px}}
-.share-pack .share-art{width:112px;height:83px}
-@media(max-width:760px){.share-pack .share-art{width:98px;height:71px}}
+.cost{margin-top:22px}

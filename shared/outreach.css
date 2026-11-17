@@ -1,0 +1,11 @@
+/* Shared styles for creator outreach pages (/for/*, /winterpack, /creatorpack).
+   Change these once and every outreach page picks it up. */
+.share-pack{text-align:center;padding-top:36px;padding-bottom:52px}
+.share-pack h2{margin-bottom:28px}
+.share-pack .share-options{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.share-pack .share-option{display:flex;flex-direction:column;align-items:center;text-align:center;gap:14px;padding:30px 24px 28px;border:1px solid #e6dace;border-radius:22px;background:#fffdf9;box-shadow:0 12px 30px #3d225c10}
+.share-pack .share-art{flex:none;width:112px;height:83px}
+.share-pack .share-art svg{width:100%;height:100%;display:block}
+.share-pack .share-option h4{margin:0;font-size:22px;line-height:1.25;letter-spacing:-.4px}
+.share-pack .share-option p{font-size:17px;line-height:1.45;margin-top:6px;color:var(--muted)}
+@media(max-width:760px){.share-pack{padding-top:24px;padding-bottom:36px}.share-pack .share-options{grid-template-columns:1fr}.share-pack .share-option{padding:24px 20px}.share-pack .share-art{width:98px;height:71px}}
