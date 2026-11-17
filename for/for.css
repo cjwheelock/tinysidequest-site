@@ -11,3 +11,5 @@
 @media(max-width:760px){.share-pack{padding-top:24px;padding-bottom:36px}.share-pack .share-option{padding:24px 20px}.share-pack .share-art svg{width:130px}}
 .share-pack .share-art{flex:none;width:150px;height:110px}.share-pack .share-art svg{width:100%;height:100%}
 @media(max-width:760px){.share-pack .share-art{width:130px;height:95px}}
+.share-pack .share-art{width:112px;height:83px}
+@media(max-width:760px){.share-pack .share-art{width:98px;height:71px}}
